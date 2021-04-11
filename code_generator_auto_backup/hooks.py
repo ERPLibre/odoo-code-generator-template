@@ -248,11 +248,28 @@ return self.search([]).action_backup()''',
         )
         lst_item_view.append(view_item.id)
 
+        view_item = env["code.generator.view.item"].create(
+            {
+                "action_name": """
+Automatic backups of the database can be scheduled as follows:
+<ol>
+    <li>Go to Settings / Technical / Automation / Scheduled Actions.</li>
+    <li>Search the action named 'Backup scheduler'.</li>
+    <li>Set the scheduler to active and fill in how often you want backups generated.</li>
+</ol>
+""",
+                "colspan": 2,
+                "section_type": "help",
+                "item_type": "html",
+            }
+        )
+        lst_item_view.append(view_item.id)
+
         view_code_generator = env["code.generator.view"].create(
             {
                 "code_generator_id": code_generator_id.id,
                 "view_type": "form",
-                "view_name": "view_backup_conf_form",
+                # "view_name": "view_backup_conf_form",
                 "m2o_model": model_db_backup.id,
                 "view_item_ids": [(6, 0, lst_item_view)],
             }
