@@ -145,7 +145,7 @@ return self.search([]).action_backup()''',
             "code_generator_compute": "_compute_name",
             "help": "Summary of this backup process",
         }
-        env["ir.model.fields"].create(value_field_name)
+        field_name = env["ir.model.fields"].create(value_field_name)
 
         value_field_sftp_host = {
             "name": "sftp_host",
@@ -224,10 +224,45 @@ return self.search([]).action_backup()''',
         # End Field
 
         # Generate view
+        lst_item_view = []
+        view_item = env["code.generator.view.item"].create(
+            {
+                "action_name": "action_backup",
+                "label": "Execute backup",
+                "section_type": "header",
+                "item_type": "button",
+                "button_type": "oe_highlight",
+                "sequence": 1,
+            }
+        )
+        lst_item_view.append(view_item.id)
+
+        view_item = env["code.generator.view.item"].create(
+            {
+                "action_name": "name",
+                "section_type": "title",
+                "item_type": "field",
+                "m2o_fields": field_name.id,
+                "sequence": 1,
+            }
+        )
+        lst_item_view.append(view_item.id)
+
+        view_code_generator = env["code.generator.view"].create(
+            {
+                "code_generator_id": code_generator_id.id,
+                "view_type": "form",
+                "view_name": "view_backup_conf_form",
+                "m2o_model": model_db_backup.id,
+                "view_item_ids": [(6, 0, lst_item_view)],
+            }
+        )
+
         wizard_view = env["code.generator.generate.views.wizard"].create(
             {
                 "code_generator_id": code_generator_id.id,
                 "enable_generate_all": False,
+                "code_generator_view_ids": [(6, 0, view_code_generator.ids)],
             }
         )
 
