@@ -96,7 +96,6 @@ return self.search([]).action_backup()''',
             "model": "db.backup",
             "field_description": "Days To Keep",
             "code_generator_sequence": 6,
-            "code_generator_tree_view_sequence": 3,
             "ttype": "integer",
             "model_id": model_db_backup.id,
             "required": True,
@@ -109,8 +108,6 @@ return self.search([]).action_backup()''',
             "model": "db.backup",
             "field_description": "Folder",
             "code_generator_sequence": 5,
-            "code_generator_tree_view_sequence": 1,
-            "code_generator_search_sequence": 2,
             "ttype": "char",
             "model_id": model_db_backup.id,
             "default": "lambda self: self._default_folder()",
@@ -137,8 +134,6 @@ return self.search([]).action_backup()''',
             "model": "db.backup",
             "field_description": "Name",
             "code_generator_sequence": 4,
-            "code_generator_tree_view_sequence": 0,
-            "code_generator_search_sequence": 1,
             "ttype": "char",
             "model_id": model_db_backup.id,
             "store": True,
@@ -152,7 +147,6 @@ return self.search([]).action_backup()''',
             "model": "db.backup",
             "field_description": "SFTP Server",
             "code_generator_sequence": 8,
-            "code_generator_search_sequence": 3,
             "ttype": "char",
             "model_id": model_db_backup.id,
             "help": "The host name or IP address from your remote server. For example 192.168.0.1",
@@ -458,11 +452,95 @@ return self.search([]).action_backup()''',
 
         # tree view
         if True:
-            pass
+            lst_item_view = []
+            # BODY
+            view_item = env["code.generator.view.item"].create(
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "action_name": "name",
+                    "sequence": 1,
+                }
+            )
+            lst_item_view.append(view_item.id)
+
+            view_item = env["code.generator.view.item"].create(
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "action_name": "folder",
+                    "sequence": 2,
+                }
+            )
+            lst_item_view.append(view_item.id)
+
+            view_item = env["code.generator.view.item"].create(
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "action_name": "days_to_keep",
+                    "sequence": 3,
+                }
+            )
+            lst_item_view.append(view_item.id)
+
+            view_code_generator = env["code.generator.view"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "view_type": "tree",
+                    # "view_name": "view_backup_conf_form",
+                    "m2o_model": model_db_backup.id,
+                    "view_item_ids": [(6, 0, lst_item_view)],
+                    "has_body_sheet": False,
+                }
+            )
+            lst_view_id.append(view_code_generator.id)
 
         # search view
         if True:
-            pass
+            lst_item_view = []
+            # BODY
+            view_item = env["code.generator.view.item"].create(
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "action_name": "name",
+                    "sequence": 1,
+                }
+            )
+            lst_item_view.append(view_item.id)
+
+            view_item = env["code.generator.view.item"].create(
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "action_name": "folder",
+                    "sequence": 2,
+                }
+            )
+            lst_item_view.append(view_item.id)
+
+            view_item = env["code.generator.view.item"].create(
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "action_name": "sftp_host",
+                    "sequence": 3,
+                }
+            )
+            lst_item_view.append(view_item.id)
+
+            view_code_generator = env["code.generator.view"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "view_type": "search",
+                    # "view_name": "view_backup_conf_form",
+                    "m2o_model": model_db_backup.id,
+                    "view_item_ids": [(6, 0, lst_item_view)],
+                    "has_body_sheet": False,
+                }
+            )
+            lst_view_id.append(view_code_generator.id)
 
         # act_window view
         if True:
