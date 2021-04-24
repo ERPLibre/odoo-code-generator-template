@@ -50,7 +50,7 @@ def post_init_hook(cr, e):
         }
         model_db_backup = env["ir.model"].create(value)
 
-        # Cron
+        ##### Cron
         value = {
             "m2o_module": code_generator_id.id,
             "name": "Backup Scheduler",
@@ -77,7 +77,7 @@ return self.search([]).action_backup()''',
         }
         env["code.generator.model.code"].create(value)
 
-        # Begin Field
+        ##### Begin Field
         value_field_backup_format = {
             "name": "backup_format",
             "model": "db.backup",
@@ -117,7 +117,7 @@ return self.search([]).action_backup()''',
             "required": True,
             "help": "Absolute path for storing the backups",
         }
-        field_folder = env["ir.model.fields"].create(value_field_folder)
+        env["ir.model.fields"].create(value_field_folder)
 
         value_field_method = {
             "name": "method",
@@ -145,7 +145,7 @@ return self.search([]).action_backup()''',
             "code_generator_compute": "_compute_name",
             "help": "Summary of this backup process",
         }
-        field_name = env["ir.model.fields"].create(value_field_name)
+        env["ir.model.fields"].create(value_field_name)
 
         value_field_sftp_host = {
             "name": "sftp_host",
@@ -221,20 +221,22 @@ return self.search([]).action_backup()''',
         )
         field_x_name.unlink()
         model_db_backup.rec_name = "name"
-        # End Field
+        ##### End Field
 
         # Generate view
-        lst_item_view = []
-        # Form custom
+        ##### Begin Views
+        lst_view_id = []
+        # form view
         if True:
+            lst_item_view = []
             # HEADER
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "action_backup",
-                    "label": "Execute backup",
                     "section_type": "header",
                     "item_type": "button",
+                    "action_name": "action_backup",
                     "button_type": "oe_highlight",
+                    "label": "Execute backup",
                     "sequence": 1,
                 }
             )
@@ -243,31 +245,31 @@ return self.search([]).action_backup()''',
             # TITLE
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "name",
                     "section_type": "title",
                     "item_type": "field",
+                    "action_name": "name",
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
             # BODY
-            view_item_group_basic_backup = env["code.generator.view.item"].create(
+            view_item_body_1 = env["code.generator.view.item"].create(
                 {
-                    "item_type": "group",
                     "section_type": "body",
+                    "item_type": "group",
                     "label": "Basic backup configuration",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_group_basic_backup.id)
+            lst_item_view.append(view_item_body_1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "folder",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_basic_backup.id,
+                    "action_name": "folder",
+                    "parent_id": view_item_body_1.id,
                     "sequence": 1,
                 }
             )
@@ -275,10 +277,10 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "days_to_keep",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_basic_backup.id,
+                    "action_name": "days_to_keep",
+                    "parent_id": view_item_body_1.id,
                     "sequence": 2,
                 }
             )
@@ -286,10 +288,10 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "method",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_basic_backup.id,
+                    "action_name": "method",
+                    "parent_id": view_item_body_1.id,
                     "sequence": 3,
                 }
             )
@@ -297,55 +299,55 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "backup_format",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_basic_backup.id,
+                    "action_name": "backup_format",
+                    "parent_id": view_item_body_1.id,
                     "sequence": 4,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_div = env["code.generator.view.item"].create(
+            view_item_body_2 = env["code.generator.view.item"].create(
                 {
-                    "item_type": "div",
                     "section_type": "body",
+                    "item_type": "div",
                     "attrs": "{'invisible': [('method', '!=', 'sftp')]}",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_div.id)
+            lst_item_view.append(view_item_body_2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "html",
-                    "parent_id": view_item_div.id,
-                    "sequence": 1,
                     "background_type": "bg-warning",
                     "label": "Use SFTP with caution! This writes files to external servers under the path you specify.",
+                    "parent_id": view_item_body_2.id,
+                    "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_group_sftp = env["code.generator.view.item"].create(
+            view_item_body_2 = env["code.generator.view.item"].create(
                 {
-                    "item_type": "group",
                     "section_type": "body",
+                    "item_type": "group",
                     "label": "SFTP Settings",
-                    "parent_id": view_item_div.id,
+                    "parent_id": view_item_body_2.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_group_sftp.id)
+            lst_item_view.append(view_item_body_2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "sftp_host",
-                    "placeholder": "sftp.example.com",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_sftp.id,
+                    "action_name": "sftp_host",
+                    "placeholder": "sftp.example.com",
+                    "parent_id": view_item_body_2.id,
                     "sequence": 1,
                 }
             )
@@ -353,10 +355,10 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "sftp_port",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_sftp.id,
+                    "action_name": "sftp_port",
+                    "parent_id": view_item_body_2.id,
                     "sequence": 2,
                 }
             )
@@ -364,11 +366,11 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "sftp_user",
-                    "placeholder": "john",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_sftp.id,
+                    "action_name": "sftp_user",
+                    "placeholder": "john",
+                    "parent_id": view_item_body_2.id,
                     "sequence": 3,
                 }
             )
@@ -376,11 +378,11 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "sftp_password",
-                    "password": True,
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_sftp.id,
+                    "action_name": "sftp_password",
+                    "password": True,
+                    "parent_id": view_item_body_2.id,
                     "sequence": 4,
                 }
             )
@@ -388,11 +390,11 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "sftp_private_key",
-                    "placeholder": "/home/odoo/.ssh/id_rsa",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_sftp.id,
+                    "action_name": "sftp_private_key",
+                    "placeholder": "/home/odoo/.ssh/id_rsa",
+                    "parent_id": view_item_body_2.id,
                     "sequence": 5,
                 }
             )
@@ -400,11 +402,11 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "sftp_public_host_key",
-                    "placeholder": "AAAA...",
                     "section_type": "body",
                     "item_type": "field",
-                    "parent_id": view_item_group_sftp.id,
+                    "action_name": "sftp_public_host_key",
+                    "placeholder": "AAAA...",
+                    "parent_id": view_item_body_2.id,
                     "sequence": 6,
                 }
             )
@@ -412,12 +414,12 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "action_name": "action_sftp_test_connection",
-                    "label": "Test SFTP Connection",
                     "section_type": "body",
-                    "parent_id": view_item_group_sftp.id,
                     "item_type": "button",
+                    "action_name": "action_sftp_test_connection",
                     "icon": "fa-television",
+                    "label": "Test SFTP Connection",
+                    "parent_id": view_item_body_2.id,
                     "sequence": 7,
                 }
             )
@@ -425,19 +427,19 @@ return self.search([]).action_backup()''',
 
             view_item = env["code.generator.view.item"].create(
                 {
-                    "label": """
-    Automatic backups of the database can be scheduled as follows:
-    <ol>
-        <li>Go to Settings / Technical / Automation / Scheduled Actions.</li>
-        <li>Search the action named 'Backup scheduler'.</li>
-        <li>Set the scheduler to active and fill in how often you want backups generated.</li>
-    </ol>
-    """,
-                    "colspan": 2,
                     "section_type": "body",
                     "item_type": "html",
+                    "colspan": 2,
+                    "label": """
+                    Automatic backups of the database can be scheduled as follows:
+                    <ol>
+                    <li>Go to Settings / Technical / Automation / Scheduled Actions.</li>
+                    <li>Search the action named 'Backup scheduler'.</li>
+                    <li>Set the scheduler to active and fill in how often you want backups generated.</li>
+                    </ol>
+                    """,
                     "is_help": True,
-                    "sequence": 10,
+                    "sequence": 4,
                 }
             )
             lst_item_view.append(view_item.id)
@@ -452,6 +454,7 @@ return self.search([]).action_backup()''',
                     "has_body_sheet": False,
                 }
             )
+            lst_view_id.append(view_code_generator.id)
 
         # tree view
         if True:
@@ -465,28 +468,21 @@ return self.search([]).action_backup()''',
         if True:
             pass
 
-        # action server view
+        # action_server view
         if True:
             pass
 
         # menu view
         if True:
             pass
-
-        # portal view
-        if True:
-            pass
-
-        # website view
-        if True:
-            pass
+        ##### End Views
 
         # Action generate view
         wizard_view = env["code.generator.generate.views.wizard"].create(
             {
                 "code_generator_id": code_generator_id.id,
                 "enable_generate_all": False,
-                "code_generator_view_ids": [(6, 0, view_code_generator.ids)],
+                "code_generator_view_ids": [(6, 0, lst_view_id)],
             }
         )
 
