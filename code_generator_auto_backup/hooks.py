@@ -552,10 +552,6 @@ return self.search([]).action_backup()''',
                 }
             )
 
-        # action_server view
-        if True:
-            pass
-
         # menu view
         if True:
             env["code.generator.menu"].create(
@@ -567,6 +563,31 @@ return self.search([]).action_backup()''',
                 }
             )
         ##### End Views
+
+        # Generate server action
+        # action_server view
+        if True:
+            act_server_id = env["ir.actions.server"].create(
+                {
+                    "name": "Execute backup(s)",
+                    "model_id": model_db_backup.id,
+                    "binding_model_id": model_db_backup.id,
+                    "state": "code",
+                    "code": "records.action_backup()",
+                    "comment": 'Execute backup from "More" menu',
+                }
+            )
+
+            # Add record id name
+            env["ir.model.data"].create(
+                {
+                    "name": "action_server_backup",
+                    "model": "ir.actions.server",
+                    "module": "auto_backup",
+                    "res_id": act_server_id.id,
+                    "noupdate": True,
+                }
+            )
 
         # Action generate view
         wizard_view = env["code.generator.generate.views.wizard"].create(
