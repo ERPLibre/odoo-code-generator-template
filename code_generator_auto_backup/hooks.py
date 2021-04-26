@@ -445,7 +445,7 @@ return self.search([]).action_backup()''',
                     # "view_name": "view_backup_conf_form",
                     "m2o_model": model_db_backup.id,
                     "view_item_ids": [(6, 0, lst_item_view)],
-                    "has_body_sheet": False,
+                    "id_name": "view_backup_conf_form",
                 }
             )
             lst_view_id.append(view_code_generator.id)
@@ -491,7 +491,7 @@ return self.search([]).action_backup()''',
                     # "view_name": "view_backup_conf_form",
                     "m2o_model": model_db_backup.id,
                     "view_item_ids": [(6, 0, lst_item_view)],
-                    "has_body_sheet": False,
+                    "id_name": "view_backup_conf_tree",
                 }
             )
             lst_view_id.append(view_code_generator.id)
@@ -537,14 +537,20 @@ return self.search([]).action_backup()''',
                     # "view_name": "view_backup_conf_form",
                     "m2o_model": model_db_backup.id,
                     "view_item_ids": [(6, 0, lst_item_view)],
-                    "has_body_sheet": False,
+                    "id_name": "view_backup_conf_search",
                 }
             )
             lst_view_id.append(view_code_generator.id)
 
         # act_window view
         if True:
-            pass
+            action_backup_conf_form = env["code.generator.act_window"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Automated Backups",
+                    "id_name": "action_backup_conf_form",
+                }
+            )
 
         # action_server view
         if True:
@@ -552,7 +558,14 @@ return self.search([]).action_backup()''',
 
         # menu view
         if True:
-            pass
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "id_name": "backup_conf_menu",
+                    "parent_id_name": "base.next_id_9",
+                    "m2o_act_window": action_backup_conf_form.id,
+                }
+            )
         ##### End Views
 
         # Action generate view
