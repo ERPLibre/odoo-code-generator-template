@@ -26,6 +26,9 @@ def post_init_hook(cr, e):
             "application": True,
             "enable_sync_code": True,
             "path_sync_code": path_module_generate,
+            "icon": os.path.join(
+                os.path.dirname(__file__), "static", "description", "code_generator_icon.png"
+            ),
         }
 
         # TODO HUMAN: enable your functionality to generate
