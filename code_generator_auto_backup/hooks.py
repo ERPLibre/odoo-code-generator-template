@@ -1,7 +1,8 @@
 from odoo import _, api, models, fields, SUPERUSER_ID
-
+import logging
 import os
 
+_logger = logging.getLogger(__name__)
 MODULE_NAME = "auto_backup"
 
 
@@ -931,6 +932,28 @@ return pysftp.Connection(**params, cnopts=cnopts)''',
             "m2o_model": model_db_backup.id,
         }
         env["code.generator.model.code"].create(value)
+
+        # Add constraint
+        if True:
+            value = {
+                "code_generator_id": code_generator_id.id,
+                "name": "name_unique",
+                "definition": "unique(name)",
+                "type": "u",
+                "model": model_db_backup.id,
+                "module": code_generator_id.id,
+            }
+            model_db_backup = env["ir.model.constraint"].create(value)
+
+            # TODO not working 2 ir.model.constraints in same time, why?
+            # value = {
+            #     "name": "days_to_keep_positive",
+            #     "definition": "check(days_to_keep >= 0)",
+            #     "type": "u",
+            #     "model": model_db_backup.id,
+            #     "module": code_generator_id.id,
+            # }
+            # model_db_backup = env["ir.model.constraint"].create(value)
 
         # Generate module
         value = {"code_generator_ids": code_generator_id.ids}
