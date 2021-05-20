@@ -1,8 +1,7 @@
 from odoo import _, api, models, fields, SUPERUSER_ID
-import logging
+
 import os
 
-_logger = logging.getLogger(__name__)
 MODULE_NAME = "auto_backup"
 
 
@@ -608,9 +607,10 @@ return self.search([]).action_backup()''',
         wizard_view.button_generate_views()
 
         # Generate code
-        # Generate code header
-        value = {
-            "code": """# Copyright 2004-2009 Tiny SPRL (<http://tiny.be>).
+        if True:
+            # Generate code header
+            value = {
+                "code": """# Copyright 2004-2009 Tiny SPRL (<http://tiny.be>).
 # Copyright 2015 Agile Business Group <http://www.agilebg.com>
 # Copyright 2016 Grupo ESOC Ingenieria de Servicios, S.L.U. - Jairo Llopis
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
@@ -633,47 +633,44 @@ try:
     import pysftp
 except ImportError:  # pragma: no cover
     _logger.debug('Cannot import pysftp')""",
-            "name": "header",
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code.import"].create(value)
+                "name": "header",
+                "m2o_module": code_generator_id.id,
+                "m2o_model": model_db_backup.id,
+            }
+            env["code.generator.model.code.import"].create(value)
 
-        # Generate code model
-        value = {
-            "code": '''"""Default to ``backups`` folder inside current server datadir."""
+            # Generate code model
+            lst_value = [
+                {
+                    "code": '''"""Default to ``backups`` folder inside current server datadir."""
 return os.path.join(
     tools.config["data_dir"],
     "backups",
     self.env.cr.dbname)''',
-            "name": "_default_folder",
-            "decorator": "@api.model",
-            "param": "self",
-            "sequence": 0,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Get the right summary for this job."""
+                    "name": "_default_folder",
+                    "decorator": "@api.model",
+                    "param": "self",
+                    "sequence": 0,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Get the right summary for this job."""
 for rec in self:
     if rec.method == "local":
         rec.name = "%s @ localhost" % rec.folder
     elif rec.method == "sftp":
         rec.name = "sftp://%s@%s:%d%s" % (
             rec.sftp_user, rec.sftp_host, rec.sftp_port, rec.folder)''',
-            "name": "_compute_name",
-            "decorator": '@api.multi;@api.depends("folder", "method", "sftp_host", "sftp_port", "sftp_user")',
-            "param": "self",
-            "sequence": 1,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Do not use the filestore or you will backup your backups."""
+                    "name": "_compute_name",
+                    "decorator": '@api.multi;@api.depends("folder", "method", "sftp_host", "sftp_port", "sftp_user")',
+                    "param": "self",
+                    "sequence": 1,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Do not use the filestore or you will backup your backups."""
 for record in self:
     if (record.method == "local" and
             record.folder.startswith(
@@ -681,17 +678,15 @@ for record in self:
         raise exceptions.ValidationError(
             _("Do not save backups on your filestore, or you will "
               "backup your backups too!"))''',
-            "name": "_check_folder",
-            "decorator": '@api.multi;@api.constrains("folder", "method")',
-            "param": "self",
-            "sequence": 2,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Check if the SFTP settings are correct."""
+                    "name": "_check_folder",
+                    "decorator": '@api.multi;@api.constrains("folder", "method")',
+                    "param": "self",
+                    "sequence": 2,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Check if the SFTP settings are correct."""
 try:
     # Just open and close the connection
     with self.sftp_connection():
@@ -701,17 +696,15 @@ except (pysftp.CredentialException,
         pysftp.SSHException):
     _logger.info("Connection Test Failed!", exc_info=True)
     raise exceptions.Warning(_("Connection Test Failed!"))''',
-            "name": "action_sftp_test_connection",
-            "decorator": "@api.multi",
-            "param": "self",
-            "sequence": 3,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Run selected backups."""
+                    "name": "action_sftp_test_connection",
+                    "decorator": "@api.multi",
+                    "param": "self",
+                    "sequence": 3,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Run selected backups."""
 backup = None
 successful = self.browse()
 
@@ -771,29 +764,25 @@ if sftp:
 
 # Remove old files for successful backups
 successful.cleanup()''',
-            "name": "action_backup",
-            "decorator": "@api.multi",
-            "param": "self",
-            "sequence": 4,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Run all scheduled backups."""
+                    "name": "action_backup",
+                    "decorator": "@api.multi",
+                    "param": "self",
+                    "sequence": 4,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Run all scheduled backups."""
 return self.search([]).action_backup()''',
-            "name": "action_backup_all",
-            "decorator": "@api.model",
-            "param": "self",
-            "sequence": 5,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Log a backup result."""
+                    "name": "action_backup_all",
+                    "decorator": "@api.model",
+                    "param": "self",
+                    "sequence": 5,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Log a backup result."""
 try:
     _logger.info("Starting database backup: %s", self.name)
     yield
@@ -811,17 +800,15 @@ except Exception:
 else:
     _logger.info("Database backup succeeded: %s", self.name)
     self.message_post(body=_("Database backup succeeded."))''',
-            "name": "backup_log",
-            "decorator": "@api.multi;@contextmanager",
-            "param": "self",
-            "sequence": 6,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Clean up old backups."""
+                    "name": "backup_log",
+                    "decorator": "@api.multi;@contextmanager",
+                    "param": "self",
+                    "sequence": 6,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Clean up old backups."""
 now = datetime.now()
 for rec in self.filtered("days_to_keep"):
     with rec.cleanup_log():
@@ -839,17 +826,15 @@ for rec in self.filtered("days_to_keep"):
                     if (name.endswith(".dump.zip") and
                             os.path.basename(name) < oldest):
                         remote.unlink('%s/%s' % (rec.folder, name))''',
-            "name": "cleanup",
-            "decorator": "@api.multi",
-            "param": "self",
-            "sequence": 7,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Log a possible cleanup failure."""
+                    "name": "cleanup",
+                    "decorator": "@api.multi",
+                    "param": "self",
+                    "sequence": 7,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Log a possible cleanup failure."""
 self.ensure_one()
 try:
     _logger.info(
@@ -868,17 +853,15 @@ else:
     _logger.info(
         "Cleanup of old database backups succeeded: %s",
         self.name)''',
-            "name": "cleanup_log",
-            "decorator": "@api.multi;@contextmanager",
-            "param": "self",
-            "sequence": 8,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Generate a file name for a backup.
+                    "name": "cleanup_log",
+                    "decorator": "@api.multi;@contextmanager",
+                    "param": "self",
+                    "sequence": 8,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Generate a file name for a backup.
 
 :param datetime.datetime when:
     Use this datetime instead of :meth:`datetime.datetime.now`.
@@ -887,17 +870,15 @@ else:
 return "{:%Y_%m_%d_%H_%M_%S}.{ext}".format(
     when, ext='dump.zip' if ext == 'zip' else ext
 )''',
-            "name": "filename",
-            "decorator": "@staticmethod",
-            "param": "when, ext='zip'",
-            "sequence": 9,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
-
-        value = {
-            "code": '''"""Return a new SFTP connection with found parameters."""
+                    "name": "filename",
+                    "decorator": "@staticmethod",
+                    "param": "when, ext='zip'",
+                    "sequence": 9,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+                {
+                    "code": '''"""Return a new SFTP connection with found parameters."""
 self.ensure_one()
 params = {
     "host": self.sftp_host,
@@ -924,40 +905,41 @@ else:
     params["password"] = self.sftp_password
 
 return pysftp.Connection(**params, cnopts=cnopts)''',
-            "name": "sftp_connection",
-            "decorator": "@api.multi",
-            "param": "self",
-            "sequence": 10,
-            "m2o_module": code_generator_id.id,
-            "m2o_model": model_db_backup.id,
-        }
-        env["code.generator.model.code"].create(value)
+                    "name": "sftp_connection",
+                    "decorator": "@api.multi",
+                    "param": "self",
+                    "sequence": 10,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_db_backup.id,
+                },
+            ]
+            env["code.generator.model.code"].create(lst_value)
 
         # Add constraint
         if True:
-            value = {
-                "code_generator_id": code_generator_id.id,
-                "name": "name_unique",
-                "definition": "unique(name)",
-                "type": "u",
-                "model": model_db_backup.id,
-                "module": code_generator_id.id,
-            }
-            model_db_backup = env["ir.model.constraint"].create(value)
-
-            # TODO not working 2 ir.model.constraints in same time, why?
-            # value = {
-            #     "name": "days_to_keep_positive",
-            #     "definition": "check(days_to_keep >= 0)",
-            #     "type": "u",
-            #     "model": model_db_backup.id,
-            #     "module": code_generator_id.id,
-            # }
-            # model_db_backup = env["ir.model.constraint"].create(value)
+            lst_value = [
+                {
+                    "name": "db_backup_name_unique",
+                    "definition": "unique(name)",
+                    "type": "u",
+                    "code_generator_id": code_generator_id.id,
+                    "module": code_generator_id.id,
+                    "model": model_db_backup.id,
+                },
+                {
+                    "name": "db_backup_days_to_keep_positive",
+                    "definition": "check(days_to_keep >= 0)",
+                    "type": "u",
+                    "code_generator_id": code_generator_id.id,
+                    "module": code_generator_id.id,
+                    "model": model_db_backup.id,
+                },
+            ]
+            env["ir.model.constraint"].create(lst_value)
 
         # Generate module
         value = {"code_generator_ids": code_generator_id.ids}
-        code_generator_writer = env["code.generator.writer"].create(value)
+        env["code.generator.writer"].create(value)
 
 
 def uninstall_hook(cr, e):
