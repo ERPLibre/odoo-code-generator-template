@@ -56,6 +56,10 @@ def post_init_hook(cr, e):
         }
         model_db_backup = env["ir.model"].create(value)
 
+        # Model Inherit
+        inherit_model = env["ir.model"].search([("model", "=", "mail.thread")])
+        model_db_backup.m2o_inherit_model = inherit_model.id
+
         ##### Cron
         value = {
             "m2o_module": code_generator_id.id,
@@ -920,7 +924,8 @@ return pysftp.Connection(**params, cnopts=cnopts)''',
             lst_value = [
                 {
                     "name": "db_backup_name_unique",
-                    "definition": "unique(name)",
+                    "definition": "UNIQUE(name)",
+                    "message": "Cannot duplicate a configuration.",
                     "type": "u",
                     "code_generator_id": code_generator_id.id,
                     "module": code_generator_id.id,
@@ -928,7 +933,8 @@ return pysftp.Connection(**params, cnopts=cnopts)''',
                 },
                 {
                     "name": "db_backup_days_to_keep_positive",
-                    "definition": "check(days_to_keep >= 0)",
+                    "definition": "CHECK(days_to_keep >= 0)",
+                    "message": "I cannot remove backups from the future. Ask Doc for that.",
                     "type": "u",
                     "code_generator_id": code_generator_id.id,
                     "module": code_generator_id.id,
