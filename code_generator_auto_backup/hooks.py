@@ -57,6 +57,14 @@ def post_init_hook(cr, e):
         model_db_backup = env["ir.model"].create(value)
 
         # Model Inherit
+        dependency_ids = env["ir.module.module"].search([("name", "=", "mail")])
+        for dependency in dependency_ids:
+            value = {
+                "module_id": code_generator_id.id,
+                "depend_id": dependency.id,
+                "name": code_generator_id.display_name,
+            }
+            env["code.generator.module.dependency"].create(value)
         inherit_model = env["ir.model"].search([("model", "=", "mail.thread")])
         model_db_backup.m2o_inherit_model = inherit_model.id
 
