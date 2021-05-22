@@ -17,13 +17,29 @@ def post_init_hook(cr, e):
         short_name = MODULE_NAME.replace("_", " ").title()
 
         # Add code generator
+        categ_id = env["ir.module.category"].search([("name", "=", "Tools")])
         value = {
-            "shortdesc": short_name,
-            "name": MODULE_NAME,
+            "shortdesc": "Database Auto-Backup",
+            "name": "auto_backup",
+            "header_manifest": """
+# Copyright 2004-2009 Tiny SPRL (<http://tiny.be>).
+# Copyright 2015 Agile Business Group <http://www.agilebg.com>
+# Copyright 2016 Grupo ESOC Ingenieria de Servicios, S.L.U. - Jairo Llopis
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+            """,
             "license": "AGPL-3",
-            "author": "TechnoLibre",
-            "website": "https://technolibre.ca",
-            "application": True,
+            "category_id": categ_id.id,
+            "summary": "Backups database",
+            "author": (
+                "Yenthe Van Ginneken, "
+                "Agile Business Group, "
+                "Grupo ESOC Ingenieria de Servicios, "
+                "LasLabs, "
+                "AdaptiveCity, "
+                "Odoo Community Association (OCA)"
+            ),
+            "website": "https://github.com/OCA/server-tools/",
+            "application": False,
             "enable_sync_code": True,
             "path_sync_code": path_module_generate,
             "icon": os.path.join(
