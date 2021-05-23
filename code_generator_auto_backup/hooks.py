@@ -11,7 +11,9 @@ def post_init_hook(cr, e):
 
         # The path of the actual file
         path_module_generate = os.path.normpath(
-            os.path.join(os.path.dirname(__file__), "..", "..", "OCA_server-tools")
+            os.path.join(
+                os.path.dirname(__file__), "..", "..", "OCA_server-tools"
+            )
         )
 
         short_name = MODULE_NAME.replace("_", " ").title()
@@ -73,7 +75,9 @@ def post_init_hook(cr, e):
         model_db_backup = env["ir.model"].create(value)
 
         # Model Inherit
-        dependency_ids = env["ir.module.module"].search([("name", "=", "mail")])
+        dependency_ids = env["ir.module.module"].search(
+            [("name", "=", "mail")]
+        )
         for dependency in dependency_ids:
             value = {
                 "module_id": code_generator_id.id,
@@ -973,6 +977,8 @@ return pysftp.Connection(**params, cnopts=cnopts)''',
 def uninstall_hook(cr, e):
     with api.Environment.manage():
         env = api.Environment(cr, SUPERUSER_ID, {})
-        code_generator_id = env["code.generator.module"].search([("name", "=", MODULE_NAME)])
+        code_generator_id = env["code.generator.module"].search(
+            [("name", "=", MODULE_NAME)]
+        )
         if code_generator_id:
             code_generator_id.unlink()
