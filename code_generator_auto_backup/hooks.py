@@ -115,7 +115,7 @@ def post_init_hook(cr, e):
         cron_id = env["ir.cron"].create(value)
 
         value = {
-            "name": cron_id.name,
+            "name": "ir_cron_backup_scheduler_0",
             "model": "ir.cron",
             "module": MODULE_NAME,
             "res_id": cron_id.id,
