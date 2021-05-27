@@ -94,16 +94,18 @@ MODULE_NAME = "{new_module_name}"'''
         value = {"code_generator_ids": code_generator_id.ids}
         code_generator_writer = env["code.generator.writer"].create(value)
 
-        # # Generate translation
-        # path_module_generate = os.path.normpath(
-        #     os.path.join(
-        #         os.path.dirname(__file__), "..", "..", "OCA_server-tools"
-        #     )
-        # )
-        # new_module_path = os.path.join(path_module_generate, new_module_name)
-        # code_generator_writer.set_module_translator(
-        #     new_module_name, new_module_path
-        # )
+        # Generate translation
+        path_module_generate = os.path.normpath(
+            os.path.join(
+                os.path.dirname(__file__), "..", "..", "OCA_server-tools"
+            )
+        )
+        new_module_path = os.path.join(path_module_generate, new_module_name)
+        i18n_path = os.path.join(new_module_path, "i18n")
+        if not os.path.isdir(i18n_path):
+            code_generator_writer.set_module_translator(
+                new_module_name, new_module_path
+            )
 
 
 def uninstall_hook(cr, e):
