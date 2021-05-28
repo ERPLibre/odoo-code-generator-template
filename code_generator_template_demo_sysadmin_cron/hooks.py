@@ -76,6 +76,23 @@ MODULE_NAME = "{new_module_name}"'''
 
         code_generator_id = env["code.generator.module"].create(value)
 
+        # TODO move this code inside code.generator.writer
+        path_module_generate = os.path.normpath(
+            os.path.join(
+                os.path.dirname(__file__), "..", "..", "OCA_server-tools"
+            )
+        )
+        new_module_path = os.path.join(path_module_generate, new_module_name)
+        i18n_path = os.path.join(new_module_path, "i18n")
+        not_supported_files_dir = os.path.join(
+            template_dir, "not_supported_files"
+        )
+        if os.path.isdir(not_supported_files_dir):
+            env["code.generator.writer"].set_module_translator(
+                new_module_name, new_module_path
+            )
+            return
+
         # Add dependencies
         # TODO HUMAN: update your dependencies
         lst_depend = [
@@ -98,14 +115,7 @@ MODULE_NAME = "{new_module_name}"'''
         code_generator_writer = env["code.generator.writer"].create(value)
 
         # Generate translation
-        # TODO move this code inside code.generator.writer
-        path_module_generate = os.path.normpath(
-            os.path.join(
-                os.path.dirname(__file__), "..", "..", "OCA_server-tools"
-            )
-        )
-        new_module_path = os.path.join(path_module_generate, new_module_name)
-        i18n_path = os.path.join(new_module_path, "i18n")
+
         # TODO bug, some times i18n is already generated, but need to force update
         if not os.path.isdir(i18n_path):
             code_generator_writer.set_module_translator(
