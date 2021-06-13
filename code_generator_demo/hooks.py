@@ -90,7 +90,7 @@ def post_init_hook(cr, e):
 
         # Generate module
         value = {"code_generator_ids": code_generator_id.ids}
-        code_generator_writer = env["code.generator.writer"].create(value)
+        env["code.generator.writer"].create(value)
 
 
 def uninstall_hook(cr, e):
