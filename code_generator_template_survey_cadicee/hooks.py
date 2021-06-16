@@ -30,7 +30,7 @@ def post_init_hook(cr, e):
         value["template_model_name"] = ""
         value["enable_template_wizard_view"] = False
         value["enable_template_website_snippet_view"] = False
-        value["enable_sync_template"] = False
+        value["enable_sync_template"] = True
         value["ignore_fields"] = ""
         value["post_init_hook_show"] = True
         value["uninstall_hook_show"] = True

@@ -1,9 +1,9 @@
 {
     "name": "Code Generator Survey Cadicee",
     "version": "12.0.1.0",
-    "author": "SantéLibre",
+    "author": "TechnoLibre",
     "license": "AGPL-3",
-    "website": "https://santelibre.ca",
+    "website": "https://technolibre.ca",
     "application": True,
     "depends": [
         "code_generator",

@@ -7,4 +7,7 @@
     "website": "https://technolibre.ca",
     "application": True,
     "installable": True,
+    "depends": [
+        "survey"
+    ],
 }

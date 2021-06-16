@@ -1,5 +1,5 @@
 from odoo import _, api, models, fields, SUPERUSER_ID
-
+import os
 MODULE_NAME = "survey_cadicee"
 
 
@@ -13,19 +13,30 @@ def post_init_hook(cr, e):
         short_name = MODULE_NAME.replace("_", " ").title()
 
         # Add code generator
+        categ_id = env["ir.module.category"].search(
+            [("name", "=", "Uncategorized")]
+        )
         value = {
-            "shortdesc": short_name,
+            "shortdesc": "Formulaire CADICEE",
             "name": MODULE_NAME,
             "license": "AGPL-3",
-            "author": "TechnoLibre",
+            "category_id": categ_id.id,
+            "summary": "Formulaire CADICEE au Québec Canada",
+            "author": "SantéLibre",
             "website": "https://technolibre.ca",
             "application": True,
             "enable_sync_code": True,
             # "path_sync_code": path_module_generate,
+            "icon": os.path.join(
+                os.path.dirname(__file__),
+                "static",
+                "description",
+                "code_generator_icon.png",
+            ),
         }
 
         # TODO HUMAN: enable your functionality to generate
-        value["enable_sync_template"] = False
+        value["enable_sync_template"] = True
         value["ignore_fields"] = ""
         value["post_init_hook_show"] = False
         value["uninstall_hook_show"] = False
