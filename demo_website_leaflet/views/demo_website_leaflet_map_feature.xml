@@ -66,8 +66,8 @@
     </record>
 
     <act_window
-        id="demo_website_leaflet_map_feature_demo_website_leaflet_map_feature_action_view_action_window"
-        name="demo_website_leaflet_map_feature_action_view"
+        id="demo_website_leaflet_map_feature_demo_website_leaflet_map_feature_action_window"
+        name="Demo Website Leaflet Map Feature"
         res_model="demo.website_leaflet.map.feature"
         view_mode="list,form"
     />

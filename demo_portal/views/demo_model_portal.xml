@@ -69,8 +69,8 @@
     </record>
 
     <act_window
-        id="demo_model_portal_demo_model_portal_action_view_action_window"
-        name="demo_model_portal_action_view"
+        id="demo_model_portal_demo_model_portal_action_window"
+        name="Demo Model Portal"
         res_model="demo.model.portal"
         view_mode="list,form"
     />

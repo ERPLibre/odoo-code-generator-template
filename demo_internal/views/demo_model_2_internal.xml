@@ -29,8 +29,8 @@
     </record>
 
     <act_window
-        id="demo_model_2_internal_demo_model_2_internal_action_view_action_window"
-        name="demo_model_2_internal_action_view"
+        id="demo_model_2_internal_demo_model_2_internal_action_window"
+        name="Demo Model 2 Internal"
         res_model="demo.model_2.internal"
         view_mode="list,form"
     />
