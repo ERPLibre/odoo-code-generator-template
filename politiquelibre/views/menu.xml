@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Root menu-->
+
+    <menuitem
+        id="politiquelibre"
+        name="Politiquelibre"
+        sequence="20"
+        web_icon="politiquelibre,static/description/icon.png"
+    />
+
+    <!--Sub menu-->
+
+    <menuitem id="menu" name="Menu" sequence="1" parent="politiquelibre" />
+
+    <!--Child menu-->
+
+    <menuitem id="electeurs" action="electeurs_electeurs_action_window" sequence="1" parent="menu" />
+
+    <menuitem id="enjeux" action="enjeux_enjeux_action_window" sequence="2" parent="menu" />
+</odoo>

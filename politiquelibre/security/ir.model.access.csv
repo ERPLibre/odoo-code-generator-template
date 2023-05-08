@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+electeurs_access_user_types_/_internal_user,electeurs Access User types / Internal User,model_electeurs,base.group_user,1,1,1,1
+enjeux_access_user_types_/_internal_user,enjeux Access User types / Internal User,model_enjeux,base.group_user,1,1,1,1

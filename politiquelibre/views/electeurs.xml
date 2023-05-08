@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="electeurs_view_form" model="ir.ui.view">
+        <field name="name">electeurs_form</field>
+        <field name="model">electeurs</field>
+        <field name="arch" type="xml">
+            <form string="Titre">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                    <group>
+                        <field name="a_jour" />
+                    </group>
+                    <group>
+                        <field name="a_vote_2013" />
+                    </group>
+                    <group>
+                        <field name="a_vote_2017" />
+                    </group>
+                    <group>
+                        <field name="a_vote_2021" />
+                    </group>
+                    <group>
+                        <field name="adresse_postal_cp" />
+                    </group>
+                    <group>
+                        <field name="adresse_postal_ligne_deux" />
+                    </group>
+                    <group>
+                        <field name="adresse_postal_ligne_un" />
+                    </group>
+                    <group>
+                        <field name="bva_2013" />
+                    </group>
+                    <group>
+                        <field name="bva_2017" />
+                    </group>
+                    <group>
+                        <field name="bva_2021" />
+                    </group>
+                    <group>
+                        <field name="code_maj" />
+                    </group>
+                    <group>
+                        <field name="code_municipale" />
+                    </group>
+                    <group>
+                        <field name="code_postal" />
+                    </group>
+                    <group>
+                        <field name="courriel_electeur" />
+                    </group>
+                    <group>
+                        <field name="date_naissance" />
+                    </group>
+                    <group>
+                        <field name="designation" />
+                    </group>
+                    <group>
+                        <field name="direction" />
+                    </group>
+                    <group>
+                        <field name="generique" />
+                    </group>
+                    <group>
+                        <field name="intention_election_2013" />
+                    </group>
+                    <group>
+                        <field name="intention_election_2017" />
+                    </group>
+                    <group>
+                        <field name="intention_election_2021" />
+                    </group>
+                    <group>
+                        <field name="latitude" />
+                    </group>
+                    <group>
+                        <field name="lien" />
+                    </group>
+                    <group>
+                        <field name="longitude" />
+                    </group>
+                    <group>
+                        <field name="no_appartement" />
+                    </group>
+                    <group>
+                        <field name="no_appartement_suf" />
+                    </group>
+                    <group>
+                        <field name="no_civique" />
+                    </group>
+                    <group>
+                        <field name="no_civique_suf" />
+                    </group>
+                    <group>
+                        <field name="no_electeur" />
+                    </group>
+                    <group>
+                        <field name="no_lot" />
+                    </group>
+                    <group>
+                        <field name="no_quartier" />
+                    </group>
+                    <group>
+                        <field name="no_section" />
+                    </group>
+                    <group>
+                        <field name="no_sequentiel" />
+                    </group>
+                    <group>
+                        <field name="nom_electeur" />
+                    </group>
+                    <group>
+                        <field name="nom_municipalite" />
+                    </group>
+                    <group>
+                        <field name="nom_quartier" />
+                    </group>
+                    <group>
+                        <field name="note" />
+                    </group>
+                    <group>
+                        <field name="note_ami" />
+                    </group>
+                    <group>
+                        <field name="pas_contacter" />
+                    </group>
+                    <group>
+                        <field name="pas_contacter2" />
+                    </group>
+                    <group>
+                        <field name="prenom_electeur" />
+                    </group>
+                    <group>
+                        <field name="ramq" />
+                    </group>
+                    <group>
+                        <field name="rue" />
+                    </group>
+                    <group>
+                        <field name="scr" />
+                    </group>
+                    <group>
+                        <field name="sexe" />
+                    </group>
+                    <group>
+                        <field name="taxe_eau" />
+                    </group>
+                    <group>
+                        <field name="telephone_electeur" />
+                    </group>
+                    <group>
+                        <field name="telephone_electeur2" />
+                    </group>
+                    <group>
+                        <field name="type" />
+                    </group>
+                    <group>
+                        <field name="type_occupation" />
+                    </group>
+                    <group>
+                        <field name="vpa" />
+                    </group>
+                    <group>
+                        <field name="year_sub" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="electeurs_view_graph" model="ir.ui.view">
+        <field name="name">electeurs_graph</field>
+        <field name="model">electeurs</field>
+        <field name="arch" type="xml">
+            <graph string="Electeurs">
+                <field name="name" type="row" />
+                <field name="a_jour" type="measure" />
+                <field name="a_vote_2013" type="measure" />
+                <field name="a_vote_2017" type="measure" />
+                <field name="a_vote_2021" type="measure" />
+                <field name="adresse_postal_cp" type="row" />
+                <field name="adresse_postal_ligne_deux" type="row" />
+                <field name="adresse_postal_ligne_un" type="row" />
+                <field name="bva_2013" type="measure" />
+                <field name="bva_2017" type="measure" />
+                <field name="bva_2021" type="measure" />
+                <field name="code_maj" type="row" />
+                <field name="code_municipale" type="row" />
+                <field name="code_postal" type="row" />
+                <field name="courriel_electeur" type="row" />
+                <field name="date_naissance" type="row" />
+                <field name="designation" type="row" />
+                <field name="direction" type="row" />
+                <field name="generique" type="row" />
+                <field name="intention_election_2013" type="row" />
+                <field name="intention_election_2017" type="row" />
+                <field name="intention_election_2021" type="row" />
+                <field name="latitude" type="row" />
+                <field name="lien" type="row" />
+                <field name="longitude" type="row" />
+                <field name="no_appartement" type="row" />
+                <field name="no_appartement_suf" type="row" />
+                <field name="no_civique" type="row" />
+                <field name="no_civique_suf" type="row" />
+                <field name="no_electeur" type="row" />
+                <field name="no_lot" type="row" />
+                <field name="no_quartier" type="measure" />
+                <field name="no_section" type="row" />
+                <field name="no_sequentiel" type="row" />
+                <field name="nom_electeur" type="row" />
+                <field name="nom_municipalite" type="row" />
+                <field name="nom_quartier" type="row" />
+                <field name="note" type="row" />
+                <field name="note_ami" type="row" />
+                <field name="pas_contacter" type="measure" />
+                <field name="pas_contacter2" type="measure" />
+                <field name="prenom_electeur" type="row" />
+                <field name="ramq" type="row" />
+                <field name="rue" type="row" />
+                <field name="scr" type="row" />
+                <field name="sexe" type="row" />
+                <field name="taxe_eau" type="measure" />
+                <field name="telephone_electeur" type="row" />
+                <field name="telephone_electeur2" type="row" />
+                <field name="type" type="row" />
+                <field name="type_occupation" type="row" />
+                <field name="vpa" type="row" />
+                <field name="year_sub" type="row" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="electeurs_view_kanban" model="ir.ui.view">
+        <field name="name">electeurs_kanban</field>
+        <field name="model">electeurs</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="name" />
+                <field name="a_jour" />
+                <field name="a_vote_2013" />
+                <field name="a_vote_2017" />
+                <field name="a_vote_2021" />
+                <field name="adresse_postal_cp" />
+                <field name="adresse_postal_ligne_deux" />
+                <field name="adresse_postal_ligne_un" />
+                <field name="bva_2013" />
+                <field name="bva_2017" />
+                <field name="bva_2021" />
+                <field name="code_maj" />
+                <field name="code_municipale" />
+                <field name="code_postal" />
+                <field name="courriel_electeur" />
+                <field name="date_naissance" />
+                <field name="designation" />
+                <field name="direction" />
+                <field name="generique" />
+                <field name="intention_election_2013" />
+                <field name="intention_election_2017" />
+                <field name="intention_election_2021" />
+                <field name="latitude" />
+                <field name="lien" />
+                <field name="longitude" />
+                <field name="no_appartement" />
+                <field name="no_appartement_suf" />
+                <field name="no_civique" />
+                <field name="no_civique_suf" />
+                <field name="no_electeur" />
+                <field name="no_lot" />
+                <field name="no_quartier" />
+                <field name="no_section" />
+                <field name="no_sequentiel" />
+                <field name="nom_electeur" />
+                <field name="nom_municipalite" />
+                <field name="nom_quartier" />
+                <field name="note" />
+                <field name="note_ami" />
+                <field name="pas_contacter" />
+                <field name="pas_contacter2" />
+                <field name="prenom_electeur" />
+                <field name="ramq" />
+                <field name="rue" />
+                <field name="scr" />
+                <field name="sexe" />
+                <field name="taxe_eau" />
+                <field name="telephone_electeur" />
+                <field name="telephone_electeur2" />
+                <field name="type" />
+                <field name="type_occupation" />
+                <field name="vpa" />
+                <field name="year_sub" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="name" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="a_jour" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="a_vote_2013" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="a_vote_2017" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="a_vote_2021" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="adresse_postal_cp" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="adresse_postal_ligne_deux" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="adresse_postal_ligne_un" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="bva_2013" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="bva_2017" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="bva_2021" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="code_maj" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="code_municipale" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="code_postal" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="courriel_electeur" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="date_naissance" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="designation" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="direction" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="generique" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="intention_election_2013" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="intention_election_2017" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="intention_election_2021" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="latitude" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="lien" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="longitude" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_appartement" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_appartement_suf" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_civique" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_civique_suf" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_electeur" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_lot" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_quartier" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_section" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="no_sequentiel" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="nom_electeur" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="nom_municipalite" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="nom_quartier" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="note" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="note_ami" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="pas_contacter" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="pas_contacter2" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="prenom_electeur" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="ramq" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="rue" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="scr" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="sexe" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="taxe_eau" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="telephone_electeur" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="telephone_electeur2" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="type" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="type_occupation" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="vpa" />
+                                        </strong>
+                                    </li>
+                                    <li class="mb4">
+                                        <strong>
+                                            <field name="year_sub" />
+                                        </strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="electeurs_view_pivot" model="ir.ui.view">
+        <field name="name">electeurs_pivot</field>
+        <field name="model">electeurs</field>
+        <field name="arch" type="xml">
+            <pivot string="Electeurs">
+                <field name="name" type="row" />
+                <field name="a_jour" type="measure" />
+                <field name="a_vote_2013" type="measure" />
+                <field name="a_vote_2017" type="measure" />
+                <field name="a_vote_2021" type="measure" />
+                <field name="adresse_postal_cp" type="row" />
+                <field name="adresse_postal_ligne_deux" type="row" />
+                <field name="adresse_postal_ligne_un" type="row" />
+                <field name="bva_2013" type="measure" />
+                <field name="bva_2017" type="measure" />
+                <field name="bva_2021" type="measure" />
+                <field name="code_maj" type="row" />
+                <field name="code_municipale" type="row" />
+                <field name="code_postal" type="row" />
+                <field name="courriel_electeur" type="row" />
+                <field name="date_naissance" type="row" />
+                <field name="designation" type="row" />
+                <field name="direction" type="row" />
+                <field name="generique" type="row" />
+                <field name="intention_election_2013" type="row" />
+                <field name="intention_election_2017" type="row" />
+                <field name="intention_election_2021" type="row" />
+                <field name="latitude" type="row" />
+                <field name="lien" type="row" />
+                <field name="longitude" type="row" />
+                <field name="no_appartement" type="row" />
+                <field name="no_appartement_suf" type="row" />
+                <field name="no_civique" type="row" />
+                <field name="no_civique_suf" type="row" />
+                <field name="no_electeur" type="row" />
+                <field name="no_lot" type="row" />
+                <field name="no_quartier" type="measure" />
+                <field name="no_section" type="row" />
+                <field name="no_sequentiel" type="row" />
+                <field name="nom_electeur" type="row" />
+                <field name="nom_municipalite" type="row" />
+                <field name="nom_quartier" type="row" />
+                <field name="note" type="row" />
+                <field name="note_ami" type="row" />
+                <field name="pas_contacter" type="measure" />
+                <field name="pas_contacter2" type="measure" />
+                <field name="prenom_electeur" type="row" />
+                <field name="ramq" type="row" />
+                <field name="rue" type="row" />
+                <field name="scr" type="row" />
+                <field name="sexe" type="row" />
+                <field name="taxe_eau" type="measure" />
+                <field name="telephone_electeur" type="row" />
+                <field name="telephone_electeur2" type="row" />
+                <field name="type" type="row" />
+                <field name="type_occupation" type="row" />
+                <field name="vpa" type="row" />
+                <field name="year_sub" type="row" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="electeurs_view_search" model="ir.ui.view">
+        <field name="name">electeurs_search</field>
+        <field name="model">electeurs</field>
+        <field name="arch" type="xml">
+            <search string="Electeurs">
+                <filter domain="[('name','!=',False)]" name="name" string="Name" />
+                <filter domain="[('a_jour','!=',False)]" name="a_jour" string="A jour" />
+                <filter domain="[('a_vote_2013','!=',False)]" name="a_vote_2013" string="A vote 2013" />
+                <filter domain="[('a_vote_2017','!=',False)]" name="a_vote_2017" string="A vote 2017" />
+                <filter domain="[('a_vote_2021','!=',False)]" name="a_vote_2021" string="A vote 2021" />
+                <filter
+                    domain="[('adresse_postal_cp','!=',False)]"
+                    name="adresse_postal_cp"
+                    string="Adresse postal cp"
+                />
+                <filter
+                    domain="[('adresse_postal_ligne_deux','!=',False)]"
+                    name="adresse_postal_ligne_deux"
+                    string="Adresse postal ligne deux"
+                />
+                <filter
+                    domain="[('adresse_postal_ligne_un','!=',False)]"
+                    name="adresse_postal_ligne_un"
+                    string="Adresse postal ligne un"
+                />
+                <filter domain="[('bva_2013','!=',False)]" name="bva_2013" string="Bva 2013" />
+                <filter domain="[('bva_2017','!=',False)]" name="bva_2017" string="Bva 2017" />
+                <filter domain="[('bva_2021','!=',False)]" name="bva_2021" string="Bva 2021" />
+                <filter domain="[('code_maj','!=',False)]" name="code_maj" string="Code maj" />
+                <filter domain="[('code_municipale','!=',False)]" name="code_municipale" string="Code municipale" />
+                <filter domain="[('code_postal','!=',False)]" name="code_postal" string="Code postal" />
+                <filter
+                    domain="[('courriel_electeur','!=',False)]"
+                    name="courriel_electeur"
+                    string="Courriel electeur"
+                />
+                <filter domain="[('date_naissance','!=',False)]" name="date_naissance" string="Date naissance" />
+                <filter domain="[('designation','!=',False)]" name="designation" string="Designation" />
+                <filter domain="[('direction','!=',False)]" name="direction" string="Direction" />
+                <filter domain="[('generique','!=',False)]" name="generique" string="Generique" />
+                <filter
+                    domain="[('intention_election_2013','!=',False)]"
+                    name="intention_election_2013"
+                    string="Intention election 2013"
+                />
+                <filter
+                    domain="[('intention_election_2017','!=',False)]"
+                    name="intention_election_2017"
+                    string="Intention election 2017"
+                />
+                <filter
+                    domain="[('intention_election_2021','!=',False)]"
+                    name="intention_election_2021"
+                    string="Intention election 2021"
+                />
+                <filter domain="[('latitude','!=',False)]" name="latitude" string="Latitude" />
+                <filter domain="[('lien','!=',False)]" name="lien" string="Lien" />
+                <filter domain="[('longitude','!=',False)]" name="longitude" string="Longitude" />
+                <filter domain="[('no_appartement','!=',False)]" name="no_appartement" string="No appartement" />
+                <filter
+                    domain="[('no_appartement_suf','!=',False)]"
+                    name="no_appartement_suf"
+                    string="No appartement suf"
+                />
+                <filter domain="[('no_civique','!=',False)]" name="no_civique" string="No civique" />
+                <filter domain="[('no_civique_suf','!=',False)]" name="no_civique_suf" string="No civique suf" />
+                <filter domain="[('no_electeur','!=',False)]" name="no_electeur" string="No electeur" />
+                <filter domain="[('no_lot','!=',False)]" name="no_lot" string="No lot" />
+                <filter domain="[('no_quartier','!=',False)]" name="no_quartier" string="No quartier" />
+                <filter domain="[('no_section','!=',False)]" name="no_section" string="No section" />
+                <filter domain="[('no_sequentiel','!=',False)]" name="no_sequentiel" string="No sequentiel" />
+                <filter domain="[('nom_electeur','!=',False)]" name="nom_electeur" string="Nom electeur" />
+                <filter domain="[('nom_municipalite','!=',False)]" name="nom_municipalite" string="Nom municipalite" />
+                <filter domain="[('nom_quartier','!=',False)]" name="nom_quartier" string="Nom quartier" />
+                <filter domain="[('note','!=',False)]" name="note" string="Note" />
+                <filter domain="[('note_ami','!=',False)]" name="note_ami" string="Note ami" />
+                <filter domain="[('pas_contacter','!=',False)]" name="pas_contacter" string="Pas contacter" />
+                <filter domain="[('pas_contacter2','!=',False)]" name="pas_contacter2" string="Pas contacter2" />
+                <filter domain="[('prenom_electeur','!=',False)]" name="prenom_electeur" string="Prenom electeur" />
+                <filter domain="[('ramq','!=',False)]" name="ramq" string="Ramq" />
+                <filter domain="[('rue','!=',False)]" name="rue" string="Rue" />
+                <filter domain="[('scr','!=',False)]" name="scr" string="Scr" />
+                <filter domain="[('sexe','!=',False)]" name="sexe" string="Sexe" />
+                <filter domain="[('taxe_eau','!=',False)]" name="taxe_eau" string="Taxe eau" />
+                <filter
+                    domain="[('telephone_electeur','!=',False)]"
+                    name="telephone_electeur"
+                    string="Telephone electeur"
+                />
+                <filter
+                    domain="[('telephone_electeur2','!=',False)]"
+                    name="telephone_electeur2"
+                    string="Telephone electeur2"
+                />
+                <filter domain="[('type','!=',False)]" name="type" string="Type" />
+                <filter domain="[('type_occupation','!=',False)]" name="type_occupation" string="Type occupation" />
+                <filter domain="[('vpa','!=',False)]" name="vpa" string="Vpa" />
+                <filter domain="[('year_sub','!=',False)]" name="year_sub" string="Year sub" />
+            </search>
+        </field>
+    </record>
+
+    <record id="electeurs_view_tree" model="ir.ui.view">
+        <field name="name">electeurs_tree</field>
+        <field name="model">electeurs</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="a_jour" />
+                <field name="a_vote_2013" />
+                <field name="a_vote_2017" />
+                <field name="a_vote_2021" />
+                <field name="adresse_postal_cp" />
+                <field name="adresse_postal_ligne_deux" />
+                <field name="adresse_postal_ligne_un" />
+                <field name="bva_2013" />
+                <field name="bva_2017" />
+                <field name="bva_2021" />
+                <field name="code_maj" />
+                <field name="code_municipale" />
+                <field name="code_postal" />
+                <field name="courriel_electeur" />
+                <field name="date_naissance" />
+                <field name="designation" />
+                <field name="direction" />
+                <field name="generique" />
+                <field name="intention_election_2013" />
+                <field name="intention_election_2017" />
+                <field name="intention_election_2021" />
+                <field name="latitude" />
+                <field name="lien" />
+                <field name="longitude" />
+                <field name="no_appartement" />
+                <field name="no_appartement_suf" />
+                <field name="no_civique" />
+                <field name="no_civique_suf" />
+                <field name="no_electeur" />
+                <field name="no_lot" />
+                <field name="no_quartier" />
+                <field name="no_section" />
+                <field name="no_sequentiel" />
+                <field name="nom_electeur" />
+                <field name="nom_municipalite" />
+                <field name="nom_quartier" />
+                <field name="note" />
+                <field name="note_ami" />
+                <field name="pas_contacter" />
+                <field name="pas_contacter2" />
+                <field name="prenom_electeur" />
+                <field name="ramq" />
+                <field name="rue" />
+                <field name="scr" />
+                <field name="sexe" />
+                <field name="taxe_eau" />
+                <field name="telephone_electeur" />
+                <field name="telephone_electeur2" />
+                <field name="type" />
+                <field name="type_occupation" />
+                <field name="vpa" />
+                <field name="year_sub" />
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+        id="electeurs_electeurs_action_window"
+        name="electeurs"
+        res_model="electeurs"
+        view_mode="kanban,tree,pivot,graph,form"
+    />
+</odoo>
