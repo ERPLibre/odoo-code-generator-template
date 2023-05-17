@@ -1404,16 +1404,7 @@ view_value = self.env["ir.ui.view"].search(
     ]
 )
 
-model_data_value = self.env["ir.model.data"].search(
-    [
-        ("name", "=", f"{model_name_str}_view_form"),
-        ("model", "=", "ir.ui.view"),
-        ("module", "=", module.name),
-        # ("res_id", "=", view_value.id)
-    ]
-)
-
-if not view_value and not model_data_value:
+if not view_value:
     view_value = self.env["ir.ui.view"].create(
         {
             "name": f"{model_name_str}_form",
@@ -1424,14 +1415,12 @@ if not view_value and not model_data_value:
         }
     )
 
-    model_data_value = self.env["ir.model.data"].create(
-        {
-            "name": f"{model_name_str}_view_form",
-            "model": "ir.ui.view",
-            "module": module.name,
-            "res_id": view_value.id,
-            "noupdate": True,  # If it's False, target record (res_id) will be removed while module update
-        }
+    self._create_ir_model_data(
+        module,
+        "ir.ui.view",
+        view_value.id,
+        model_name_str,
+        suffix_name="view_form",
     )
 else:
     _logger.warning(
@@ -2988,14 +2977,11 @@ elif code_generator_view_id.id_name:
     if ir_model_data_id:
         ir_model_data_id.res_id = view_value.id
     else:
-        self.env["ir.model.data"].create(
-            {
-                "name": code_generator_view_id.id_name,
-                "model": "ir.ui.view",
-                "module": code_generator_view_id.code_generator_id.name,
-                "res_id": view_value.id,
-                "noupdate": True,  # If it's False, target record (res_id) will be removed while module update
-            }
+        self._create_ir_model_data(
+            code_generator_view_id.code_generator_id,
+            "ir.ui.view",
+            view_value.id,
+            code_generator_view_id.id_name,
         )
 
 return view_value""",
@@ -3044,6 +3030,106 @@ access_value = self.env["ir.model.access"].create(v)""",
                     "name": "_generate_model_access",
                     "param": "self, model_created",
                     "sequence": 20,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_code_generator_generate_views_wizard.id,
+                },
+                {
+                    "code": """if name in lst_unique_menu_name:
+    new_name = ""
+    i = 1
+    while not new_name:
+        new_name = f"{name}_{i}"
+        i += 1
+        if new_name in lst_unique_menu_name:
+            new_name = ""
+    name = new_name
+lst_unique_menu_name.add(name)
+return name""",
+                    "name": "_generate_menu_name",
+                    "decorator": "@staticmethod",
+                    "param": "lst_unique_menu_name: set, name: str",
+                    "sequence": 21,
+                    "m2o_module": code_generator_id.id,
+                    "m2o_model": model_code_generator_generate_views_wizard.id,
+                },
+                {
+                    "code": """# TODO check function _get_action_data_name in code_generator_writer.py
+def _create_name(name, count=0, prefix_name="", suffix_name=""):
+    # TODO wait after cg refactoring to support this feature
+    # so ignore suffix_name menu
+    if suffix_name in ["root"]:
+        suffix_name = ""
+    # Accept prefix_name group
+    if suffix_name in ["group", "parent"]:
+        # TODO revert it when menu will be refactor
+        prefix_name = suffix_name
+        suffix_name = ""
+    if prefix_name in ["menu"]:
+        prefix_name = ""
+    create_name = ""
+    if prefix_name:
+        create_name = prefix_name + "_"
+    create_name += name
+    if count:
+        create_name += f"_{count}"
+    if suffix_name:
+        create_name += f"_{suffix_name}"
+    return (
+        unidecode.unidecode(create_name)
+        .replace(" ", "_")
+        .replace("'", "_")
+        .replace("-", "_")
+        .lower()
+    )
+
+data = self.env["ir.model.data"].search(
+    [
+        ("module", "=", module.name),
+        ("model", "=", model),
+        ("res_id", "=", res_id),
+    ]
+)
+if data:
+    _logger.warning(
+        f"Cannot create xml_id for model '{model}', id '{res_id}',"
+        f" name '{data.name}'. Already exist!"
+    )
+    return
+
+# check if exist
+new_name = ""
+i = 0
+while not new_name:
+    new_name = _create_name(
+        name, count=i, prefix_name=prefix_name, suffix_name=suffix_name
+    )
+    i += 1
+    data = self.env["ir.model.data"].search(
+        [
+            ("module", "=", module.name),
+            ("model", "=", model),
+            ("name", "=", new_name),
+        ]
+    )
+    if data:
+        new_name = ""
+
+return self.env["ir.model.data"].create(
+    {
+        "name": new_name,
+        "model": model,
+        "module": module.name,
+        "res_id": res_id,
+        "noupdate": True,
+        # If it's False, target record (res_id) will be removed while module update
+    }
+)""",
+                    "name": "_create_ir_model_data",
+                    "param": (
+                        "self, module, model, res_id, name, prefix_name='',"
+                        " suffix_name=''"
+                    ),
+                    "sequence": 22,
                     "m2o_module": code_generator_id.id,
                     "m2o_model": model_code_generator_generate_views_wizard.id,
                 },
@@ -3118,18 +3204,13 @@ if is_generic_menu and menu_parent:
         self.dct_parent_generated_menu[menu_parent] = menu_parent_id
 
         # Create id name
-        menu_parent_name = (
-            f"parent_{unidecode.unidecode(menu_parent).replace(' ','').lower()}"
-        )
-        self.env["ir.model.data"].create(
-            {
-                "name": menu_parent_name,
-                "model": "ir.ui.menu",
-                "module": module.name,
-                "res_id": menu_parent_id.id,
-                "noupdate": True,
-                # If it's False, target record (res_id) will be removed while module update
-            }
+        self._create_ir_model_data(
+            module,
+            "ir.ui.menu",
+            menu_parent_id.id,
+            menu_parent,
+            prefix_name="menu",
+            suffix_name="parent",
         )
 
 # Create menu_group item
@@ -3154,18 +3235,13 @@ if is_generic_menu and menu_group:
         self.dct_group_generated_menu[menu_group] = menu_group_id
 
         # Create id name
-        menu_group_name = (
-            f"group_{unidecode.unidecode(menu_group).replace(' ','').lower()}"
-        )
-        self.env["ir.model.data"].create(
-            {
-                "name": menu_group_name,
-                "model": "ir.ui.menu",
-                "module": module.name,
-                "res_id": menu_group_id.id,
-                "noupdate": True,
-                # If it's False, target record (res_id) will be removed while module update
-            }
+        self._create_ir_model_data(
+            module,
+            "ir.ui.menu",
+            menu_group_id.id,
+            menu_group,
+            prefix_name="menu",
+            suffix_name="group",
         )
 
 help_str = f"""<p class="o_view_nocontent_empty_folder">
@@ -3264,40 +3340,14 @@ if module.application and is_generic_menu:
         )
         action_id = action_data_value[0]
 
-    # TODO check function _get_action_data_name in code_generator_writer.py
-    fix_action_id_name = (
-        unidecode.unidecode(menu_name)
-        .replace(" ", "_")
-        .replace("'", "_")
-        .replace("-", "_")
-        .lower()
+    self._create_ir_model_data(
+        module,
+        "ir.actions.act_window",
+        action_id.id,
+        menu_name,
+        prefix_name=model_name_str,
+        suffix_name="action_window",
     )
-    action_id_name = (
-        f"{model_name_str}_{fix_action_id_name}_action_window"
-    )
-
-    model_data_value = self.env["ir.model.data"].search(
-        [
-            ("name", "=", action_id_name),
-            ("model", "=", "ir.actions.act_window"),
-            ("module", "=", module.name),
-            # ("res_id", "=", view_value.id)
-        ]
-    )
-    if not model_data_value:
-        v_ir_model_data = {
-            "name": action_id_name,
-            "model": "ir.actions.act_window",
-            "module": module.name,
-            "res_id": action_id.id,
-            "noupdate": True,
-        }
-        self.env["ir.model.data"].create(v_ir_model_data)
-    else:
-        _logger.warning(
-            f"ir.model.data '{action_id_name}' of model"
-            " 'ir.actions.act_window' already exist."
-        )
 
     self.nb_sub_menu += 1
 
@@ -3318,38 +3368,13 @@ if module.application and is_generic_menu:
 
     new_menu_id = self.env["ir.ui.menu"].create(v)
 
-    menu_id_name = (
-        unidecode.unidecode(menu_name)
-        .replace(" ", "_")
-        .replace("'", "_")
-        .replace("-", "_")
-        .lower()
+    self._create_ir_model_data(
+        module,
+        "ir.ui.menu",
+        new_menu_id.id,
+        menu_name,
+        prefix_name="menu",
     )
-
-    model_data_value = self.env["ir.model.data"].search(
-        [
-            ("name", "=", menu_id_name),
-            ("model", "=", "ir.ui.menu"),
-            ("module", "=", module.name),
-            # ("res_id", "=", view_value.id)
-        ]
-    )
-
-    if not model_data_value:
-        v_ir_model_data = {
-            "name": menu_id_name,
-            "model": "ir.ui.menu",
-            "module": module.name,
-            "res_id": new_menu_id.id,
-            "noupdate": True,
-        }
-        self.env["ir.model.data"].create(v_ir_model_data)
-    else:
-        _logger.warning(
-            f"ir.model.data '{action_id_name}' of model 'ir.ui.menu'"
-            " already exist."
-        )
-
 elif not is_generic_menu:
     cg_menu_ids = model_created.m2o_module.code_generator_menus_id
     # TODO check different case, with act_window, without, multiple menu, single menu
@@ -3483,6 +3508,15 @@ elif not is_generic_menu:
             v["web_icon"] = menu_id.web_icon
 
         if menu_id.parent_id_name:
+            # TODO wait after cg refactoring to support this feature
+            # menu_id.parent_id doesn't exist, we try to find the parent with
+            # ir_model_data_parent_id = self.env["ir.model.data"].search(
+            #     [
+            #         ("module", "=", module.name),
+            #         ("model", "=", "ir.ui.menu"),
+            #         ("res_id", "=", menu_id.parent_id.id),
+            #     ]
+            # )
             # TODO crash when create empty module and template to read this empty module
             try:
                 v["parent_id"] = self.env.ref(
@@ -3508,22 +3542,27 @@ elif not is_generic_menu:
             ]
         )
         if ir_model_data_id:
+            # This is because the module is already installed
             ir_model_data_id.res_id = new_menu_id.id
+            _logger.warning(
+                f"Force change menu id for {menu_id.id_name}"
+            )
         else:
-            v_ir_model_data = {
-                "name": menu_id.id_name,
-                "model": "ir.ui.menu",
-                "module": module.name,
-                "res_id": new_menu_id.id,
-                "noupdate": True,
-            }
-            self.env["ir.model.data"].create(v_ir_model_data)''',
+            suffix = ""
+            if not menu_id.parent_id_name:
+                suffix = "root"
+            self._create_ir_model_data(
+                module,
+                "ir.ui.menu",
+                new_menu_id.id,
+                menu_id.id_name,
+                prefix_name="menu",''',
                     "name": "_generate_menu",
                     "param": (
                         "self, model_created, module, lst_view_generated,"
                         " model_ids"
                     ),
-                    "sequence": 21,
+                    "sequence": 23,
                     "m2o_module": code_generator_id.id,
                     "m2o_model": model_code_generator_generate_views_wizard.id,
                 },
@@ -3812,9 +3851,10 @@ elif not is_generic_menu:
                 "code_generator_form_simple_view_sequence": 15,
                 "code_generator_sequence": 7,
                 "code_generator_tree_view_sequence": 15,
-                "comment_before": (
-                    "TODO use ir.model.data instead if parent_id_name"
-                ),
+                "comment_before": """TODO use ir.model.data instead if parent_id_name
+parent_id_name is fill in cg hook, but need parent_id instead to find ir.model.data associate
+Or do refactoring where preprocessing metadata
+But parent_id_name is a good way to try to know the parent from template, because we cannot use id""",
                 "field_description": "Menu parent id",
                 "help": "Specify id name of parent menu, optional.",
                 "ttype": "char",
@@ -4200,8 +4240,10 @@ return""",
             },
             "path_sync_code": {
                 "code_generator_form_simple_view_sequence": 21,
-                "code_generator_sequence": 44,
+                "code_generator_sequence": 55,
                 "code_generator_tree_view_sequence": 21,
+                "comment_before": """sibling directory odoo-code-generator-template
+Cannot find sibling template, use this working repo directory instead""",
                 "default": "_default_path_sync_code",
                 "field_description": "Directory",
                 "help": (
@@ -4211,13 +4253,13 @@ return""",
                 "ttype": "char",
             },
             "published_version": {
-                "code_generator_sequence": 45,
+                "code_generator_sequence": 44,
                 "field_description": "Published Version",
                 "ttype": "char",
             },
             "shortdesc": {
                 "code_generator_form_simple_view_sequence": 13,
-                "code_generator_sequence": 46,
+                "code_generator_sequence": 45,
                 "code_generator_tree_view_sequence": 13,
                 "field_description": "Module Name",
                 "required": True,
@@ -4225,7 +4267,7 @@ return""",
             },
             "state": {
                 "code_generator_form_simple_view_sequence": 26,
-                "code_generator_sequence": 47,
+                "code_generator_sequence": 46,
                 "code_generator_tree_view_sequence": 12,
                 "default": "uninstalled",
                 "field_description": "Status",
@@ -4239,13 +4281,13 @@ return""",
             },
             "summary": {
                 "code_generator_form_simple_view_sequence": 16,
-                "code_generator_sequence": 48,
+                "code_generator_sequence": 47,
                 "code_generator_tree_view_sequence": 16,
                 "field_description": "Summary",
                 "ttype": "char",
             },
             "template_inherit_model_name": {
-                "code_generator_sequence": 49,
+                "code_generator_sequence": 48,
                 "field_description": "Functions models inherit",
                 "help": (
                     "Add model from list, separate by ';' and generate"
@@ -4254,7 +4296,7 @@ return""",
                 "ttype": "char",
             },
             "template_model_name": {
-                "code_generator_sequence": 50,
+                "code_generator_sequence": 49,
                 "field_description": "Functions models",
                 "help": (
                     "Add model from list, separate by ';' and generate"
@@ -4264,14 +4306,14 @@ return""",
             },
             "template_module_id": {
                 "code_generator_compute": "_fill_template_module_id",
-                "code_generator_sequence": 51,
+                "code_generator_sequence": 50,
                 "field_description": "Template module id",
                 "help": "Child module to generate.",
                 "relation": "ir.module.module",
                 "ttype": "many2one",
             },
             "template_module_name": {
-                "code_generator_sequence": 52,
+                "code_generator_sequence": 51,
                 "field_description": "Generated module name",
                 "help": (
                     "Can be empty in case of code_generator_demo, else it's"
@@ -4280,12 +4322,12 @@ return""",
                 "ttype": "char",
             },
             "url": {
-                "code_generator_sequence": 53,
+                "code_generator_sequence": 52,
                 "field_description": "URL",
                 "ttype": "char",
             },
             "website": {
-                "code_generator_sequence": 54,
+                "code_generator_sequence": 53,
                 "code_generator_tree_view_sequence": 10,
                 "field_description": "Website",
                 "ttype": "char",
@@ -6293,6 +6335,7 @@ with cw.block(delim=("{", "}")):
         lst_depend = module.dependencies_id.mapped(
             lambda did: f"'{did.depend_id.name}'"
         )
+        lst_depend = sorted(lst_depend)
         # Remove exclude_dependencies_str
         if module.exclude_dependencies_str:
             lst_exclude_depend = [
@@ -8710,14 +8753,7 @@ else:
                         lst_split_relation_t = lst_split_relation_t[1:]
                     # Take only first later of each word
                     new_relation_table = (
-                        "_".join(
-                            [
-                                a[0]
-                                for a in lst_split_relation_t.split(
-                                    "_"
-                                )
-                            ]
-                        )
+                        "_".join([a[0] for a in lst_split_relation_t])
                         + "_rel"
                     )
                     if len(new_relation_table) > 63:
