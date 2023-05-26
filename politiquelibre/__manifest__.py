@@ -1,7 +1,6 @@
 {
-    "name": "Politique Libre",
+    "name": "Politique libre",
     "version": "12.0.1.0",
-    "author": "TechnoLibre",
     "license": "AGPL-3",
     "application": True,
     "data": [
@@ -9,6 +8,9 @@
         "views/electeurs.xml",
         "views/enjeux.xml",
         "views/menu.xml",
+        "data/electeurs.xml",
+        "data/enjeux.xml",
+        # "data/membre.xml",
     ],
     "installable": True,
 }
