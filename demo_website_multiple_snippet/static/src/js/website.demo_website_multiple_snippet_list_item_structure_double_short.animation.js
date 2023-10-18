@@ -10,9 +10,7 @@ odoo.define("demo_website_multiple_snippet_list_item_structure_double_short.anim
             let self = this;
             this._eventList = this.$(".container");
             this._originalContent = this._eventList[0].outerHTML;
-            let def = this._rpc({
-                route: "/demo_website_multiple_snippet/dp_dmp_demo_model_portal_and_dp_dm2p_demo_model_2_portal_and_dp_dm3pd_demo_model_3_portal_diagram_list",
-            }).then(function (data) {
+            let def = this._rpc({route: "/demo_website_multiple_snippet/portal_list"}).then(function (data) {
                 if (data.error) {
                     return;
                 }
