@@ -10,7 +10,7 @@ odoo.define("demo_portal.animation", function (require) {
             let self = this;
             this._eventList = this.$(".container");
             this._originalContent = this._eventList[0].outerHTML;
-            let def = this._rpc({ route: "/demo_portal/get_last_item" }).then(function (data) {
+            let def = this._rpc({route: "/demo_portal/get_last_item"}).then(function (data) {
                 if (data.error) {
                     return;
                 }
