@@ -27,9 +27,7 @@ odoo.define("demo_website_leaflet.animation", function (require) {
 
         start: function () {
             var self = this;
-            var def = this._rpc({
-                route: "/demo_website_leaflet/map/config",
-            }).then(function (data) {
+            var def = this._rpc({route: "/demo_website_leaflet/map/config"}).then(function (data) {
                 // $timeline.empty();
                 // $goal.empty();
                 // $progression.empty();
