@@ -15,7 +15,7 @@ odoo.define("demo_mariadb_sql_example_1.demo_mariadb_sql_example_1_portal", func
     let ready_with_locale = $.when(base.ready(), load_locale());
     ready_with_locale.then(function () {
         _.each($(".input-group.date"), function (date_field) {
-            let minDate = $(date_field).data("mindate") || moment({ y: 1900 });
+            let minDate = $(date_field).data("mindate") || moment({y: 1900});
             let maxDate = $(date_field).data("maxdate") || moment().add(200, "y");
             let options = {
                 minDate: minDate,
