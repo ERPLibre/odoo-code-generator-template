@@ -16,8 +16,7 @@ odoo.define("demo_portal.demo_portal_portal", function (require) {
     ready_with_locale.then(function () {
         _.each($(".input-group.date"), function (date_field) {
             let minDate = $(date_field).data("mindate") || moment({ y: 1900 });
-            let maxDate =
-                $(date_field).data("maxdate") || moment().add(200, "y");
+            let maxDate = $(date_field).data("maxdate") || moment().add(200, "y");
             let options = {
                 minDate: minDate,
                 maxDate: maxDate,
