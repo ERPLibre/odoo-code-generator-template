@@ -10,9 +10,7 @@ odoo.define("demo_website_multiple_snippet_helloworld_structure.animation", func
             let self = this;
             this._eventList = this.$(".demo_website_multiple_snippet_helloworld_structure_value");
             this._originalContent = this._eventList.text();
-            let def = this._rpc({
-                route: "/demo_website_multiple_snippet/helloworld",
-            }).then(function (data) {
+            let def = this._rpc({route: "/demo_website_multiple_snippet/helloworld"}).then(function (data) {
                 if (data.error) {
                     return;
                 }

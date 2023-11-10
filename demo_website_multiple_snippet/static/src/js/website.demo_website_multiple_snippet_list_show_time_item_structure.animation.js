@@ -10,9 +10,7 @@ odoo.define("demo_website_multiple_snippet_list_show_time_item_structure.animati
             let self = this;
             this._eventList = this.$(".container");
             this._originalContent = this._eventList[0].outerHTML;
-            let def = this._rpc({
-                route: "/demo_website_multiple_snippet/portal_time_list",
-            }).then(function (data) {
+            let def = this._rpc({route: "/demo_website_multiple_snippet/portal_time_list"}).then(function (data) {
                 if (data.error) {
                     return;
                 }

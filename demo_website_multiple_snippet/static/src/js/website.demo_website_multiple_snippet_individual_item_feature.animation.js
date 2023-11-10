@@ -10,9 +10,7 @@ odoo.define("demo_website_multiple_snippet_individual_item_feature.animation", f
             let self = this;
             this._eventList = this.$(".container");
             this._originalContent = this._eventList[0].outerHTML;
-            let def = this._rpc({
-                route: "/demo_website_multiple_snippet/get_last_item",
-            }).then(function (data) {
+            let def = this._rpc({route: "/demo_website_multiple_snippet/get_last_item"}).then(function (data) {
                 if (data.error) {
                     return;
                 }
