@@ -82,11 +82,7 @@ odoo.define("demo_website_leaflet.animation", function (require) {
                 // hide google icon
                 // $('.img-fluid').hide();
 
-                var map_id =
-                    "map_id_" +
-                    [...Array(10)].map((_) =>
-                        ((Math.random() * 36) | 0).toString(36)
-                    ).join``;
+                var map_id = "map_id_" + [...Array(10)].map((_) => ((Math.random() * 36) | 0).toString(36)).join``;
                 div_map.id = map_id;
                 div_map.attr("id", map_id);
 
@@ -113,9 +109,7 @@ odoo.define("demo_website_leaflet.animation", function (require) {
                             // Implement category
                             var obj = L.marker(marker.coordinates).addTo(map);
                             if (marker.html_popup) {
-                                let obj_popup = obj.bindPopup(
-                                    marker.html_popup
-                                );
+                                let obj_popup = obj.bindPopup(marker.html_popup);
                                 if (marker.open_popup) {
                                     obj_popup.openPopup();
                                 }
@@ -154,9 +148,7 @@ odoo.define("demo_website_leaflet.animation", function (require) {
                 function onMapClick(e) {
                     popup
                         .setLatLng(e.latlng)
-                        .setContent(
-                            "You clicked the map at " + e.latlng.toString()
-                        )
+                        .setContent("You clicked the map at " + e.latlng.toString())
                         .openOn(map);
                 }
 
