@@ -2,6 +2,7 @@ import base64
 import logging
 
 import werkzeug
+
 from odoo import http
 from odoo.http import request
 
