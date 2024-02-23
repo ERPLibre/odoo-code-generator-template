@@ -15,8 +15,6 @@ def post_init_hook(cr, e):
             os.path.join(
                 os.path.dirname(__file__),
                 "..",
-                "..",
-                "TechnoLibre_odoo-code-generator",
             )
         )
 
