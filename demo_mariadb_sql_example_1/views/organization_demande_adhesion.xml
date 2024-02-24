@@ -6,8 +6,8 @@
         <field name="arch" type="xml">
             <form string="Titre">
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                        <button class="oe_stat_button" icon="fa-archive" name="toggle_active" type="object">
+                    <div name="button_box" class="oe_button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
                             <field name="active" widget="boolean_button" />
                         </button>
                     </div>
@@ -101,10 +101,10 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.en_attente.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.en_attente.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -132,10 +132,10 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.transferer.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.transferer.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                 </ul>
                             </div>
@@ -170,25 +170,25 @@
         <field name="model">organization.demande.adhesion</field>
         <field name="arch" type="xml">
             <search string="Organization demande adhesion">
-                <filter domain="[('nom_complet','!=',False)]" name="nom_complet" string="Nom complet" />
+                <filter name="nom_complet" string="Nom complet" domain="[('nom_complet','!=',False)]" />
                 <filter
-                    domain="[('active','=',False)]"
                     name="Inactive"
                     string="Inactive Organization demande adhesion"
+                    domain="[('active','=',False)]"
                 />
-                <filter domain="[('courriel','!=',False)]" name="courriel" string="Courriel" />
+                <filter name="courriel" string="Courriel" domain="[('courriel','!=',False)]" />
                 <filter
-                    domain="[('date_mise_a_jour','!=',False)]"
                     name="date_mise_a_jour"
                     string="Derni&#232;re mise &#224; jour"
+                    domain="[('date_mise_a_jour','!=',False)]"
                 />
-                <filter domain="[('en_attente','=',True)]" name="en_attente" string="En attente" />
-                <filter domain="[('nom','!=',False)]" name="nom" string="Nom" />
-                <filter domain="[('organization','!=',False)]" name="organization" string="Organization" />
-                <filter domain="[('poste','!=',False)]" name="poste" string="Poste" />
-                <filter domain="[('prenom','!=',False)]" name="prenom" string="Pr&#233;nom" />
-                <filter domain="[('telephone','!=',False)]" name="telephone" string="T&#233;l&#233;phone" />
-                <filter domain="[('transferer','=',True)]" name="transferer" string="Transf&#233;r&#233;" />
+                <filter name="en_attente" string="En attente" domain="[('en_attente','=',True)]" />
+                <filter name="nom" string="Nom" domain="[('nom','!=',False)]" />
+                <filter name="organization" string="Organization" domain="[('organization','!=',False)]" />
+                <filter name="poste" string="Poste" domain="[('poste','!=',False)]" />
+                <filter name="prenom" string="Pr&#233;nom" domain="[('prenom','!=',False)]" />
+                <filter name="telephone" string="T&#233;l&#233;phone" domain="[('telephone','!=',False)]" />
+                <filter name="transferer" string="Transf&#233;r&#233;" domain="[('transferer','=',True)]" />
             </search>
         </field>
     </record>

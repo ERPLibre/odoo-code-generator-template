@@ -3234,14 +3234,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -3249,20 +3249,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -3270,20 +3270,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "ville",
                     "action_name": "ville",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -3291,7 +3291,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -3389,7 +3389,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_4 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -3398,71 +3398,71 @@ for organization_ville in self:
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_templates_4.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_4.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -3470,32 +3470,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -3503,32 +3503,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "ville",
                     "action_name": "ville",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -3536,7 +3536,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -3698,777 +3698,18 @@ for organization_ville in self:
             )
             lst_view_id.append(view_code_generator.id)
 
-        # act_window view
-        if True:
-            organization_arrondissement_arrondissement_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Arrondissement",
-                    "id_name": "organization_arrondissement_arrondissement_action_window",
-                    "model_name": "organization.arrondissement",
-                }
-            )
-
-            organization_type_service_categorie_categorie_de_services_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Catégorie de services",
-                    "id_name": "organization_type_service_categorie_categorie_de_services_action_window",
-                    "model_name": "organization.type.service.categorie",
-                }
-            )
-
-            organization_commentaire_commentaire_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Commentaire",
-                    "id_name": (
-                        "organization_commentaire_commentaire_action_window"
-                    ),
-                    "model_name": "organization.commentaire",
-                }
-            )
-
-            organization_demande_adhesion_demande_d_adhesion_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Demande d'adhésion",
-                    "id_name": "organization_demande_adhesion_demande_d_adhesion_action_window",
-                    "model_name": "organization.demande.adhesion",
-                }
-            )
-
-            organization_demande_service_demande_de_services_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Demande de services",
-                    "id_name": "organization_demande_service_demande_de_services_action_window",
-                    "model_name": "organization.demande.service",
-                }
-            )
-
-            organization_droits_admin_droits_administratifs_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Droits administratifs",
-                    "id_name": "organization_droits_admin_droits_administratifs_action_window",
-                    "model_name": "organization.droits.admin",
-                }
-            )
-
-            organization_echange_service_echange_de_services_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Échange de services",
-                    "id_name": "organization_echange_service_echange_de_services_action_window",
-                    "model_name": "organization.echange.service",
-                }
-            )
-
-            organization_fichier_fichier_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Fichier",
-                    "id_name": "organization_fichier_fichier_action_window",
-                    "model_name": "organization.fichier",
-                }
-            )
-
-            organization_membre_membre_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Membre",
-                    "id_name": "organization_membre_membre_action_window",
-                    "model_name": "organization.membre",
-                }
-            )
-
-            organization_occupation_occupation_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Occupation",
-                    "id_name": (
-                        "organization_occupation_occupation_action_window"
-                    ),
-                    "model_name": "organization.occupation",
-                }
-            )
-
-            organization_offre_service_offre_de_services_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Offre de services",
-                    "id_name": "organization_offre_service_offre_de_services_action_window",
-                    "model_name": "organization.offre.service",
-                }
-            )
-
-            organization_organization_organization_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Organization",
-                    "id_name": (
-                        "organization_organization_organization_action_window"
-                    ),
-                    "model_name": "organization.organization",
-                }
-            )
-
-            organization_origine_origine_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Origine",
-                    "id_name": "organization_origine_origine_action_window",
-                    "model_name": "organization.origine",
-                }
-            )
-
-            organization_point_service_point_de_services_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Point de services",
-                    "id_name": "organization_point_service_point_de_services_action_window",
-                    "model_name": "organization.point.service",
-                }
-            )
-
-            organization_provenance_provenance_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Provenance",
-                    "id_name": (
-                        "organization_provenance_provenance_action_window"
-                    ),
-                    "model_name": "organization.provenance",
-                }
-            )
-
-            organization_quartier_quartier_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Quartier",
-                    "id_name": "organization_quartier_quartier_action_window",
-                    "model_name": "organization.quartier",
-                }
-            )
-
-            organization_region_region_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Région",
-                    "id_name": "organization_region_region_action_window",
-                    "model_name": "organization.region",
-                }
-            )
-
-            organization_revenu_familial_revenu_familial_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Revenu familial",
-                    "id_name": "organization_revenu_familial_revenu_familial_action_window",
-                    "model_name": "organization.revenu.familial",
-                }
-            )
-
-            organization_situation_maison_situation_maison_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Situation maison",
-                    "id_name": "organization_situation_maison_situation_maison_action_window",
-                    "model_name": "organization.situation.maison",
-                }
-            )
-
-            organization_type_service_sous_categorie_sous_categorie_de_services_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Sous-catégorie de services",
-                    "id_name": "organization_type_service_sous_categorie_sous_categorie_de_services_action_window",
-                    "model_name": "organization.type.service.sous.categorie",
-                }
-            )
-
-            organization_type_communication_type_de_communications_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de communications",
-                    "id_name": "organization_type_communication_type_de_communications_action_window",
-                    "model_name": "organization.type.communication",
-                }
-            )
-
-            organization_type_compte_type_de_comptes_membre_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de comptes membre",
-                    "id_name": "organization_type_compte_type_de_comptes_membre_action_window",
-                    "model_name": "organization.type.compte",
-                }
-            )
-
-            organization_type_fichier_type_de_fichiers_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de fichiers",
-                    "id_name": "organization_type_fichier_type_de_fichiers_action_window",
-                    "model_name": "organization.type.fichier",
-                }
-            )
-
-            organization_type_service_type_de_services_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de services",
-                    "id_name": "organization_type_service_type_de_services_action_window",
-                    "model_name": "organization.type.service",
-                }
-            )
-
-            organization_type_telephone_type_de_telephones_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de téléphones",
-                    "id_name": "organization_type_telephone_type_de_telephones_action_window",
-                    "model_name": "organization.type.telephone",
-                }
-            )
-
-            organization_ville_ville_action_window = env[
-                "code.generator.act_window"
-            ].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Ville",
-                    "id_name": "organization_ville_ville_action_window",
-                    "model_name": "organization.ville",
-                }
-            )
-
-        # menu view
-        if True:
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Arrondissement",
-                    "id_name": "arrondissement",
-                    "sequence": 1,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_location"
-                    ),
-                    "m2o_act_window": organization_arrondissement_arrondissement_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Catégorie de services",
-                    "id_name": "categorie_de_services",
-                    "sequence": 23,
-                    "parent_id_name": "demo_mariadb_sql_example_1.group_categorie_de_services",
-                    "m2o_act_window": organization_type_service_categorie_categorie_de_services_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Commentaire",
-                    "id_name": "commentaire",
-                    "sequence": 2,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_service"
-                    ),
-                    "m2o_act_window": organization_commentaire_commentaire_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Demande d'adhésion",
-                    "id_name": "demande_d_adhesion",
-                    "sequence": 3,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_membre"
-                    ),
-                    "m2o_act_window": organization_demande_adhesion_demande_d_adhesion_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Demande de services",
-                    "id_name": "demande_de_services",
-                    "sequence": 4,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_service"
-                    ),
-                    "m2o_act_window": organization_demande_service_demande_de_services_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Demo Mariadb Sql Example 1",
-                    "web_icon": "demo_mariadb_sql_example_1,static/description/icon.png",
-                    "id_name": "demo_mariadb_sql_example_1",
-                    "sequence": 20,
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Droits administratifs",
-                    "id_name": "droits_administratifs",
-                    "sequence": 5,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_configuration"
-                    ),
-                    "m2o_act_window": organization_droits_admin_droits_administratifs_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Échange de services",
-                    "id_name": "echange_de_services",
-                    "sequence": 6,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_service"
-                    ),
-                    "m2o_act_window": organization_echange_service_echange_de_services_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Fichier",
-                    "id_name": "fichier",
-                    "sequence": 7,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_document"
-                    ),
-                    "m2o_act_window": organization_fichier_fichier_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Catégorie de services",
-                    "id_name": "group_categorie_de_services",
-                    "sequence": 0,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.parent_service"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Configuration",
-                    "id_name": "group_configuration",
-                    "sequence": 1,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.parent_configuration"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Document",
-                    "id_name": "group_document",
-                    "sequence": 2,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.parent_organization"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Location",
-                    "id_name": "group_location",
-                    "sequence": 3,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.parent_configuration"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Membre",
-                    "id_name": "group_membre",
-                    "sequence": 4,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.parent_organization"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Organization",
-                    "id_name": "group_organization",
-                    "sequence": 5,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.parent_organization"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Service",
-                    "id_name": "group_service",
-                    "sequence": 6,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.parent_service"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Statistique",
-                    "id_name": "group_statistique",
-                    "sequence": 7,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.parent_organization"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Membre",
-                    "id_name": "membre",
-                    "sequence": 8,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_membre"
-                    ),
-                    "m2o_act_window": organization_membre_membre_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Menu",
-                    "id_name": "menu",
-                    "sequence": 1,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.demo_mariadb_sql_example_1"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Occupation",
-                    "id_name": "occupation",
-                    "sequence": 9,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_statistique"
-                    ),
-                    "m2o_act_window": organization_occupation_occupation_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Offre de services",
-                    "id_name": "offre_de_services",
-                    "sequence": 10,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_service"
-                    ),
-                    "m2o_act_window": organization_offre_service_offre_de_services_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Organization",
-                    "id_name": "organization",
-                    "sequence": 11,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_organization"
-                    ),
-                    "m2o_act_window": organization_organization_organization_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Origine",
-                    "id_name": "origine",
-                    "sequence": 12,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_statistique"
-                    ),
-                    "m2o_act_window": organization_origine_origine_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Configuration",
-                    "id_name": "parent_configuration",
-                    "sequence": 99,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.demo_mariadb_sql_example_1"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Organization",
-                    "id_name": "parent_organization",
-                    "sequence": 2,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.demo_mariadb_sql_example_1"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Service",
-                    "id_name": "parent_service",
-                    "sequence": 3,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.demo_mariadb_sql_example_1"
-                    ),
-                    "ignore_act_window": True,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Point de services",
-                    "id_name": "point_de_services",
-                    "sequence": 13,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_organization"
-                    ),
-                    "m2o_act_window": organization_point_service_point_de_services_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Provenance",
-                    "id_name": "provenance",
-                    "sequence": 14,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_statistique"
-                    ),
-                    "m2o_act_window": organization_provenance_provenance_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Quartier",
-                    "id_name": "quartier",
-                    "sequence": 15,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_location"
-                    ),
-                    "m2o_act_window": organization_quartier_quartier_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Région",
-                    "id_name": "region",
-                    "sequence": 16,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_location"
-                    ),
-                    "m2o_act_window": organization_region_region_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Revenu familial",
-                    "id_name": "revenu_familial",
-                    "sequence": 17,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_statistique"
-                    ),
-                    "m2o_act_window": organization_revenu_familial_revenu_familial_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Situation maison",
-                    "id_name": "situation_maison",
-                    "sequence": 18,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_statistique"
-                    ),
-                    "m2o_act_window": organization_situation_maison_situation_maison_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Sous-catégorie de services",
-                    "id_name": "sous_categorie_de_services",
-                    "sequence": 24,
-                    "parent_id_name": "demo_mariadb_sql_example_1.group_categorie_de_services",
-                    "m2o_act_window": organization_type_service_sous_categorie_sous_categorie_de_services_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de communications",
-                    "id_name": "type_de_communications",
-                    "sequence": 19,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_statistique"
-                    ),
-                    "m2o_act_window": organization_type_communication_type_de_communications_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de comptes membre",
-                    "id_name": "type_de_comptes_membre",
-                    "sequence": 20,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_configuration"
-                    ),
-                    "m2o_act_window": organization_type_compte_type_de_comptes_membre_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de fichiers",
-                    "id_name": "type_de_fichiers",
-                    "sequence": 21,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_document"
-                    ),
-                    "m2o_act_window": organization_type_fichier_type_de_fichiers_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de services",
-                    "id_name": "type_de_services",
-                    "sequence": 22,
-                    "parent_id_name": "demo_mariadb_sql_example_1.group_categorie_de_services",
-                    "m2o_act_window": organization_type_service_type_de_services_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Type de téléphones",
-                    "id_name": "type_de_telephones",
-                    "sequence": 25,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_statistique"
-                    ),
-                    "m2o_act_window": organization_type_telephone_type_de_telephones_action_window.id,
-                }
-            )
-            env["code.generator.menu"].create(
-                {
-                    "code_generator_id": code_generator_id.id,
-                    "name": "Ville",
-                    "id_name": "ville",
-                    "sequence": 26,
-                    "parent_id_name": (
-                        "demo_mariadb_sql_example_1.group_location"
-                    ),
-                    "m2o_act_window": organization_ville_ville_action_window.id,
-                }
-            )
-
         # form view
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4476,20 +3717,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4497,20 +3738,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "autre_commentaire",
                     "action_name": "autre_commentaire",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4518,20 +3759,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "autre_situation",
                     "action_name": "autre_situation",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4539,20 +3780,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "confidentiel",
                     "action_name": "confidentiel",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4560,20 +3801,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "consulter_organization",
                     "action_name": "consulter_organization",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4581,20 +3822,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "consulter_reseau",
                     "action_name": "consulter_reseau",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4602,20 +3843,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_incident",
                     "action_name": "date_incident",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4623,20 +3864,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4644,20 +3885,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "datetime_creation",
                     "action_name": "datetime_creation",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_10 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_group_10.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4665,20 +3906,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "degre_satisfaction",
                     "action_name": "degre_satisfaction",
-                    "parent_id": view_item_body_group_10.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_11 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_group_11.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4686,20 +3927,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "demande_service_id",
                     "action_name": "demande_service_id",
-                    "parent_id": view_item_body_group_11.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_12 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_group_12.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4707,20 +3948,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "demarche",
                     "action_name": "demarche",
-                    "parent_id": view_item_body_group_12.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_13 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_group_13.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4728,20 +3969,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_source",
                     "action_name": "membre_source",
-                    "parent_id": view_item_body_group_13.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_14 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_group_14.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4749,20 +3990,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_viser",
                     "action_name": "membre_viser",
-                    "parent_id": view_item_body_group_14.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_15 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_group_15.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4770,20 +4011,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_comite",
                     "action_name": "nom_comite",
-                    "parent_id": view_item_body_group_15.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_16 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_group_16.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4791,20 +4032,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "note_administrative",
                     "action_name": "note_administrative",
-                    "parent_id": view_item_body_group_16.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_17 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_group_17.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4812,20 +4053,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "number",
                     "action_name": "number",
-                    "parent_id": view_item_body_group_17.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_18 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_group_18.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4833,20 +4074,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "offre_service_id",
                     "action_name": "offre_service_id",
-                    "parent_id": view_item_body_group_18.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_19 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_group_19.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4854,20 +4095,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "point_service",
                     "action_name": "point_service",
-                    "parent_id": view_item_body_group_19.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_20 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 20,
                 }
             )
-            lst_item_view.append(view_item_body_group_20.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4875,20 +4116,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "resumer_situation",
                     "action_name": "resumer_situation",
-                    "parent_id": view_item_body_group_20.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_21 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 21,
                 }
             )
-            lst_item_view.append(view_item_body_group_21.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4896,20 +4137,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "situation_impliquant",
                     "action_name": "situation_impliquant",
-                    "parent_id": view_item_body_group_21.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_22 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 22,
                 }
             )
-            lst_item_view.append(view_item_body_group_22.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4917,20 +4158,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "solution_pour_regler",
                     "action_name": "solution_pour_regler",
-                    "parent_id": view_item_body_group_22.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_23 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 23,
                 }
             )
-            lst_item_view.append(view_item_body_group_23.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -4938,7 +4179,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_offre",
                     "action_name": "type_offre",
-                    "parent_id": view_item_body_group_23.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -5508,7 +4749,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_24 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -5517,71 +4758,71 @@ for organization_ville in self:
                     "sequence": 24,
                 }
             )
-            lst_item_view.append(view_item_body_templates_24.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_24.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5589,32 +4830,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5622,32 +4863,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "autre_commentaire",
                     "action_name": "autre_commentaire",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5655,32 +4896,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "autre_situation",
                     "action_name": "autre_situation",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5688,23 +4929,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "confidentiel",
                     "action_name": "confidentiel",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.consulter_organization.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5714,23 +4955,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.consulter_organization.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5740,23 +4981,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.consulter_reseau.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5766,23 +5007,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.consulter_reseau.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5792,32 +5033,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5825,32 +5066,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_incident",
                     "action_name": "date_incident",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5858,32 +5099,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5891,32 +5132,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "datetime_creation",
                     "action_name": "datetime_creation",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_12 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_li_12.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_12.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5924,32 +5165,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "degre_satisfaction",
                     "action_name": "degre_satisfaction",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_13 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_li_13.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_13.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5957,32 +5198,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "demande_service_id",
                     "action_name": "demande_service_id",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_14 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_li_14.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_14.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -5990,32 +5231,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "demarche",
                     "action_name": "demarche",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_15 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_li_15.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_15.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6023,32 +5264,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_source",
                     "action_name": "membre_source",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_16 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_li_16.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_16.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6056,32 +5297,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_viser",
                     "action_name": "membre_viser",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_17 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_li_17.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_17.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6089,32 +5330,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_comite",
                     "action_name": "nom_comite",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_18 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_li_18.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_18.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6122,32 +5363,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "note_administrative",
                     "action_name": "note_administrative",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_19 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_li_19.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_19.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6155,32 +5396,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "number",
                     "action_name": "number",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_20 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 20,
                 }
             )
-            lst_item_view.append(view_item_body_li_20.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_20.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6188,32 +5429,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "offre_service_id",
                     "action_name": "offre_service_id",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_21 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 21,
                 }
             )
-            lst_item_view.append(view_item_body_li_21.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_21.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6221,32 +5462,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "point_service",
                     "action_name": "point_service",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_22 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 22,
                 }
             )
-            lst_item_view.append(view_item_body_li_22.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_22.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6254,32 +5495,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "resumer_situation",
                     "action_name": "resumer_situation",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_23 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 23,
                 }
             )
-            lst_item_view.append(view_item_body_li_23.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_23.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6287,32 +5528,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "situation_impliquant",
                     "action_name": "situation_impliquant",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_24 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 24,
                 }
             )
-            lst_item_view.append(view_item_body_li_24.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_24.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6320,32 +5561,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "solution_pour_regler",
                     "action_name": "solution_pour_regler",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_25 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 25,
                 }
             )
-            lst_item_view.append(view_item_body_li_25.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_25.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -6353,7 +5594,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_offre",
                     "action_name": "type_offre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -7231,7 +6472,7 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
@@ -7240,9 +6481,9 @@ for organization_ville in self:
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p1.id)
 
-            view_item_body_button_1 = env["code.generator.view.item"].create(
+            view_item_body_button_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "button",
@@ -7251,11 +6492,11 @@ for organization_ville in self:
                     "action_name": "toggle_active",
                     "button_type": "oe_stat_button",
                     "icon": "fa-archive",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_button_1.id)
+            lst_item_view.append(view_item_body_button_p2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7264,20 +6505,20 @@ for organization_ville in self:
                     "name": "active",
                     "widget": "boolean_button",
                     "action_name": "active",
-                    "parent_id": view_item_body_button_1.id,
+                    "parent_id": view_item_body_button_p2.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7285,20 +6526,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7306,20 +6547,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "courriel",
                     "action_name": "courriel",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7327,20 +6568,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7348,20 +6589,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "en_attente",
                     "action_name": "en_attente",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7369,20 +6610,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7390,20 +6631,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7411,20 +6652,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "poste",
                     "action_name": "poste",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7432,20 +6673,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "prenom",
                     "action_name": "prenom",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_10 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_group_10.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7453,20 +6694,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone",
                     "action_name": "telephone",
-                    "parent_id": view_item_body_group_10.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_11 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_group_11.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7474,7 +6715,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "transferer",
                     "action_name": "transferer",
-                    "parent_id": view_item_body_group_11.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -7745,7 +6986,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_11 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -7754,71 +6995,71 @@ for organization_ville in self:
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_templates_11.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_11.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7826,32 +7067,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7859,32 +7100,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "courriel",
                     "action_name": "courriel",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7892,23 +7133,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.en_attente.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7918,23 +7159,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.en_attente.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7944,32 +7185,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -7977,32 +7218,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8010,32 +7251,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8043,32 +7284,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "poste",
                     "action_name": "poste",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8076,32 +7317,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "prenom",
                     "action_name": "prenom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8109,23 +7350,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone",
                     "action_name": "telephone",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.transferer.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8135,23 +7376,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_12 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.transferer.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_li_12.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8161,7 +7402,7 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_12.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
@@ -8574,7 +7815,7 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
@@ -8583,9 +7824,9 @@ for organization_ville in self:
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p1.id)
 
-            view_item_body_button_1 = env["code.generator.view.item"].create(
+            view_item_body_button_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "button",
@@ -8594,11 +7835,11 @@ for organization_ville in self:
                     "action_name": "toggle_active",
                     "button_type": "oe_stat_button",
                     "icon": "fa-archive",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_button_1.id)
+            lst_item_view.append(view_item_body_button_p2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8607,20 +7848,20 @@ for organization_ville in self:
                     "name": "active",
                     "widget": "boolean_button",
                     "action_name": "active",
-                    "parent_id": view_item_body_button_1.id,
+                    "parent_id": view_item_body_button_p2.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8628,20 +7869,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "titre",
                     "action_name": "titre",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8649,20 +7890,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "approuver",
                     "action_name": "approuver",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8670,20 +7911,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_debut",
                     "action_name": "date_debut",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8691,20 +7932,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_fin",
                     "action_name": "date_fin",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8712,20 +7953,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "description",
                     "action_name": "description",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8733,20 +7974,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8754,20 +7995,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -8775,7 +8016,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire",
                     "action_name": "commentaire",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -8988,7 +8229,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_9 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -8997,71 +8238,71 @@ for organization_ville in self:
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_templates_9.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_9.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9069,23 +8310,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "titre",
                     "action_name": "titre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.approuver.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9095,23 +8336,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.approuver.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9121,32 +8362,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9154,32 +8395,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_debut",
                     "action_name": "date_debut",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9187,32 +8428,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_fin",
                     "action_name": "date_fin",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9220,32 +8461,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "description",
                     "action_name": "description",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9253,32 +8494,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9286,32 +8527,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9319,7 +8560,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire",
                     "action_name": "commentaire",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -9672,14 +8913,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9687,20 +8928,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9708,20 +8949,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "consulter_etat_compte",
                     "action_name": "consulter_etat_compte",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9729,20 +8970,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "consulter_profil",
                     "action_name": "consulter_profil",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9750,20 +8991,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "gestion_dmd",
                     "action_name": "gestion_dmd",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9771,20 +9012,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "gestion_fichier",
                     "action_name": "gestion_fichier",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9792,20 +9033,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "gestion_offre",
                     "action_name": "gestion_offre",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9813,20 +9054,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "gestion_offre_service",
                     "action_name": "gestion_offre_service",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9834,20 +9075,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "gestion_profil",
                     "action_name": "gestion_profil",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9855,20 +9096,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "gestion_type_service",
                     "action_name": "gestion_type_service",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_10 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_group_10.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9876,20 +9117,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "groupe_achat",
                     "action_name": "groupe_achat",
-                    "parent_id": view_item_body_group_10.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_11 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_group_11.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9897,20 +9138,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_11.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_12 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_group_12.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9918,20 +9159,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "saisie_echange",
                     "action_name": "saisie_echange",
-                    "parent_id": view_item_body_group_12.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_13 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_group_13.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -9939,7 +9180,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "validation",
                     "action_name": "validation",
-                    "parent_id": view_item_body_group_13.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -10279,7 +9520,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_14 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -10288,71 +9529,71 @@ for organization_ville in self:
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_templates_14.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_14.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10360,23 +9601,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.consulter_etat_compte.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10386,23 +9627,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.consulter_etat_compte.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10412,23 +9653,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.consulter_profil.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10438,23 +9679,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.consulter_profil.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10464,23 +9705,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.gestion_dmd.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10490,23 +9731,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.gestion_dmd.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10516,23 +9757,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.gestion_fichier.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10542,23 +9783,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.gestion_fichier.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10568,23 +9809,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.gestion_offre.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10594,23 +9835,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.gestion_offre.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10620,23 +9861,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_12 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.gestion_offre_service.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_li_12.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10646,23 +9887,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_12.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_13 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.gestion_offre_service.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_li_13.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10672,23 +9913,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_13.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_14 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.gestion_profil.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_li_14.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10698,23 +9939,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_14.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_15 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.gestion_profil.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_li_15.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10724,23 +9965,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_15.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_16 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.gestion_type_service.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_li_16.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10750,23 +9991,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_16.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_17 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.gestion_type_service.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_li_17.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10776,23 +10017,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_17.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_18 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.groupe_achat.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_li_18.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10802,23 +10043,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_18.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_19 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.groupe_achat.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_li_19.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10828,32 +10069,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_19.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_20 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 20,
                 }
             )
-            lst_item_view.append(view_item_body_li_20.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_20.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10861,23 +10102,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_21 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.saisie_echange.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 21,
                 }
             )
-            lst_item_view.append(view_item_body_li_21.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10887,23 +10128,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_21.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_22 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.saisie_echange.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 22,
                 }
             )
-            lst_item_view.append(view_item_body_li_22.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10913,23 +10154,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_22.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_23 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.validation.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 23,
                 }
             )
-            lst_item_view.append(view_item_body_li_23.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10939,23 +10180,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_23.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_24 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.validation.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 24,
                 }
             )
-            lst_item_view.append(view_item_body_li_24.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -10965,7 +10206,7 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_24.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
@@ -11493,14 +10734,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11508,20 +10749,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11529,20 +10770,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire",
                     "action_name": "commentaire",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11550,20 +10791,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_echange",
                     "action_name": "date_echange",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11571,20 +10812,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "demande_service",
                     "action_name": "demande_service",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11592,20 +10833,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_acheteur",
                     "action_name": "membre_acheteur",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11613,20 +10854,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_vendeur",
                     "action_name": "membre_vendeur",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11635,20 +10876,20 @@ for organization_ville in self:
                     "name": "nb_heure",
                     "widget": "float_time",
                     "action_name": "nb_heure",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11656,20 +10897,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "offre_service",
                     "action_name": "offre_service",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11677,20 +10918,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "point_service",
                     "action_name": "point_service",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_10 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_group_10.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11698,20 +10939,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "remarque",
                     "action_name": "remarque",
-                    "parent_id": view_item_body_group_10.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_11 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_group_11.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -11719,7 +10960,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_echange",
                     "action_name": "type_echange",
-                    "parent_id": view_item_body_group_11.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -12014,7 +11255,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_12 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -12023,71 +11264,71 @@ for organization_ville in self:
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_templates_12.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_12.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12095,32 +11336,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12128,32 +11369,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire",
                     "action_name": "commentaire",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12161,32 +11402,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_echange",
                     "action_name": "date_echange",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12194,32 +11435,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "demande_service",
                     "action_name": "demande_service",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12227,32 +11468,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_acheteur",
                     "action_name": "membre_acheteur",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12260,32 +11501,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_vendeur",
                     "action_name": "membre_vendeur",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12293,32 +11534,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nb_heure",
                     "action_name": "nb_heure",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12326,32 +11567,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "offre_service",
                     "action_name": "offre_service",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12359,32 +11600,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "point_service",
                     "action_name": "point_service",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12392,32 +11633,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "remarque",
                     "action_name": "remarque",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12425,7 +11666,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_echange",
                     "action_name": "type_echange",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -12884,14 +12125,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12899,20 +12140,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12920,20 +12161,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12941,20 +12182,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "fichier",
                     "action_name": "fichier",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12962,20 +12203,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -12983,20 +12224,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "si_admin",
                     "action_name": "si_admin",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13004,20 +12245,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "si_disponible",
                     "action_name": "si_disponible",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13025,20 +12266,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "si_organization_local_seulement",
                     "action_name": "si_organization_local_seulement",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13046,7 +12287,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_fichier",
                     "action_name": "type_fichier",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -13271,7 +12512,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_9 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -13280,71 +12521,71 @@ for organization_ville in self:
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_templates_9.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_9.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13352,32 +12593,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13385,32 +12626,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13418,32 +12659,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "fichier",
                     "action_name": "fichier",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13451,23 +12692,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.si_admin.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13477,23 +12718,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.si_admin.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13503,23 +12744,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.si_disponible.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13529,23 +12770,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.si_disponible.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13555,23 +12796,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.si_organization_local_seulement.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13581,13 +12822,13 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
@@ -13595,11 +12836,11 @@ for organization_ville in self:
                         "!record.si_organization_local_seulement.raw_value"
                     ),
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13609,32 +12850,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -13642,7 +12883,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_fichier",
                     "action_name": "type_fichier",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -13983,7 +13224,7 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
@@ -13992,9 +13233,9 @@ for organization_ville in self:
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p1.id)
 
-            view_item_body_button_1 = env["code.generator.view.item"].create(
+            view_item_body_button_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "button",
@@ -14003,11 +13244,11 @@ for organization_ville in self:
                     "action_name": "toggle_active",
                     "button_type": "oe_stat_button",
                     "icon": "fa-archive",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_button_1.id)
+            lst_item_view.append(view_item_body_button_p2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14016,20 +13257,20 @@ for organization_ville in self:
                     "name": "active",
                     "widget": "boolean_button",
                     "action_name": "active",
-                    "parent_id": view_item_body_button_1.id,
+                    "parent_id": view_item_body_button_p2.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14037,20 +13278,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14058,20 +13299,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "achat_regrouper",
                     "action_name": "achat_regrouper",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14079,20 +13320,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "adresse",
                     "action_name": "adresse",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14100,20 +13341,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "annee_naissance",
                     "action_name": "annee_naissance",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14121,20 +13362,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "arrondissement",
                     "action_name": "arrondissement",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14142,20 +13383,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "bottin_courriel",
                     "action_name": "bottin_courriel",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14163,20 +13404,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "bottin_tel",
                     "action_name": "bottin_tel",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14184,20 +13425,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "codepostal",
                     "action_name": "codepostal",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_10 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_group_10.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14205,20 +13446,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "courriel",
                     "action_name": "courriel",
-                    "parent_id": view_item_body_group_10.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_11 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_group_11.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14226,20 +13467,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_adhesion",
                     "action_name": "date_adhesion",
-                    "parent_id": view_item_body_group_11.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_12 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_group_12.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14247,20 +13488,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_group_12.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_13 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_group_13.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14268,20 +13509,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "description_membre",
                     "action_name": "description_membre",
-                    "parent_id": view_item_body_group_13.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_14 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_group_14.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14289,20 +13530,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "est_un_point_service",
                     "action_name": "est_un_point_service",
-                    "parent_id": view_item_body_group_14.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_15 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_group_15.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14310,20 +13551,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_ca",
                     "action_name": "membre_ca",
-                    "parent_id": view_item_body_group_15.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_16 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_group_16.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14331,20 +13572,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_conjoint",
                     "action_name": "membre_conjoint",
-                    "parent_id": view_item_body_group_16.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_17 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_group_17.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14352,20 +13593,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_conjoint_id",
                     "action_name": "membre_conjoint_id",
-                    "parent_id": view_item_body_group_17.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_18 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_group_18.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14373,20 +13614,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_principal",
                     "action_name": "membre_principal",
-                    "parent_id": view_item_body_group_18.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_19 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_group_19.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14394,20 +13635,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "memo",
                     "action_name": "memo",
-                    "parent_id": view_item_body_group_19.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_20 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 20,
                 }
             )
-            lst_item_view.append(view_item_body_group_20.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14415,20 +13656,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_20.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_21 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 21,
                 }
             )
-            lst_item_view.append(view_item_body_group_21.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14436,20 +13677,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_utilisateur",
                     "action_name": "nom_utilisateur",
-                    "parent_id": view_item_body_group_21.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_22 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 22,
                 }
             )
-            lst_item_view.append(view_item_body_group_22.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14457,20 +13698,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "occupation",
                     "action_name": "occupation",
-                    "parent_id": view_item_body_group_22.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_23 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 23,
                 }
             )
-            lst_item_view.append(view_item_body_group_23.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14478,20 +13719,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_group_23.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_24 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 24,
                 }
             )
-            lst_item_view.append(view_item_body_group_24.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14499,20 +13740,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "origine",
                     "action_name": "origine",
-                    "parent_id": view_item_body_group_24.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_25 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 25,
                 }
             )
-            lst_item_view.append(view_item_body_group_25.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14520,20 +13761,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "part_social_paye",
                     "action_name": "part_social_paye",
-                    "parent_id": view_item_body_group_25.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_26 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 26,
                 }
             )
-            lst_item_view.append(view_item_body_group_26.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14541,20 +13782,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "pas_communication",
                     "action_name": "pas_communication",
-                    "parent_id": view_item_body_group_26.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_27 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 27,
                 }
             )
-            lst_item_view.append(view_item_body_group_27.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14562,20 +13803,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "point_service",
                     "action_name": "point_service",
-                    "parent_id": view_item_body_group_27.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_28 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 28,
                 }
             )
-            lst_item_view.append(view_item_body_group_28.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14583,20 +13824,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "prenom",
                     "action_name": "prenom",
-                    "parent_id": view_item_body_group_28.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_29 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 29,
                 }
             )
-            lst_item_view.append(view_item_body_group_29.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14604,20 +13845,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "pret_actif",
                     "action_name": "pret_actif",
-                    "parent_id": view_item_body_group_29.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_30 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 30,
                 }
             )
-            lst_item_view.append(view_item_body_group_30.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14625,20 +13866,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "profil_approuver",
                     "action_name": "profil_approuver",
-                    "parent_id": view_item_body_group_30.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_31 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 31,
                 }
             )
-            lst_item_view.append(view_item_body_group_31.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14646,20 +13887,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "provenance",
                     "action_name": "provenance",
-                    "parent_id": view_item_body_group_31.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_32 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 32,
                 }
             )
-            lst_item_view.append(view_item_body_group_32.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14667,20 +13908,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "quartier",
                     "action_name": "quartier",
-                    "parent_id": view_item_body_group_32.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_33 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 33,
                 }
             )
-            lst_item_view.append(view_item_body_group_33.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14688,20 +13929,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "recevoir_courriel_groupe",
                     "action_name": "recevoir_courriel_groupe",
-                    "parent_id": view_item_body_group_33.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_34 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 34,
                 }
             )
-            lst_item_view.append(view_item_body_group_34.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14709,20 +13950,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "region",
                     "action_name": "region",
-                    "parent_id": view_item_body_group_34.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_35 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 35,
                 }
             )
-            lst_item_view.append(view_item_body_group_35.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14730,20 +13971,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "revenu_familial",
                     "action_name": "revenu_familial",
-                    "parent_id": view_item_body_group_35.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_36 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 36,
                 }
             )
-            lst_item_view.append(view_item_body_group_36.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14751,20 +13992,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "sexe",
                     "action_name": "sexe",
-                    "parent_id": view_item_body_group_36.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_37 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 37,
                 }
             )
-            lst_item_view.append(view_item_body_group_37.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14772,20 +14013,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "situation_maison",
                     "action_name": "situation_maison",
-                    "parent_id": view_item_body_group_37.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_38 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 38,
                 }
             )
-            lst_item_view.append(view_item_body_group_38.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14793,20 +14034,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_1",
                     "action_name": "telephone_1",
-                    "parent_id": view_item_body_group_38.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_39 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 39,
                 }
             )
-            lst_item_view.append(view_item_body_group_39.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14814,20 +14055,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_2",
                     "action_name": "telephone_2",
-                    "parent_id": view_item_body_group_39.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_40 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 40,
                 }
             )
-            lst_item_view.append(view_item_body_group_40.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14835,20 +14076,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_3",
                     "action_name": "telephone_3",
-                    "parent_id": view_item_body_group_40.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_41 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 41,
                 }
             )
-            lst_item_view.append(view_item_body_group_41.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14856,20 +14097,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_poste_1",
                     "action_name": "telephone_poste_1",
-                    "parent_id": view_item_body_group_41.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_42 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 42,
                 }
             )
-            lst_item_view.append(view_item_body_group_42.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14877,20 +14118,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_poste_2",
                     "action_name": "telephone_poste_2",
-                    "parent_id": view_item_body_group_42.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_43 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 43,
                 }
             )
-            lst_item_view.append(view_item_body_group_43.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14898,20 +14139,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_poste_3",
                     "action_name": "telephone_poste_3",
-                    "parent_id": view_item_body_group_43.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_44 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 44,
                 }
             )
-            lst_item_view.append(view_item_body_group_44.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14919,20 +14160,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_type_1",
                     "action_name": "telephone_type_1",
-                    "parent_id": view_item_body_group_44.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_45 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 45,
                 }
             )
-            lst_item_view.append(view_item_body_group_45.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14940,20 +14181,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_type_2",
                     "action_name": "telephone_type_2",
-                    "parent_id": view_item_body_group_45.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_46 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 46,
                 }
             )
-            lst_item_view.append(view_item_body_group_46.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14961,20 +14202,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_type_3",
                     "action_name": "telephone_type_3",
-                    "parent_id": view_item_body_group_46.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_47 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 47,
                 }
             )
-            lst_item_view.append(view_item_body_group_47.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -14982,20 +14223,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "transfert_organization",
                     "action_name": "transfert_organization",
-                    "parent_id": view_item_body_group_47.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_48 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 48,
                 }
             )
-            lst_item_view.append(view_item_body_group_48.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -15003,20 +14244,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_communication",
                     "action_name": "type_communication",
-                    "parent_id": view_item_body_group_48.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_49 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 49,
                 }
             )
-            lst_item_view.append(view_item_body_group_49.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -15024,20 +14265,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "ville",
                     "action_name": "ville",
-                    "parent_id": view_item_body_group_49.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_50 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 50,
                 }
             )
-            lst_item_view.append(view_item_body_group_50.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -15045,20 +14286,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire",
                     "action_name": "commentaire",
-                    "parent_id": view_item_body_group_50.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_51 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 51,
                 }
             )
-            lst_item_view.append(view_item_body_group_51.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -15066,7 +14307,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire_ids",
                     "action_name": "commentaire_ids",
-                    "parent_id": view_item_body_group_51.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -16233,7 +15474,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_51 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -16242,71 +15483,71 @@ for organization_ville in self:
                     "sequence": 51,
                 }
             )
-            lst_item_view.append(view_item_body_templates_51.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_51.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16314,23 +15555,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.achat_regrouper.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16340,23 +15581,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.achat_regrouper.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16366,32 +15607,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16399,32 +15640,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "adresse",
                     "action_name": "adresse",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16432,32 +15673,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "annee_naissance",
                     "action_name": "annee_naissance",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16465,23 +15706,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "arrondissement",
                     "action_name": "arrondissement",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.bottin_courriel.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16491,23 +15732,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.bottin_courriel.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16517,23 +15758,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.bottin_tel.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16543,23 +15784,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.bottin_tel.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16569,32 +15810,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16602,32 +15843,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "codepostal",
                     "action_name": "codepostal",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_12 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_li_12.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_12.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16635,32 +15876,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "courriel",
                     "action_name": "courriel",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_13 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_li_13.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_13.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16668,32 +15909,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_adhesion",
                     "action_name": "date_adhesion",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_14 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_li_14.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_14.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16701,23 +15942,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_15 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.description_membre.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_li_15.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16727,23 +15968,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_15.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_16 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.description_membre.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_li_16.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16753,23 +15994,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_16.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_17 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.est_un_point_service.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_li_17.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16779,23 +16020,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_17.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_18 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.est_un_point_service.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_li_18.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16805,23 +16046,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_18.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_19 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.membre_ca.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_li_19.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16831,23 +16072,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_19.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_20 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.membre_ca.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 20,
                 }
             )
-            lst_item_view.append(view_item_body_li_20.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16857,23 +16098,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_20.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_21 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.membre_conjoint.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 21,
                 }
             )
-            lst_item_view.append(view_item_body_li_21.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16883,23 +16124,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_21.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_22 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.membre_conjoint.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 22,
                 }
             )
-            lst_item_view.append(view_item_body_li_22.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16909,32 +16150,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_22.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_23 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 23,
                 }
             )
-            lst_item_view.append(view_item_body_li_23.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_23.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16942,23 +16183,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_conjoint_id",
                     "action_name": "membre_conjoint_id",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_24 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.membre_principal.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 24,
                 }
             )
-            lst_item_view.append(view_item_body_li_24.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16968,23 +16209,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_24.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_25 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.membre_principal.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 25,
                 }
             )
-            lst_item_view.append(view_item_body_li_25.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -16994,32 +16235,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_25.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_26 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 26,
                 }
             )
-            lst_item_view.append(view_item_body_li_26.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_26.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17027,32 +16268,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "memo",
                     "action_name": "memo",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_27 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 27,
                 }
             )
-            lst_item_view.append(view_item_body_li_27.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_27.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17060,32 +16301,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_28 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 28,
                 }
             )
-            lst_item_view.append(view_item_body_li_28.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_28.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17093,32 +16334,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_utilisateur",
                     "action_name": "nom_utilisateur",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_29 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 29,
                 }
             )
-            lst_item_view.append(view_item_body_li_29.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_29.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17126,32 +16367,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "occupation",
                     "action_name": "occupation",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_30 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 30,
                 }
             )
-            lst_item_view.append(view_item_body_li_30.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_30.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17159,32 +16400,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_31 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 31,
                 }
             )
-            lst_item_view.append(view_item_body_li_31.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_31.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17192,23 +16433,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "origine",
                     "action_name": "origine",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_32 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.part_social_paye.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 32,
                 }
             )
-            lst_item_view.append(view_item_body_li_32.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17218,23 +16459,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_32.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_33 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.part_social_paye.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 33,
                 }
             )
-            lst_item_view.append(view_item_body_li_33.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17244,23 +16485,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_33.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_34 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.pas_communication.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 34,
                 }
             )
-            lst_item_view.append(view_item_body_li_34.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17270,23 +16511,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_34.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_35 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.pas_communication.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 35,
                 }
             )
-            lst_item_view.append(view_item_body_li_35.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17296,32 +16537,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_35.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_36 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 36,
                 }
             )
-            lst_item_view.append(view_item_body_li_36.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_36.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17329,32 +16570,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "point_service",
                     "action_name": "point_service",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_37 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 37,
                 }
             )
-            lst_item_view.append(view_item_body_li_37.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_37.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17362,23 +16603,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "prenom",
                     "action_name": "prenom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_38 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.pret_actif.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 38,
                 }
             )
-            lst_item_view.append(view_item_body_li_38.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17388,23 +16629,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_38.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_39 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.pret_actif.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 39,
                 }
             )
-            lst_item_view.append(view_item_body_li_39.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17414,23 +16655,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_39.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_40 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.profil_approuver.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 40,
                 }
             )
-            lst_item_view.append(view_item_body_li_40.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17440,23 +16681,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_40.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_41 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.profil_approuver.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 41,
                 }
             )
-            lst_item_view.append(view_item_body_li_41.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17466,32 +16707,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_41.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_42 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 42,
                 }
             )
-            lst_item_view.append(view_item_body_li_42.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_42.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17499,32 +16740,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "provenance",
                     "action_name": "provenance",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_43 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 43,
                 }
             )
-            lst_item_view.append(view_item_body_li_43.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_43.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17532,23 +16773,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "quartier",
                     "action_name": "quartier",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_44 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.recevoir_courriel_groupe.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 44,
                 }
             )
-            lst_item_view.append(view_item_body_li_44.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17558,23 +16799,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_44.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_45 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.recevoir_courriel_groupe.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 45,
                 }
             )
-            lst_item_view.append(view_item_body_li_45.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17584,32 +16825,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_45.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_46 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 46,
                 }
             )
-            lst_item_view.append(view_item_body_li_46.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_46.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17617,32 +16858,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "region",
                     "action_name": "region",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_47 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 47,
                 }
             )
-            lst_item_view.append(view_item_body_li_47.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_47.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17650,32 +16891,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "revenu_familial",
                     "action_name": "revenu_familial",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_48 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 48,
                 }
             )
-            lst_item_view.append(view_item_body_li_48.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_48.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17683,32 +16924,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "sexe",
                     "action_name": "sexe",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_49 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 49,
                 }
             )
-            lst_item_view.append(view_item_body_li_49.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_49.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17716,32 +16957,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "situation_maison",
                     "action_name": "situation_maison",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_50 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 50,
                 }
             )
-            lst_item_view.append(view_item_body_li_50.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_50.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17749,32 +16990,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_1",
                     "action_name": "telephone_1",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_51 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 51,
                 }
             )
-            lst_item_view.append(view_item_body_li_51.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_51.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17782,32 +17023,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_2",
                     "action_name": "telephone_2",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_52 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 52,
                 }
             )
-            lst_item_view.append(view_item_body_li_52.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_52.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17815,32 +17056,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_3",
                     "action_name": "telephone_3",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_53 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 53,
                 }
             )
-            lst_item_view.append(view_item_body_li_53.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_53.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17848,32 +17089,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_poste_1",
                     "action_name": "telephone_poste_1",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_54 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 54,
                 }
             )
-            lst_item_view.append(view_item_body_li_54.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_54.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17881,32 +17122,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_poste_2",
                     "action_name": "telephone_poste_2",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_55 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 55,
                 }
             )
-            lst_item_view.append(view_item_body_li_55.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_55.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17914,32 +17155,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_poste_3",
                     "action_name": "telephone_poste_3",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_56 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 56,
                 }
             )
-            lst_item_view.append(view_item_body_li_56.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_56.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17947,32 +17188,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_type_1",
                     "action_name": "telephone_type_1",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_57 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 57,
                 }
             )
-            lst_item_view.append(view_item_body_li_57.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_57.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -17980,32 +17221,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_type_2",
                     "action_name": "telephone_type_2",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_58 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 58,
                 }
             )
-            lst_item_view.append(view_item_body_li_58.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_58.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -18013,32 +17254,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone_type_3",
                     "action_name": "telephone_type_3",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_59 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 59,
                 }
             )
-            lst_item_view.append(view_item_body_li_59.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_59.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -18046,32 +17287,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "transfert_organization",
                     "action_name": "transfert_organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_60 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 60,
                 }
             )
-            lst_item_view.append(view_item_body_li_60.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_60.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -18079,32 +17320,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_communication",
                     "action_name": "type_communication",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_61 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 61,
                 }
             )
-            lst_item_view.append(view_item_body_li_61.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_61.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -18112,32 +17353,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "ville",
                     "action_name": "ville",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_62 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 62,
                 }
             )
-            lst_item_view.append(view_item_body_li_62.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_62.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -18145,32 +17386,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire",
                     "action_name": "commentaire",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_63 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 63,
                 }
             )
-            lst_item_view.append(view_item_body_li_63.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_63.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -18178,7 +17419,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire_ids",
                     "action_name": "commentaire_ids",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -19879,14 +19120,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -19894,20 +19135,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -19915,7 +19156,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -19990,7 +19231,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_3 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -19999,71 +19240,71 @@ for organization_ville in self:
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_templates_3.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_3.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20071,32 +19312,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20104,7 +19345,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -20235,7 +19476,7 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
@@ -20244,9 +19485,9 @@ for organization_ville in self:
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p1.id)
 
-            view_item_body_button_1 = env["code.generator.view.item"].create(
+            view_item_body_button_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "button",
@@ -20255,11 +19496,11 @@ for organization_ville in self:
                     "action_name": "toggle_active",
                     "button_type": "oe_stat_button",
                     "icon": "fa-archive",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_button_1.id)
+            lst_item_view.append(view_item_body_button_p2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20268,20 +19509,20 @@ for organization_ville in self:
                     "name": "active",
                     "widget": "boolean_button",
                     "action_name": "active",
-                    "parent_id": view_item_body_button_1.id,
+                    "parent_id": view_item_body_button_p2.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20289,20 +19530,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "description",
                     "action_name": "description",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20310,20 +19551,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "accompli",
                     "action_name": "accompli",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20331,20 +19572,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "approuve",
                     "action_name": "approuve",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20352,20 +19593,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "condition",
                     "action_name": "condition",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20373,20 +19614,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "condition_autre",
                     "action_name": "condition_autre",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20394,20 +19635,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_affichage",
                     "action_name": "date_affichage",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20415,20 +19656,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_debut",
                     "action_name": "date_debut",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20436,20 +19677,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_fin",
                     "action_name": "date_fin",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_10 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_group_10.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20457,20 +19698,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_group_10.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_11 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_group_11.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20478,20 +19719,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "disponibilite",
                     "action_name": "disponibilite",
-                    "parent_id": view_item_body_group_11.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_12 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_group_12.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20499,20 +19740,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_12.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_13 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_group_13.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20520,20 +19761,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nb_consultation",
                     "action_name": "nb_consultation",
-                    "parent_id": view_item_body_group_13.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_14 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_group_14.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20541,20 +19782,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_offre_special",
                     "action_name": "nom_offre_special",
-                    "parent_id": view_item_body_group_14.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_15 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_group_15.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20562,20 +19803,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "offre_special",
                     "action_name": "offre_special",
-                    "parent_id": view_item_body_group_15.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_16 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_group_16.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20583,20 +19824,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_group_16.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_17 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_group_17.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20604,20 +19845,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "tarif",
                     "action_name": "tarif",
-                    "parent_id": view_item_body_group_17.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_18 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_group_18.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -20625,7 +19866,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_service_id",
                     "action_name": "type_service_id",
-                    "parent_id": view_item_body_group_18.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -21057,7 +20298,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_18 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -21066,71 +20307,71 @@ for organization_ville in self:
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_templates_18.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_18.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21138,23 +20379,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "description",
                     "action_name": "description",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.accompli.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21164,23 +20405,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.accompli.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21190,23 +20431,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.approuve.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21216,23 +20457,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.approuve.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21242,32 +20483,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21275,32 +20516,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "condition",
                     "action_name": "condition",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21308,32 +20549,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "condition_autre",
                     "action_name": "condition_autre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21341,32 +20582,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_affichage",
                     "action_name": "date_affichage",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21374,32 +20615,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_debut",
                     "action_name": "date_debut",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21407,32 +20648,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_fin",
                     "action_name": "date_fin",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21440,32 +20681,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_12 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_li_12.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_12.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21473,32 +20714,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "disponibilite",
                     "action_name": "disponibilite",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_13 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_li_13.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_13.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21506,32 +20747,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_14 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_li_14.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_14.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21539,32 +20780,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nb_consultation",
                     "action_name": "nb_consultation",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_15 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_li_15.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_15.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21572,23 +20813,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_offre_special",
                     "action_name": "nom_offre_special",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_16 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.offre_special.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_li_16.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21598,23 +20839,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_16.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_17 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.offre_special.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_li_17.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21624,32 +20865,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_17.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_18 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_li_18.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_18.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21657,32 +20898,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_19 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_li_19.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_19.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21690,32 +20931,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "tarif",
                     "action_name": "tarif",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_20 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 20,
                 }
             )
-            lst_item_view.append(view_item_body_li_20.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_20.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -21723,7 +20964,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_service_id",
                     "action_name": "type_service_id",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -22403,7 +21644,7 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
@@ -22412,9 +21653,9 @@ for organization_ville in self:
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p1.id)
 
-            view_item_body_button_1 = env["code.generator.view.item"].create(
+            view_item_body_button_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "button",
@@ -22423,11 +21664,11 @@ for organization_ville in self:
                     "action_name": "toggle_active",
                     "button_type": "oe_stat_button",
                     "icon": "fa-archive",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_button_1.id)
+            lst_item_view.append(view_item_body_button_p2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22436,20 +21677,20 @@ for organization_ville in self:
                     "name": "active",
                     "widget": "boolean_button",
                     "action_name": "active",
-                    "parent_id": view_item_body_button_1.id,
+                    "parent_id": view_item_body_button_p2.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22457,20 +21698,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22478,20 +21719,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "adresse",
                     "action_name": "adresse",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22499,20 +21740,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "arrondissement",
                     "action_name": "arrondissement",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22520,20 +21761,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "code_postal",
                     "action_name": "code_postal",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22541,20 +21782,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "courriel",
                     "action_name": "courriel",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22562,20 +21803,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22583,20 +21824,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "grp_achat_administrateur",
                     "action_name": "grp_achat_administrateur",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22604,20 +21845,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "grp_achat_membre",
                     "action_name": "grp_achat_membre",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_10 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_group_10.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22626,20 +21867,20 @@ for organization_ville in self:
                     "name": "logo",
                     "widget": "image",
                     "action_name": "logo",
-                    "parent_id": view_item_body_group_10.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_11 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_group_11.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22647,20 +21888,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "message_accueil",
                     "action_name": "message_accueil",
-                    "parent_id": view_item_body_group_11.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_12 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_group_12.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22668,20 +21909,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "message_grp_achat",
                     "action_name": "message_grp_achat",
-                    "parent_id": view_item_body_group_12.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_13 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_group_13.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22689,20 +21930,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "region",
                     "action_name": "region",
-                    "parent_id": view_item_body_group_13.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_14 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_group_14.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22710,20 +21951,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telecopieur",
                     "action_name": "telecopieur",
-                    "parent_id": view_item_body_group_14.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_15 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_group_15.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22731,20 +21972,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone",
                     "action_name": "telephone",
-                    "parent_id": view_item_body_group_15.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_16 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_group_16.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22752,20 +21993,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "url_public",
                     "action_name": "url_public",
-                    "parent_id": view_item_body_group_16.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_17 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_group_17.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22773,20 +22014,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "url_transactionnel",
                     "action_name": "url_transactionnel",
-                    "parent_id": view_item_body_group_17.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_18 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_group_18.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22794,20 +22035,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "ville",
                     "action_name": "ville",
-                    "parent_id": view_item_body_group_18.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_19 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_group_19.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -22815,7 +22056,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_19.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -23261,7 +22502,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_19 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -23270,71 +22511,71 @@ for organization_ville in self:
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_templates_19.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_19.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23342,32 +22583,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23375,32 +22616,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "adresse",
                     "action_name": "adresse",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23408,32 +22649,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "arrondissement",
                     "action_name": "arrondissement",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23441,32 +22682,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "code_postal",
                     "action_name": "code_postal",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23474,32 +22715,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "courriel",
                     "action_name": "courriel",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23507,23 +22748,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.grp_achat_administrateur.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23533,23 +22774,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.grp_achat_administrateur.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23559,23 +22800,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.grp_achat_membre.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23585,23 +22826,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.grp_achat_membre.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23611,32 +22852,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23644,32 +22885,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "logo",
                     "action_name": "logo",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_12 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_li_12.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_12.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23677,32 +22918,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "message_accueil",
                     "action_name": "message_accueil",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_13 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_li_13.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_13.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23710,32 +22951,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "message_grp_achat",
                     "action_name": "message_grp_achat",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_14 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_li_14.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_14.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23743,32 +22984,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "region",
                     "action_name": "region",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_15 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_li_15.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_15.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23776,32 +23017,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telecopieur",
                     "action_name": "telecopieur",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_16 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_li_16.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_16.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23809,32 +23050,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "telephone",
                     "action_name": "telephone",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_17 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 17,
                 }
             )
-            lst_item_view.append(view_item_body_li_17.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_17.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23842,32 +23083,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "url_public",
                     "action_name": "url_public",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_18 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 18,
                 }
             )
-            lst_item_view.append(view_item_body_li_18.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_18.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23875,32 +23116,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "url_transactionnel",
                     "action_name": "url_transactionnel",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_19 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 19,
                 }
             )
-            lst_item_view.append(view_item_body_li_19.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_19.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23908,32 +23149,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "ville",
                     "action_name": "ville",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_20 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 20,
                 }
             )
-            lst_item_view.append(view_item_body_li_20.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_20.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -23941,7 +23182,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -24613,14 +23854,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -24628,20 +23869,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -24649,7 +23890,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -24724,7 +23965,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_3 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -24733,71 +23974,71 @@ for organization_ville in self:
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_templates_3.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_3.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -24805,32 +24046,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -24838,7 +24079,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -24969,14 +24210,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -24984,20 +24225,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25005,20 +24246,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25026,20 +24267,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25047,20 +24288,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "sequence",
                     "action_name": "sequence",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25068,20 +24309,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire",
                     "action_name": "commentaire",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25089,7 +24330,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -25244,7 +24485,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_7 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -25253,71 +24494,71 @@ for organization_ville in self:
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_templates_7.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_7.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25325,32 +24566,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25358,32 +24599,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25391,32 +24632,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25424,32 +24665,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "sequence",
                     "action_name": "sequence",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25457,32 +24698,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "commentaire",
                     "action_name": "commentaire",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25490,7 +24731,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -25738,14 +24979,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25753,20 +24994,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25774,7 +25015,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -25849,7 +25090,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_3 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -25858,71 +25099,71 @@ for organization_ville in self:
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_templates_3.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_3.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25930,32 +25171,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -25963,7 +25204,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -26094,14 +25335,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26109,20 +25350,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26130,20 +25371,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "arrondissement",
                     "action_name": "arrondissement",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26151,7 +25392,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -26249,7 +25490,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_4 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -26258,71 +25499,71 @@ for organization_ville in self:
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_templates_4.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_4.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26330,32 +25571,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26363,32 +25604,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "arrondissement",
                     "action_name": "arrondissement",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26396,7 +25637,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -26562,14 +25803,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26577,20 +25818,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26598,20 +25839,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "code",
                     "action_name": "code",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26619,20 +25860,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26640,20 +25881,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26661,7 +25902,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "ville",
                     "action_name": "ville",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -26781,7 +26022,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_6 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -26790,71 +26031,71 @@ for organization_ville in self:
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_templates_6.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_6.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26862,32 +26103,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26895,32 +26136,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "code",
                     "action_name": "code",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26928,32 +26169,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26961,32 +26202,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -26994,7 +26235,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "ville",
                     "action_name": "ville",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -27206,14 +26447,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27221,20 +26462,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27242,7 +26483,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -27317,7 +26558,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_3 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -27326,71 +26567,71 @@ for organization_ville in self:
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_templates_3.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_3.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27398,32 +26639,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27431,7 +26672,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -27562,14 +26803,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27577,20 +26818,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27598,7 +26839,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -27673,7 +26914,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_3 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -27682,71 +26923,71 @@ for organization_ville in self:
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_templates_3.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_3.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27754,32 +26995,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27787,7 +27028,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -27918,14 +27159,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27933,20 +27174,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -27954,7 +27195,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -28029,7 +27270,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_3 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -28038,71 +27279,71 @@ for organization_ville in self:
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_templates_3.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_3.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28110,32 +27351,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28143,7 +27384,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -28274,14 +27515,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28289,20 +27530,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28310,20 +27551,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "admin",
                     "action_name": "admin",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28331,20 +27572,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "admin_chef",
                     "action_name": "admin_chef",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28352,20 +27593,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "admin_ord_point_service",
                     "action_name": "admin_ord_point_service",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28373,20 +27614,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "admin_point_service",
                     "action_name": "admin_point_service",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28394,20 +27635,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28415,20 +27656,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organizateur_simple",
                     "action_name": "organizateur_simple",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28436,20 +27677,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "reseau",
                     "action_name": "reseau",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_9 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_group_9.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28457,7 +27698,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "spip",
                     "action_name": "spip",
-                    "parent_id": view_item_body_group_9.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -28705,7 +27946,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_10 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -28714,71 +27955,71 @@ for organization_ville in self:
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_templates_10.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_10.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28786,23 +28027,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.admin.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28812,23 +28053,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.admin.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28838,23 +28079,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.admin_chef.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28864,23 +28105,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.admin_chef.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28890,23 +28131,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.admin_ord_point_service.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28916,23 +28157,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.admin_ord_point_service.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28942,23 +28183,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.admin_point_service.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28968,23 +28209,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_9 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.admin_point_service.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 9,
                 }
             )
-            lst_item_view.append(view_item_body_li_9.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -28994,32 +28235,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_9.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_10 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 10,
                 }
             )
-            lst_item_view.append(view_item_body_li_10.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_10.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29027,23 +28268,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_11 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.organizateur_simple.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 11,
                 }
             )
-            lst_item_view.append(view_item_body_li_11.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29053,23 +28294,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_11.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_12 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.organizateur_simple.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 12,
                 }
             )
-            lst_item_view.append(view_item_body_li_12.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29079,23 +28320,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_12.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_13 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.reseau.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 13,
                 }
             )
-            lst_item_view.append(view_item_body_li_13.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29105,23 +28346,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_13.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_14 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.reseau.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 14,
                 }
             )
-            lst_item_view.append(view_item_body_li_14.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29131,23 +28372,23 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_14.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_15 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.spip.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 15,
                 }
             )
-            lst_item_view.append(view_item_body_li_15.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29157,23 +28398,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_15.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_16 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.spip.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 16,
                 }
             )
-            lst_item_view.append(view_item_body_li_16.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29183,7 +28424,7 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_16.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
@@ -29571,14 +28812,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29586,20 +28827,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29607,20 +28848,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29628,7 +28869,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "fichier",
                     "action_name": "fichier",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -29726,7 +28967,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_4 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -29735,71 +28976,71 @@ for organization_ville in self:
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_templates_4.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_4.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29807,32 +29048,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29840,32 +29081,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "date_mise_a_jour",
                     "action_name": "date_mise_a_jour",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -29873,7 +29114,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "fichier",
                     "action_name": "fichier",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -30039,7 +29280,7 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
@@ -30048,9 +29289,9 @@ for organization_ville in self:
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p1.id)
 
-            view_item_body_button_1 = env["code.generator.view.item"].create(
+            view_item_body_button_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "button",
@@ -30059,11 +29300,11 @@ for organization_ville in self:
                     "action_name": "toggle_active",
                     "button_type": "oe_stat_button",
                     "icon": "fa-archive",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_button_1.id)
+            lst_item_view.append(view_item_body_button_p2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30072,20 +29313,20 @@ for organization_ville in self:
                     "name": "active",
                     "widget": "boolean_button",
                     "action_name": "active",
-                    "parent_id": view_item_body_button_1.id,
+                    "parent_id": view_item_body_button_p2.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30093,20 +29334,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30114,20 +29355,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "approuve",
                     "action_name": "approuve",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30135,20 +29376,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "description",
                     "action_name": "description",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30156,20 +29397,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "identifiant",
                     "action_name": "identifiant",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30177,20 +29418,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_7 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_group_7.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30198,20 +29439,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "numero",
                     "action_name": "numero",
-                    "parent_id": view_item_body_group_7.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_8 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_group_8.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30219,7 +29460,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "sous_categorie_id",
                     "action_name": "sous_categorie_id",
-                    "parent_id": view_item_body_group_8.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -30421,7 +29662,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_8 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -30430,71 +29671,71 @@ for organization_ville in self:
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_templates_8.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_8.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30502,23 +29743,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom_complet",
                     "action_name": "nom_complet",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.approuve.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30528,23 +29769,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.approuve.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30554,32 +29795,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30587,32 +29828,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "description",
                     "action_name": "description",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30620,32 +29861,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "identifiant",
                     "action_name": "identifiant",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30653,32 +29894,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_7 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_li_7.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_7.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30686,32 +29927,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "numero",
                     "action_name": "numero",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_8 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 8,
                 }
             )
-            lst_item_view.append(view_item_body_li_8.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_8.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -30719,7 +29960,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "sous_categorie_id",
                     "action_name": "sous_categorie_id",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -31049,7 +30290,7 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
@@ -31058,9 +30299,9 @@ for organization_ville in self:
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p1.id)
 
-            view_item_body_button_1 = env["code.generator.view.item"].create(
+            view_item_body_button_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "button",
@@ -31069,11 +30310,11 @@ for organization_ville in self:
                     "action_name": "toggle_active",
                     "button_type": "oe_stat_button",
                     "icon": "fa-archive",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_button_1.id)
+            lst_item_view.append(view_item_body_button_p2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31082,20 +30323,20 @@ for organization_ville in self:
                     "name": "active",
                     "widget": "boolean_button",
                     "action_name": "active",
-                    "parent_id": view_item_body_button_1.id,
+                    "parent_id": view_item_body_button_p2.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31103,20 +30344,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31124,20 +30365,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "approuve",
                     "action_name": "approuve",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31145,20 +30386,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nocategorie",
                     "action_name": "nocategorie",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31166,7 +30407,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_service_sous_categorie",
                     "action_name": "type_service_sous_categorie",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -31289,7 +30530,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_5 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -31298,71 +30539,71 @@ for organization_ville in self:
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_templates_5.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_5.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31370,23 +30611,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.approuve.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31396,23 +30637,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.approuve.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31422,32 +30663,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31455,32 +30696,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nocategorie",
                     "action_name": "nocategorie",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31488,7 +30729,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_service_sous_categorie",
                     "action_name": "type_service_sous_categorie",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -31707,7 +30948,7 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
@@ -31716,9 +30957,9 @@ for organization_ville in self:
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p1.id)
 
-            view_item_body_button_1 = env["code.generator.view.item"].create(
+            view_item_body_button_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "button",
@@ -31727,11 +30968,11 @@ for organization_ville in self:
                     "action_name": "toggle_active",
                     "button_type": "oe_stat_button",
                     "icon": "fa-archive",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_button_1.id)
+            lst_item_view.append(view_item_body_button_p2.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31740,20 +30981,20 @@ for organization_ville in self:
                     "name": "active",
                     "widget": "boolean_button",
                     "action_name": "active",
-                    "parent_id": view_item_body_button_1.id,
+                    "parent_id": view_item_body_button_p2.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31761,20 +31002,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31782,20 +31023,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "approuver",
                     "action_name": "approuver",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31803,20 +31044,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "categorie",
                     "action_name": "categorie",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31824,20 +31065,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "sous_categorie_service",
                     "action_name": "sous_categorie_service",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -31845,7 +31086,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_service",
                     "action_name": "type_service",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -31999,7 +31240,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_6 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -32008,71 +31249,71 @@ for organization_ville in self:
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_templates_6.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_6.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32080,23 +31321,23 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "record.approuver.raw_value",
                     "class_attr": "text-success float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32106,23 +31347,23 @@ for organization_ville in self:
                     "aria_label": "Ok",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "t_if": "!record.approuver.raw_value",
                     "class_attr": "text-danger float-right mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32132,32 +31373,32 @@ for organization_ville in self:
                     "aria_label": "Invalid",
                     "role": "img",
                     "class_attr": "fa fa-circle",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32165,32 +31406,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "categorie",
                     "action_name": "categorie",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32198,32 +31439,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "sous_categorie_service",
                     "action_name": "sous_categorie_service",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32231,7 +31472,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "type_service",
                     "action_name": "type_service",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -32501,14 +31742,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32516,20 +31757,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32537,20 +31778,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32558,20 +31799,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_2_ids",
                     "action_name": "membre_2_ids",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32579,7 +31820,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_ids",
                     "action_name": "membre_ids",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -32676,7 +31917,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_5 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -32685,71 +31926,71 @@ for organization_ville in self:
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_templates_5.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_5.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32757,32 +31998,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32790,32 +32031,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32823,32 +32064,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_2_ids",
                     "action_name": "membre_2_ids",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -32856,7 +32097,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre_ids",
                     "action_name": "membre_ids",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -33033,14 +32274,14 @@ for organization_ville in self:
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_group_1 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_group_1.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33048,20 +32289,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_group_1.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_2 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_group_2.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33069,20 +32310,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "code",
                     "action_name": "code",
-                    "parent_id": view_item_body_group_2.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_3 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_group_3.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33090,20 +32331,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "region",
                     "action_name": "region",
-                    "parent_id": view_item_body_group_3.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_4 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_group_4.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33111,20 +32352,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "arrondissement",
                     "action_name": "arrondissement",
-                    "parent_id": view_item_body_group_4.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_5 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_group_5.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33132,20 +32373,20 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_group_5.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_group_6 = env["code.generator.view.item"].create(
+            view_item_body_group_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "group",
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_group_6.id)
+            lst_item_view.append(view_item_body_group_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33153,7 +32394,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_group_6.id,
+                    "parent_id": view_item_body_group_p1.id,
                     "sequence": 1,
                 }
             )
@@ -33296,7 +32537,7 @@ for organization_ville in self:
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_templates_7 = env[
+            view_item_body_templates_p1 = env[
                 "code.generator.view.item"
             ].create(
                 {
@@ -33305,71 +32546,71 @@ for organization_ville in self:
                     "sequence": 7,
                 }
             )
-            lst_item_view.append(view_item_body_templates_7.id)
+            lst_item_view.append(view_item_body_templates_p1.id)
 
-            view_item_body_t_1 = env["code.generator.view.item"].create(
+            view_item_body_t_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "t",
                     "t_name": "kanban-box",
-                    "parent_id": view_item_body_templates_7.id,
+                    "parent_id": view_item_body_templates_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_t_1.id)
+            lst_item_view.append(view_item_body_t_p2.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "t_attf_class": "oe_kanban_global_click",
-                    "parent_id": view_item_body_t_1.id,
+                    "parent_id": view_item_body_t_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p3.id)
 
-            view_item_body_div_1 = env["code.generator.view.item"].create(
+            view_item_body_div_p4 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "div",
                     "class_attr": "oe_kanban_details",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p3.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_div_1.id)
+            lst_item_view.append(view_item_body_div_p4.id)
 
-            view_item_body_ul_1 = env["code.generator.view.item"].create(
+            view_item_body_ul_p5 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "ul",
-                    "parent_id": view_item_body_div_1.id,
+                    "parent_id": view_item_body_div_p4.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_ul_1.id)
+            lst_item_view.append(view_item_body_ul_p5.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33377,32 +32618,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "nom",
                     "action_name": "nom",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_2 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_li_2.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_2.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33410,32 +32651,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "code",
                     "action_name": "code",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_3 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 3,
                 }
             )
-            lst_item_view.append(view_item_body_li_3.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_3.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33443,32 +32684,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "region",
                     "action_name": "region",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_4 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 4,
                 }
             )
-            lst_item_view.append(view_item_body_li_4.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_4.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33476,32 +32717,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "arrondissement",
                     "action_name": "arrondissement",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_5 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 5,
                 }
             )
-            lst_item_view.append(view_item_body_li_5.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_5.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33509,32 +32750,32 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "membre",
                     "action_name": "membre",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_li_6 = env["code.generator.view.item"].create(
+            view_item_body_li_p6 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_ul_1.id,
+                    "parent_id": view_item_body_ul_p5.id,
                     "sequence": 6,
                 }
             )
-            lst_item_view.append(view_item_body_li_6.id)
+            lst_item_view.append(view_item_body_li_p6.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p7 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_6.id,
+                    "parent_id": view_item_body_li_p6.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p7.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -33542,7 +32783,7 @@ for organization_ville in self:
                     "item_type": "field",
                     "name": "organization",
                     "action_name": "organization",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p7.id,
                     "sequence": 1,
                 }
             )
@@ -33784,6 +33025,817 @@ for organization_ville in self:
                 }
             )
             lst_view_id.append(view_code_generator.id)
+
+        # act_window view
+        if True:
+            organization_arrondissement_arrondissement_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Arrondissement",
+                    "id_name": "organization_arrondissement_arrondissement_action_window",
+                    "model_name": "organization.arrondissement",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_type_service_categorie_categorie_de_services_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Catégorie de services",
+                    "id_name": "organization_type_service_categorie_categorie_de_services_action_window",
+                    "model_name": "organization.type.service.categorie",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_commentaire_commentaire_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Commentaire",
+                    "id_name": (
+                        "organization_commentaire_commentaire_action_window"
+                    ),
+                    "model_name": "organization.commentaire",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_demande_adhesion_demande_d_adhesion_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Demande d'adhésion",
+                    "id_name": "organization_demande_adhesion_demande_d_adhesion_action_window",
+                    "model_name": "organization.demande.adhesion",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_demande_service_demande_de_services_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Demande de services",
+                    "id_name": "organization_demande_service_demande_de_services_action_window",
+                    "model_name": "organization.demande.service",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_droits_admin_droits_administratifs_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Droits administratifs",
+                    "id_name": "organization_droits_admin_droits_administratifs_action_window",
+                    "model_name": "organization.droits.admin",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_echange_service_echange_de_services_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Échange de services",
+                    "id_name": "organization_echange_service_echange_de_services_action_window",
+                    "model_name": "organization.echange.service",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_fichier_fichier_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Fichier",
+                    "id_name": "organization_fichier_fichier_action_window",
+                    "model_name": "organization.fichier",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_membre_membre_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Membre",
+                    "id_name": "organization_membre_membre_action_window",
+                    "model_name": "organization.membre",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_occupation_occupation_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Occupation",
+                    "id_name": (
+                        "organization_occupation_occupation_action_window"
+                    ),
+                    "model_name": "organization.occupation",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_offre_service_offre_de_services_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Offre de services",
+                    "id_name": "organization_offre_service_offre_de_services_action_window",
+                    "model_name": "organization.offre.service",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_organization_organization_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Organization",
+                    "id_name": (
+                        "organization_organization_organization_action_window"
+                    ),
+                    "model_name": "organization.organization",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_origine_origine_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Origine",
+                    "id_name": "organization_origine_origine_action_window",
+                    "model_name": "organization.origine",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_point_service_point_de_services_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Point de services",
+                    "id_name": "organization_point_service_point_de_services_action_window",
+                    "model_name": "organization.point.service",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_provenance_provenance_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Provenance",
+                    "id_name": (
+                        "organization_provenance_provenance_action_window"
+                    ),
+                    "model_name": "organization.provenance",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_quartier_quartier_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Quartier",
+                    "id_name": "organization_quartier_quartier_action_window",
+                    "model_name": "organization.quartier",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_region_region_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Région",
+                    "id_name": "organization_region_region_action_window",
+                    "model_name": "organization.region",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_revenu_familial_revenu_familial_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Revenu familial",
+                    "id_name": "organization_revenu_familial_revenu_familial_action_window",
+                    "model_name": "organization.revenu.familial",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_situation_maison_situation_maison_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Situation maison",
+                    "id_name": "organization_situation_maison_situation_maison_action_window",
+                    "model_name": "organization.situation.maison",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_type_service_sous_categorie_sous_categorie_de_services_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Sous-catégorie de services",
+                    "id_name": "organization_type_service_sous_categorie_sous_categorie_de_services_action_window",
+                    "model_name": "organization.type.service.sous.categorie",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_type_communication_type_de_communications_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de communications",
+                    "id_name": "organization_type_communication_type_de_communications_action_window",
+                    "model_name": "organization.type.communication",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_type_compte_type_de_comptes_membre_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de comptes membre",
+                    "id_name": "organization_type_compte_type_de_comptes_membre_action_window",
+                    "model_name": "organization.type.compte",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_type_fichier_type_de_fichiers_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de fichiers",
+                    "id_name": "organization_type_fichier_type_de_fichiers_action_window",
+                    "model_name": "organization.type.fichier",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_type_service_type_de_services_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de services",
+                    "id_name": "organization_type_service_type_de_services_action_window",
+                    "model_name": "organization.type.service",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_type_telephone_type_de_telephones_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de téléphones",
+                    "id_name": "organization_type_telephone_type_de_telephones_action_window",
+                    "model_name": "organization.type.telephone",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+            organization_ville_ville_action_window = env[
+                "code.generator.act_window"
+            ].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Ville",
+                    "id_name": "organization_ville_ville_action_window",
+                    "model_name": "organization.ville",
+                    "view_type": "form",
+                    "view_mode": "kanban,tree,pivot,graph,form",
+                }
+            )
+
+        # menu view
+        if True:
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Arrondissement",
+                    "id_name": "arrondissement",
+                    "sequence": 1,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_location"
+                    ),
+                    "m2o_act_window": organization_arrondissement_arrondissement_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Catégorie de services",
+                    "id_name": "categorie_de_services",
+                    "sequence": 23,
+                    "parent_id_name": "demo_mariadb_sql_example_1.group_categorie_de_services",
+                    "m2o_act_window": organization_type_service_categorie_categorie_de_services_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Commentaire",
+                    "id_name": "commentaire",
+                    "sequence": 2,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_service"
+                    ),
+                    "m2o_act_window": organization_commentaire_commentaire_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Demande d'adhésion",
+                    "id_name": "demande_d_adhesion",
+                    "sequence": 3,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_membre"
+                    ),
+                    "m2o_act_window": organization_demande_adhesion_demande_d_adhesion_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Demande de services",
+                    "id_name": "demande_de_services",
+                    "sequence": 4,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_service"
+                    ),
+                    "m2o_act_window": organization_demande_service_demande_de_services_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Demo Mariadb Sql Example 1",
+                    "web_icon": "demo_mariadb_sql_example_1,static/description/icon.png",
+                    "id_name": "demo_mariadb_sql_example_1",
+                    "sequence": 20,
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Droits administratifs",
+                    "id_name": "droits_administratifs",
+                    "sequence": 5,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_configuration"
+                    ),
+                    "m2o_act_window": organization_droits_admin_droits_administratifs_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Échange de services",
+                    "id_name": "echange_de_services",
+                    "sequence": 6,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_service"
+                    ),
+                    "m2o_act_window": organization_echange_service_echange_de_services_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Fichier",
+                    "id_name": "fichier",
+                    "sequence": 7,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_document"
+                    ),
+                    "m2o_act_window": organization_fichier_fichier_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Catégorie de services",
+                    "id_name": "group_categorie_de_services",
+                    "sequence": 0,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.parent_service"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Configuration",
+                    "id_name": "group_configuration",
+                    "sequence": 1,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.parent_configuration"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Document",
+                    "id_name": "group_document",
+                    "sequence": 2,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.parent_organization"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Location",
+                    "id_name": "group_location",
+                    "sequence": 3,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.parent_configuration"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Membre",
+                    "id_name": "group_membre",
+                    "sequence": 4,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.parent_organization"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Organization",
+                    "id_name": "group_organization",
+                    "sequence": 5,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.parent_organization"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Service",
+                    "id_name": "group_service",
+                    "sequence": 6,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.parent_service"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Statistique",
+                    "id_name": "group_statistique",
+                    "sequence": 7,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.parent_organization"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Membre",
+                    "id_name": "membre",
+                    "sequence": 8,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_membre"
+                    ),
+                    "m2o_act_window": organization_membre_membre_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Menu",
+                    "id_name": "menu",
+                    "sequence": 1,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.demo_mariadb_sql_example_1"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Occupation",
+                    "id_name": "occupation",
+                    "sequence": 9,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_statistique"
+                    ),
+                    "m2o_act_window": organization_occupation_occupation_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Offre de services",
+                    "id_name": "offre_de_services",
+                    "sequence": 10,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_service"
+                    ),
+                    "m2o_act_window": organization_offre_service_offre_de_services_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Organization",
+                    "id_name": "organization",
+                    "sequence": 11,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_organization"
+                    ),
+                    "m2o_act_window": organization_organization_organization_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Origine",
+                    "id_name": "origine",
+                    "sequence": 12,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_statistique"
+                    ),
+                    "m2o_act_window": organization_origine_origine_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Configuration",
+                    "id_name": "parent_configuration",
+                    "sequence": 99,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.demo_mariadb_sql_example_1"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Organization",
+                    "id_name": "parent_organization",
+                    "sequence": 2,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.demo_mariadb_sql_example_1"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Service",
+                    "id_name": "parent_service",
+                    "sequence": 3,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.demo_mariadb_sql_example_1"
+                    ),
+                    "ignore_act_window": True,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Point de services",
+                    "id_name": "point_de_services",
+                    "sequence": 13,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_organization"
+                    ),
+                    "m2o_act_window": organization_point_service_point_de_services_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Provenance",
+                    "id_name": "provenance",
+                    "sequence": 14,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_statistique"
+                    ),
+                    "m2o_act_window": organization_provenance_provenance_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Quartier",
+                    "id_name": "quartier",
+                    "sequence": 15,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_location"
+                    ),
+                    "m2o_act_window": organization_quartier_quartier_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Région",
+                    "id_name": "region",
+                    "sequence": 16,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_location"
+                    ),
+                    "m2o_act_window": organization_region_region_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Revenu familial",
+                    "id_name": "revenu_familial",
+                    "sequence": 17,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_statistique"
+                    ),
+                    "m2o_act_window": organization_revenu_familial_revenu_familial_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Situation maison",
+                    "id_name": "situation_maison",
+                    "sequence": 18,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_statistique"
+                    ),
+                    "m2o_act_window": organization_situation_maison_situation_maison_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Sous-catégorie de services",
+                    "id_name": "sous_categorie_de_services",
+                    "sequence": 24,
+                    "parent_id_name": "demo_mariadb_sql_example_1.group_categorie_de_services",
+                    "m2o_act_window": organization_type_service_sous_categorie_sous_categorie_de_services_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de communications",
+                    "id_name": "type_de_communications",
+                    "sequence": 19,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_statistique"
+                    ),
+                    "m2o_act_window": organization_type_communication_type_de_communications_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de comptes membre",
+                    "id_name": "type_de_comptes_membre",
+                    "sequence": 20,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_configuration"
+                    ),
+                    "m2o_act_window": organization_type_compte_type_de_comptes_membre_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de fichiers",
+                    "id_name": "type_de_fichiers",
+                    "sequence": 21,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_document"
+                    ),
+                    "m2o_act_window": organization_type_fichier_type_de_fichiers_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de services",
+                    "id_name": "type_de_services",
+                    "sequence": 22,
+                    "parent_id_name": "demo_mariadb_sql_example_1.group_categorie_de_services",
+                    "m2o_act_window": organization_type_service_type_de_services_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Type de téléphones",
+                    "id_name": "type_de_telephones",
+                    "sequence": 25,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_statistique"
+                    ),
+                    "m2o_act_window": organization_type_telephone_type_de_telephones_action_window.id,
+                }
+            )
+            env["code.generator.menu"].create(
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "name": "Ville",
+                    "id_name": "ville",
+                    "sequence": 26,
+                    "parent_id_name": (
+                        "demo_mariadb_sql_example_1.group_location"
+                    ),
+                    "m2o_act_window": organization_ville_ville_action_window.id,
+                }
+            )
 
         # Action generate view
         wizard_view = env["code.generator.generate.views.wizard"].create(

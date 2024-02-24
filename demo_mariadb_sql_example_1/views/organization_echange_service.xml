@@ -174,17 +174,17 @@
         <field name="model">organization.echange.service</field>
         <field name="arch" type="xml">
             <search string="Organization echange service">
-                <filter domain="[('nom_complet','!=',False)]" name="nom_complet" string="Nom complet" />
-                <filter domain="[('commentaire','!=',False)]" name="commentaire" string="Commentaire" />
-                <filter domain="[('date_echange','!=',False)]" name="date_echange" string="Date de l'&#233;change" />
-                <filter domain="[('demande_service','!=',False)]" name="demande_service" string="Demande de services" />
-                <filter domain="[('membre_acheteur','!=',False)]" name="membre_acheteur" string="Membre acheteur" />
-                <filter domain="[('membre_vendeur','!=',False)]" name="membre_vendeur" string="Membre vendeur" />
-                <filter domain="[('nb_heure','!=',False)]" name="nb_heure" string="Nombre d'heure" />
-                <filter domain="[('offre_service','!=',False)]" name="offre_service" string="Offre de services" />
-                <filter domain="[('point_service','!=',False)]" name="point_service" string="Point de services" />
-                <filter domain="[('remarque','!=',False)]" name="remarque" string="Remarque" />
-                <filter domain="[('type_echange','!=',False)]" name="type_echange" string="Type d'&#233;change" />
+                <filter name="nom_complet" string="Nom complet" domain="[('nom_complet','!=',False)]" />
+                <filter name="commentaire" string="Commentaire" domain="[('commentaire','!=',False)]" />
+                <filter name="date_echange" string="Date de l'&#233;change" domain="[('date_echange','!=',False)]" />
+                <filter name="demande_service" string="Demande de services" domain="[('demande_service','!=',False)]" />
+                <filter name="membre_acheteur" string="Membre acheteur" domain="[('membre_acheteur','!=',False)]" />
+                <filter name="membre_vendeur" string="Membre vendeur" domain="[('membre_vendeur','!=',False)]" />
+                <filter name="nb_heure" string="Nombre d'heure" domain="[('nb_heure','!=',False)]" />
+                <filter name="offre_service" string="Offre de services" domain="[('offre_service','!=',False)]" />
+                <filter name="point_service" string="Point de services" domain="[('point_service','!=',False)]" />
+                <filter name="remarque" string="Remarque" domain="[('remarque','!=',False)]" />
+                <filter name="type_echange" string="Type d'&#233;change" domain="[('type_echange','!=',False)]" />
             </search>
         </field>
     </record>

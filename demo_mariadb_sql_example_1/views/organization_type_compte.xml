@@ -81,40 +81,40 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.admin.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.admin.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.admin_chef.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.admin_chef.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li
                                         class="text-success float-right mb4"
                                         t-if="record.admin_ord_point_service.raw_value"
                                     >
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.admin_ord_point_service.raw_value"
                                     >
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li
                                         class="text-success float-right mb4"
                                         t-if="record.admin_point_service.raw_value"
                                     >
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.admin_point_service.raw_value"
                                     >
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -125,25 +125,25 @@
                                         class="text-success float-right mb4"
                                         t-if="record.organizateur_simple.raw_value"
                                     >
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.organizateur_simple.raw_value"
                                     >
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.reseau.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.reseau.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.spip.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.spip.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                 </ul>
                             </div>
@@ -177,27 +177,27 @@
         <field name="model">organization.type.compte</field>
         <field name="arch" type="xml">
             <search string="Organization type compte">
-                <filter domain="[('nom_complet','!=',False)]" name="nom_complet" string="Nom complet" />
-                <filter domain="[('admin','=',True)]" name="admin" string="Admin" />
-                <filter domain="[('admin_chef','=',True)]" name="admin_chef" string="Admin chef" />
+                <filter name="nom_complet" string="Nom complet" domain="[('nom_complet','!=',False)]" />
+                <filter name="admin" string="Admin" domain="[('admin','=',True)]" />
+                <filter name="admin_chef" string="Admin chef" domain="[('admin_chef','=',True)]" />
                 <filter
-                    domain="[('admin_ord_point_service','=',True)]"
                     name="admin_ord_point_service"
                     string="Administrateur ordinaire point service"
+                    domain="[('admin_ord_point_service','=',True)]"
                 />
                 <filter
-                    domain="[('admin_point_service','=',True)]"
                     name="admin_point_service"
                     string="Administrateur point service"
+                    domain="[('admin_point_service','=',True)]"
                 />
-                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
+                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
                 <filter
-                    domain="[('organizateur_simple','=',True)]"
                     name="organizateur_simple"
                     string="Organizateur simple"
+                    domain="[('organizateur_simple','=',True)]"
                 />
-                <filter domain="[('reseau','=',True)]" name="reseau" string="R&#233;seau" />
-                <filter domain="[('spip','=',True)]" name="spip" string="Spip" />
+                <filter name="reseau" string="R&#233;seau" domain="[('reseau','=',True)]" />
+                <filter name="spip" string="Spip" domain="[('spip','=',True)]" />
             </search>
         </field>
     </record>

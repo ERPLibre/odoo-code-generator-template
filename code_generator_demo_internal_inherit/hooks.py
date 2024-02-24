@@ -84,7 +84,7 @@ def post_init_hook(cr, e):
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_xpath_1 = env["code.generator.view.item"].create(
+            view_item_body_xpath_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "xpath",
@@ -93,7 +93,7 @@ def post_init_hook(cr, e):
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_xpath_1.id)
+            lst_item_view.append(view_item_body_xpath_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -101,7 +101,7 @@ def post_init_hook(cr, e):
                     "item_type": "field",
                     "name": "feature_text",
                     "action_name": "feature_text",
-                    "parent_id": view_item_body_xpath_1.id,
+                    "parent_id": view_item_body_xpath_p1.id,
                     "sequence": 1,
                 }
             )
@@ -125,7 +125,7 @@ def post_init_hook(cr, e):
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_xpath_1 = env["code.generator.view.item"].create(
+            view_item_body_xpath_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "xpath",
@@ -134,7 +134,7 @@ def post_init_hook(cr, e):
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_xpath_1.id)
+            lst_item_view.append(view_item_body_xpath_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -142,7 +142,7 @@ def post_init_hook(cr, e):
                     "item_type": "field",
                     "name": "feature_text",
                     "action_name": "feature_text",
-                    "parent_id": view_item_body_xpath_1.id,
+                    "parent_id": view_item_body_xpath_p1.id,
                     "sequence": 1,
                 }
             )
@@ -166,7 +166,7 @@ def post_init_hook(cr, e):
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_xpath_1 = env["code.generator.view.item"].create(
+            view_item_body_xpath_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "xpath",
@@ -175,7 +175,7 @@ def post_init_hook(cr, e):
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_xpath_1.id)
+            lst_item_view.append(view_item_body_xpath_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -183,13 +183,13 @@ def post_init_hook(cr, e):
                     "item_type": "field",
                     "name": "feature_text",
                     "action_name": "feature_text",
-                    "parent_id": view_item_body_xpath_1.id,
+                    "parent_id": view_item_body_xpath_p1.id,
                     "sequence": 1,
                 }
             )
             lst_item_view.append(view_item.id)
 
-            view_item_body_xpath_2 = env["code.generator.view.item"].create(
+            view_item_body_xpath_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "xpath",
@@ -198,28 +198,28 @@ def post_init_hook(cr, e):
                     "sequence": 2,
                 }
             )
-            lst_item_view.append(view_item_body_xpath_2.id)
+            lst_item_view.append(view_item_body_xpath_p1.id)
 
-            view_item_body_li_1 = env["code.generator.view.item"].create(
+            view_item_body_li_p2 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "li",
                     "class_attr": "mb4",
-                    "parent_id": view_item_body_xpath_2.id,
+                    "parent_id": view_item_body_xpath_p1.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_li_1.id)
+            lst_item_view.append(view_item_body_li_p2.id)
 
-            view_item_body_strong_1 = env["code.generator.view.item"].create(
+            view_item_body_strong_p3 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "strong",
-                    "parent_id": view_item_body_li_1.id,
+                    "parent_id": view_item_body_li_p2.id,
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_strong_1.id)
+            lst_item_view.append(view_item_body_strong_p3.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -227,7 +227,7 @@ def post_init_hook(cr, e):
                     "item_type": "field",
                     "name": "feature_text",
                     "action_name": "feature_text",
-                    "parent_id": view_item_body_strong_1.id,
+                    "parent_id": view_item_body_strong_p3.id,
                     "sequence": 1,
                 }
             )
@@ -251,7 +251,7 @@ def post_init_hook(cr, e):
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_xpath_1 = env["code.generator.view.item"].create(
+            view_item_body_xpath_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "xpath",
@@ -260,7 +260,7 @@ def post_init_hook(cr, e):
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_xpath_1.id)
+            lst_item_view.append(view_item_body_xpath_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -268,7 +268,7 @@ def post_init_hook(cr, e):
                     "item_type": "field",
                     "name": "feature_text",
                     "action_name": "feature_text",
-                    "parent_id": view_item_body_xpath_1.id,
+                    "parent_id": view_item_body_xpath_p1.id,
                     "sequence": 1,
                 }
             )
@@ -292,7 +292,7 @@ def post_init_hook(cr, e):
         if True:
             lst_item_view = []
             # BODY
-            view_item_body_xpath_1 = env["code.generator.view.item"].create(
+            view_item_body_xpath_p1 = env["code.generator.view.item"].create(
                 {
                     "section_type": "body",
                     "item_type": "xpath",
@@ -301,7 +301,7 @@ def post_init_hook(cr, e):
                     "sequence": 1,
                 }
             )
-            lst_item_view.append(view_item_body_xpath_1.id)
+            lst_item_view.append(view_item_body_xpath_p1.id)
 
             view_item = env["code.generator.view.item"].create(
                 {
@@ -309,7 +309,7 @@ def post_init_hook(cr, e):
                     "item_type": "field",
                     "name": "feature_text",
                     "action_name": "feature_text",
-                    "parent_id": view_item_body_xpath_1.id,
+                    "parent_id": view_item_body_xpath_p1.id,
                     "sequence": 1,
                 }
             )

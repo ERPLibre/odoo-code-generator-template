@@ -6,8 +6,8 @@
         <field name="arch" type="xml">
             <form string="Titre">
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                        <button class="oe_stat_button" icon="fa-archive" name="toggle_active" type="object">
+                    <div name="button_box" class="oe_button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
                             <field name="active" widget="boolean_button" />
                         </button>
                     </div>
@@ -289,10 +289,10 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.achat_regrouper.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.achat_regrouper.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -310,16 +310,16 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.bottin_courriel.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.bottin_courriel.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.bottin_tel.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.bottin_tel.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -342,34 +342,34 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.description_membre.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.description_membre.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li
                                         class="text-success float-right mb4"
                                         t-if="record.est_un_point_service.raw_value"
                                     >
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.est_un_point_service.raw_value"
                                     >
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.membre_ca.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.membre_ca.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.membre_conjoint.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.membre_conjoint.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -377,10 +377,10 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.membre_principal.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.membre_principal.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -413,16 +413,16 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.part_social_paye.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.part_social_paye.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.pas_communication.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.pas_communication.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -435,16 +435,16 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.pret_actif.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.pret_actif.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.profil_approuver.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.profil_approuver.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -460,13 +460,13 @@
                                         class="text-success float-right mb4"
                                         t-if="record.recevoir_courriel_groupe.raw_value"
                                     >
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.recevoir_courriel_groupe.raw_value"
                                     >
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -629,128 +629,128 @@
         <field name="model">organization.membre</field>
         <field name="arch" type="xml">
             <search string="Organization membre">
-                <filter domain="[('nom_complet','!=',False)]" name="nom_complet" string="Nom complet" />
-                <filter domain="[('achat_regrouper','=',True)]" name="achat_regrouper" string="Achat regroup&#233;" />
-                <filter domain="[('active','=',False)]" name="Inactive" string="Inactive Organization membre" />
-                <filter domain="[('adresse','!=',False)]" name="adresse" string="Adresse" />
+                <filter name="nom_complet" string="Nom complet" domain="[('nom_complet','!=',False)]" />
+                <filter name="achat_regrouper" string="Achat regroup&#233;" domain="[('achat_regrouper','=',True)]" />
+                <filter name="Inactive" string="Inactive Organization membre" domain="[('active','=',False)]" />
+                <filter name="adresse" string="Adresse" domain="[('adresse','!=',False)]" />
                 <filter
-                    domain="[('annee_naissance','!=',False)]"
                     name="annee_naissance"
                     string="Ann&#233;e de naissance"
+                    domain="[('annee_naissance','!=',False)]"
                 />
-                <filter domain="[('arrondissement','!=',False)]" name="arrondissement" string="Arrondissement" />
-                <filter domain="[('bottin_courriel','=',True)]" name="bottin_courriel" string="Bottin courriel" />
-                <filter domain="[('bottin_tel','=',True)]" name="bottin_tel" string="Bottin t&#233;l&#233;phone" />
-                <filter domain="[('codepostal','!=',False)]" name="codepostal" string="Codepostal" />
-                <filter domain="[('courriel','!=',False)]" name="courriel" string="Courriel" />
-                <filter domain="[('date_adhesion','!=',False)]" name="date_adhesion" string="Date de l'adh&#233;sion" />
+                <filter name="arrondissement" string="Arrondissement" domain="[('arrondissement','!=',False)]" />
+                <filter name="bottin_courriel" string="Bottin courriel" domain="[('bottin_courriel','=',True)]" />
+                <filter name="bottin_tel" string="Bottin t&#233;l&#233;phone" domain="[('bottin_tel','=',True)]" />
+                <filter name="codepostal" string="Codepostal" domain="[('codepostal','!=',False)]" />
+                <filter name="courriel" string="Courriel" domain="[('courriel','!=',False)]" />
+                <filter name="date_adhesion" string="Date de l'adh&#233;sion" domain="[('date_adhesion','!=',False)]" />
                 <filter
-                    domain="[('date_mise_a_jour','!=',False)]"
                     name="date_mise_a_jour"
                     string="Derni&#232;re mise &#224; jour"
+                    domain="[('date_mise_a_jour','!=',False)]"
                 />
                 <filter
-                    domain="[('description_membre','=',True)]"
                     name="description_membre"
                     string="Description du membre"
+                    domain="[('description_membre','=',True)]"
                 />
                 <filter
-                    domain="[('est_un_point_service','=',True)]"
                     name="est_un_point_service"
                     string="Est un point de service"
+                    domain="[('est_un_point_service','=',True)]"
                 />
-                <filter domain="[('membre_ca','=',True)]" name="membre_ca" string="Membre du CA" />
-                <filter domain="[('membre_conjoint','=',True)]" name="membre_conjoint" string="A un membre conjoint" />
+                <filter name="membre_ca" string="Membre du CA" domain="[('membre_ca','=',True)]" />
+                <filter name="membre_conjoint" string="A un membre conjoint" domain="[('membre_conjoint','=',True)]" />
                 <filter
-                    domain="[('membre_conjoint_id','!=',False)]"
                     name="membre_conjoint_id"
                     string="Membre conjoint"
+                    domain="[('membre_conjoint_id','!=',False)]"
                 />
-                <filter domain="[('membre_principal','=',True)]" name="membre_principal" string="Membre principal" />
-                <filter domain="[('memo','!=',False)]" name="memo" string="M&#233;mo" />
-                <filter domain="[('nom','!=',False)]" name="nom" string="Nom" />
-                <filter domain="[('nom_utilisateur','!=',False)]" name="nom_utilisateur" string="Nom du compte" />
-                <filter domain="[('occupation','!=',False)]" name="occupation" string="Occupation" />
-                <filter domain="[('organization','!=',False)]" name="organization" string="Organization" />
-                <filter domain="[('origine','!=',False)]" name="origine" string="Origine" />
+                <filter name="membre_principal" string="Membre principal" domain="[('membre_principal','=',True)]" />
+                <filter name="memo" string="M&#233;mo" domain="[('memo','!=',False)]" />
+                <filter name="nom" string="Nom" domain="[('nom','!=',False)]" />
+                <filter name="nom_utilisateur" string="Nom du compte" domain="[('nom_utilisateur','!=',False)]" />
+                <filter name="occupation" string="Occupation" domain="[('occupation','!=',False)]" />
+                <filter name="organization" string="Organization" domain="[('organization','!=',False)]" />
+                <filter name="origine" string="Origine" domain="[('origine','!=',False)]" />
                 <filter
-                    domain="[('part_social_paye','=',True)]"
                     name="part_social_paye"
                     string="Part social pay&#233;"
+                    domain="[('part_social_paye','=',True)]"
                 />
                 <filter
-                    domain="[('pas_communication','=',True)]"
                     name="pas_communication"
                     string="Pas de communication"
+                    domain="[('pas_communication','=',True)]"
                 />
-                <filter domain="[('point_service','!=',False)]" name="point_service" string="Point de service" />
-                <filter domain="[('prenom','!=',False)]" name="prenom" string="Pr&#233;nom" />
-                <filter domain="[('pret_actif','=',True)]" name="pret_actif" string="Pr&#234;t actif" />
+                <filter name="point_service" string="Point de service" domain="[('point_service','!=',False)]" />
+                <filter name="prenom" string="Pr&#233;nom" domain="[('prenom','!=',False)]" />
+                <filter name="pret_actif" string="Pr&#234;t actif" domain="[('pret_actif','=',True)]" />
                 <filter
-                    domain="[('profil_approuver','=',True)]"
                     name="profil_approuver"
                     string="Profil approuv&#233;"
+                    domain="[('profil_approuver','=',True)]"
                 />
-                <filter domain="[('provenance','!=',False)]" name="provenance" string="Provenance" />
-                <filter domain="[('quartier','!=',False)]" name="quartier" string="Quartier" />
+                <filter name="provenance" string="Provenance" domain="[('provenance','!=',False)]" />
+                <filter name="quartier" string="Quartier" domain="[('quartier','!=',False)]" />
                 <filter
-                    domain="[('recevoir_courriel_groupe','=',True)]"
                     name="recevoir_courriel_groupe"
                     string="Veut recevoir courriel de groupes"
+                    domain="[('recevoir_courriel_groupe','=',True)]"
                 />
-                <filter domain="[('region','!=',False)]" name="region" string="R&#233;gion" />
-                <filter domain="[('revenu_familial','!=',False)]" name="revenu_familial" string="Revenu familial" />
-                <filter domain="[('sexe','!=',False)]" name="sexe" string="Sexe" />
-                <filter domain="[('situation_maison','!=',False)]" name="situation_maison" string="Situation maison" />
-                <filter domain="[('telephone_1','!=',False)]" name="telephone_1" string="1er t&#233;l&#233;phone" />
-                <filter domain="[('telephone_2','!=',False)]" name="telephone_2" string="2e t&#233;l&#233;phone" />
-                <filter domain="[('telephone_3','!=',False)]" name="telephone_3" string="3e t&#233;l&#233;phone" />
+                <filter name="region" string="R&#233;gion" domain="[('region','!=',False)]" />
+                <filter name="revenu_familial" string="Revenu familial" domain="[('revenu_familial','!=',False)]" />
+                <filter name="sexe" string="Sexe" domain="[('sexe','!=',False)]" />
+                <filter name="situation_maison" string="Situation maison" domain="[('situation_maison','!=',False)]" />
+                <filter name="telephone_1" string="1er t&#233;l&#233;phone" domain="[('telephone_1','!=',False)]" />
+                <filter name="telephone_2" string="2e t&#233;l&#233;phone" domain="[('telephone_2','!=',False)]" />
+                <filter name="telephone_3" string="3e t&#233;l&#233;phone" domain="[('telephone_3','!=',False)]" />
                 <filter
-                    domain="[('telephone_poste_1','!=',False)]"
                     name="telephone_poste_1"
                     string="1er poste t&#233;l&#233;phone"
+                    domain="[('telephone_poste_1','!=',False)]"
                 />
                 <filter
-                    domain="[('telephone_poste_2','!=',False)]"
                     name="telephone_poste_2"
                     string="2 poste t&#233;l&#233;phone"
+                    domain="[('telephone_poste_2','!=',False)]"
                 />
                 <filter
-                    domain="[('telephone_poste_3','!=',False)]"
                     name="telephone_poste_3"
                     string="3 poste t&#233;l&#233;phone"
+                    domain="[('telephone_poste_3','!=',False)]"
                 />
                 <filter
-                    domain="[('telephone_type_1','!=',False)]"
                     name="telephone_type_1"
                     string="1er type de t&#233;l&#233;phones"
+                    domain="[('telephone_type_1','!=',False)]"
                 />
                 <filter
-                    domain="[('telephone_type_2','!=',False)]"
                     name="telephone_type_2"
                     string="2e type de t&#233;l&#233;phones"
+                    domain="[('telephone_type_2','!=',False)]"
                 />
                 <filter
-                    domain="[('telephone_type_3','!=',False)]"
                     name="telephone_type_3"
                     string="3e type de t&#233;l&#233;phones"
+                    domain="[('telephone_type_3','!=',False)]"
                 />
                 <filter
-                    domain="[('transfert_organization','!=',False)]"
                     name="transfert_organization"
                     string="Transfert d'une Organization"
+                    domain="[('transfert_organization','!=',False)]"
                 />
                 <filter
-                    domain="[('type_communication','!=',False)]"
                     name="type_communication"
                     string="Type de communications"
+                    domain="[('type_communication','!=',False)]"
                 />
-                <filter domain="[('ville','!=',False)]" name="ville" string="Ville" />
-                <filter domain="[('commentaire','!=',False)]" name="commentaire" string="Commentaire membre source" />
+                <filter name="ville" string="Ville" domain="[('ville','!=',False)]" />
+                <filter name="commentaire" string="Commentaire membre source" domain="[('commentaire','!=',False)]" />
                 <filter
-                    domain="[('commentaire_ids','!=',False)]"
                     name="commentaire_ids"
                     string="Commentaire membre vis&#233;"
+                    domain="[('commentaire_ids','!=',False)]"
                 />
             </search>
         </field>

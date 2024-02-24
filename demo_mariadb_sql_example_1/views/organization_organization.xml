@@ -6,8 +6,8 @@
         <field name="arch" type="xml">
             <form string="Titre">
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                        <button class="oe_stat_button" icon="fa-archive" name="toggle_active" type="object">
+                    <div name="button_box" class="oe_button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
                             <field name="active" widget="boolean_button" />
                         </button>
                     </div>
@@ -158,19 +158,19 @@
                                         class="text-success float-right mb4"
                                         t-if="record.grp_achat_administrateur.raw_value"
                                     >
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.grp_achat_administrateur.raw_value"
                                     >
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.grp_achat_membre.raw_value">
-                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
+                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.grp_achat_membre.raw_value">
-                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
+                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -261,45 +261,45 @@
         <field name="model">organization.organization</field>
         <field name="arch" type="xml">
             <search string="Organization organization">
-                <filter domain="[('nom','!=',False)]" name="nom" string="Nom" />
-                <filter domain="[('active','=',False)]" name="Inactive" string="Inactive Organization organization" />
-                <filter domain="[('adresse','!=',False)]" name="adresse" string="Adresse" />
-                <filter domain="[('arrondissement','!=',False)]" name="arrondissement" string="Arrondissement" />
-                <filter domain="[('code_postal','!=',False)]" name="code_postal" string="Code postal" />
-                <filter domain="[('courriel','!=',False)]" name="courriel" string="Adresse courriel" />
+                <filter name="nom" string="Nom" domain="[('nom','!=',False)]" />
+                <filter name="Inactive" string="Inactive Organization organization" domain="[('active','=',False)]" />
+                <filter name="adresse" string="Adresse" domain="[('adresse','!=',False)]" />
+                <filter name="arrondissement" string="Arrondissement" domain="[('arrondissement','!=',False)]" />
+                <filter name="code_postal" string="Code postal" domain="[('code_postal','!=',False)]" />
+                <filter name="courriel" string="Adresse courriel" domain="[('courriel','!=',False)]" />
                 <filter
-                    domain="[('date_mise_a_jour','!=',False)]"
                     name="date_mise_a_jour"
                     string="Derni&#232;re mise &#224; jour"
+                    domain="[('date_mise_a_jour','!=',False)]"
                 />
                 <filter
-                    domain="[('grp_achat_administrateur','=',True)]"
                     name="grp_achat_administrateur"
                     string="Groupe d'achats des administrateurs"
+                    domain="[('grp_achat_administrateur','=',True)]"
                 />
                 <filter
-                    domain="[('grp_achat_membre','=',True)]"
                     name="grp_achat_membre"
                     string="Groupe d'achats membre"
+                    domain="[('grp_achat_membre','=',True)]"
                 />
-                <filter domain="[('logo','!=',False)]" name="logo" string="Logo" />
-                <filter domain="[('message_accueil','!=',False)]" name="message_accueil" string="Message d'accueil" />
+                <filter name="logo" string="Logo" domain="[('logo','!=',False)]" />
+                <filter name="message_accueil" string="Message d'accueil" domain="[('message_accueil','!=',False)]" />
                 <filter
-                    domain="[('message_grp_achat','!=',False)]"
                     name="message_grp_achat"
                     string="Message groupe d'achats"
+                    domain="[('message_grp_achat','!=',False)]"
                 />
-                <filter domain="[('region','!=',False)]" name="region" string="R&#233;gion administrative" />
-                <filter domain="[('telecopieur','!=',False)]" name="telecopieur" string="T&#233;l&#233;copieur" />
-                <filter domain="[('telephone','!=',False)]" name="telephone" string="T&#233;l&#233;phone" />
-                <filter domain="[('url_public','!=',False)]" name="url_public" string="Lien du site web publique" />
+                <filter name="region" string="R&#233;gion administrative" domain="[('region','!=',False)]" />
+                <filter name="telecopieur" string="T&#233;l&#233;copieur" domain="[('telecopieur','!=',False)]" />
+                <filter name="telephone" string="T&#233;l&#233;phone" domain="[('telephone','!=',False)]" />
+                <filter name="url_public" string="Lien du site web publique" domain="[('url_public','!=',False)]" />
                 <filter
-                    domain="[('url_transactionnel','!=',False)]"
                     name="url_transactionnel"
                     string="Lien du site web transactionnel"
+                    domain="[('url_transactionnel','!=',False)]"
                 />
-                <filter domain="[('ville','!=',False)]" name="ville" string="Ville" />
-                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
+                <filter name="ville" string="Ville" domain="[('ville','!=',False)]" />
+                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
             </search>
         </field>
     </record>
