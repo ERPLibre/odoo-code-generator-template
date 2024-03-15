@@ -6,8 +6,8 @@
         <field name="arch" type="xml">
             <form string="Titre">
                 <sheet>
-                    <div name="button_box" class="oe_button_box">
-                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-archive" name="toggle_active" type="object">
                             <field name="active" widget="boolean_button" />
                         </button>
                     </div>
@@ -126,16 +126,16 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.accompli.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.accompli.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.approuve.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.approuve.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -188,10 +188,10 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.offre_special.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.offre_special.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -248,36 +248,36 @@
         <field name="model">organization.offre.service</field>
         <field name="arch" type="xml">
             <search string="Organization offre service">
-                <filter name="description" string="Description" domain="[('description','!=',False)]" />
-                <filter name="accompli" string="Accomplie" domain="[('accompli','=',True)]" />
-                <filter name="Inactive" string="Inactive Organization offre service" domain="[('active','=',False)]" />
-                <filter name="approuve" string="Approuv&#233;" domain="[('approuve','=',True)]" />
-                <filter name="condition" string="Conditions" domain="[('condition','!=',False)]" />
-                <filter name="condition_autre" string="Condition autres" domain="[('condition_autre','!=',False)]" />
-                <filter name="date_affichage" string="Date d'affichage" domain="[('date_affichage','!=',False)]" />
-                <filter name="date_debut" string="Date de d&#233;but" domain="[('date_debut','!=',False)]" />
-                <filter name="date_fin" string="Date de fin" domain="[('date_fin','!=',False)]" />
+                <filter domain="[('description','!=',False)]" name="description" string="Description" />
+                <filter domain="[('accompli','=',True)]" name="accompli" string="Accomplie" />
+                <filter domain="[('active','=',False)]" name="Inactive" string="Inactive Organization offre service" />
+                <filter domain="[('approuve','=',True)]" name="approuve" string="Approuv&#233;" />
+                <filter domain="[('condition','!=',False)]" name="condition" string="Conditions" />
+                <filter domain="[('condition_autre','!=',False)]" name="condition_autre" string="Condition autres" />
+                <filter domain="[('date_affichage','!=',False)]" name="date_affichage" string="Date d'affichage" />
+                <filter domain="[('date_debut','!=',False)]" name="date_debut" string="Date de d&#233;but" />
+                <filter domain="[('date_fin','!=',False)]" name="date_fin" string="Date de fin" />
                 <filter
+                    domain="[('date_mise_a_jour','!=',False)]"
                     name="date_mise_a_jour"
                     string="Derni&#232;re mise &#224; jour"
-                    domain="[('date_mise_a_jour','!=',False)]"
                 />
-                <filter name="disponibilite" string="Disponibilit&#233;" domain="[('disponibilite','!=',False)]" />
-                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
+                <filter domain="[('disponibilite','!=',False)]" name="disponibilite" string="Disponibilit&#233;" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
                 <filter
+                    domain="[('nb_consultation','!=',False)]"
                     name="nb_consultation"
                     string="Nombre de consultations"
-                    domain="[('nb_consultation','!=',False)]"
                 />
                 <filter
+                    domain="[('nom_offre_special','!=',False)]"
                     name="nom_offre_special"
                     string="Nom de l'offre sp&#233;ciale"
-                    domain="[('nom_offre_special','!=',False)]"
                 />
-                <filter name="offre_special" string="Offre sp&#233;ciale" domain="[('offre_special','=',True)]" />
-                <filter name="organization" string="Organization" domain="[('organization','!=',False)]" />
-                <filter name="tarif" string="Tarif" domain="[('tarif','!=',False)]" />
-                <filter name="type_service_id" string="Type de services" domain="[('type_service_id','!=',False)]" />
+                <filter domain="[('offre_special','=',True)]" name="offre_special" string="Offre sp&#233;ciale" />
+                <filter domain="[('organization','!=',False)]" name="organization" string="Organization" />
+                <filter domain="[('tarif','!=',False)]" name="tarif" string="Tarif" />
+                <filter domain="[('type_service_id','!=',False)]" name="type_service_id" string="Type de services" />
             </search>
         </field>
     </record>

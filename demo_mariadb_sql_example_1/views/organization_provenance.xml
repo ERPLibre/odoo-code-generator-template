@@ -73,8 +73,8 @@
         <field name="model">organization.provenance</field>
         <field name="arch" type="xml">
             <search string="Organization provenance">
-                <filter name="nom" string="Provenance" domain="[('nom','!=',False)]" />
-                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Provenance" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
             </search>
         </field>
     </record>

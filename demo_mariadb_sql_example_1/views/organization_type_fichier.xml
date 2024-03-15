@@ -84,13 +84,13 @@
         <field name="model">organization.type.fichier</field>
         <field name="arch" type="xml">
             <search string="Organization type fichier">
-                <filter name="nom" string="Nom" domain="[('nom','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Nom" />
                 <filter
+                    domain="[('date_mise_a_jour','!=',False)]"
                     name="date_mise_a_jour"
                     string="Derni&#232;re mise &#224; jour"
-                    domain="[('date_mise_a_jour','!=',False)]"
                 />
-                <filter name="fichier" string="Fichier" domain="[('fichier','!=',False)]" />
+                <filter domain="[('fichier','!=',False)]" name="fichier" string="Fichier" />
             </search>
         </field>
     </record>

@@ -169,19 +169,19 @@
                                         class="text-success float-right mb4"
                                         t-if="record.consulter_organization.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.consulter_organization.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.consulter_reseau.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.consulter_reseau.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -314,73 +314,73 @@
         <field name="model">organization.commentaire</field>
         <field name="arch" type="xml">
             <search string="Organization commentaire">
-                <filter name="nom_complet" string="Nom complet" domain="[('nom_complet','!=',False)]" />
+                <filter domain="[('nom_complet','!=',False)]" name="nom_complet" string="Nom complet" />
                 <filter
+                    domain="[('autre_commentaire','!=',False)]"
                     name="autre_commentaire"
                     string="Autres commentaires"
-                    domain="[('autre_commentaire','!=',False)]"
                 />
-                <filter name="autre_situation" string="Autre situation" domain="[('autre_situation','!=',False)]" />
-                <filter name="confidentiel" string="Confidentialit&#233;" domain="[('confidentiel','!=',False)]" />
+                <filter domain="[('autre_situation','!=',False)]" name="autre_situation" string="Autre situation" />
+                <filter domain="[('confidentiel','!=',False)]" name="confidentiel" string="Confidentialit&#233;" />
                 <filter
+                    domain="[('consulter_organization','=',True)]"
                     name="consulter_organization"
                     string="Consult&#233; par une Organization"
-                    domain="[('consulter_organization','=',True)]"
                 />
                 <filter
+                    domain="[('consulter_reseau','=',True)]"
                     name="consulter_reseau"
                     string="Consult&#233; par le R&#233;seau"
-                    domain="[('consulter_reseau','=',True)]"
                 />
-                <filter name="date_incident" string="Date de l'indicent" domain="[('date_incident','!=',False)]" />
+                <filter domain="[('date_incident','!=',False)]" name="date_incident" string="Date de l'indicent" />
                 <filter
+                    domain="[('date_mise_a_jour','!=',False)]"
                     name="date_mise_a_jour"
                     string="Derni&#232;re mise &#224; jour"
-                    domain="[('date_mise_a_jour','!=',False)]"
                 />
                 <filter
+                    domain="[('datetime_creation','!=',False)]"
                     name="datetime_creation"
                     string="Date et heure de cr&#233;ation"
-                    domain="[('datetime_creation','!=',False)]"
                 />
                 <filter
+                    domain="[('degre_satisfaction','!=',False)]"
                     name="degre_satisfaction"
                     string="Degr&#233; de satisfaction"
-                    domain="[('degre_satisfaction','!=',False)]"
                 />
                 <filter
+                    domain="[('demande_service_id','!=',False)]"
                     name="demande_service_id"
                     string="Demande de services"
-                    domain="[('demande_service_id','!=',False)]"
                 />
-                <filter name="demarche" string="D&#233;marche" domain="[('demarche','!=',False)]" />
-                <filter name="membre_source" string="Membre source" domain="[('membre_source','!=',False)]" />
-                <filter name="membre_viser" string="Membre vis&#233;" domain="[('membre_viser','!=',False)]" />
-                <filter name="nom_comite" string="Nom du comit&#233;" domain="[('nom_comite','!=',False)]" />
+                <filter domain="[('demarche','!=',False)]" name="demarche" string="D&#233;marche" />
+                <filter domain="[('membre_source','!=',False)]" name="membre_source" string="Membre source" />
+                <filter domain="[('membre_viser','!=',False)]" name="membre_viser" string="Membre vis&#233;" />
+                <filter domain="[('nom_comite','!=',False)]" name="nom_comite" string="Nom du comit&#233;" />
                 <filter
+                    domain="[('note_administrative','!=',False)]"
                     name="note_administrative"
                     string="Note administrative"
-                    domain="[('note_administrative','!=',False)]"
                 />
-                <filter name="number" string="# de commentaire" domain="[('number','!=',False)]" />
-                <filter name="offre_service_id" string="Offre de services" domain="[('offre_service_id','!=',False)]" />
-                <filter name="point_service" string="Point de services" domain="[('point_service','!=',False)]" />
+                <filter domain="[('number','!=',False)]" name="number" string="# de commentaire" />
+                <filter domain="[('offre_service_id','!=',False)]" name="offre_service_id" string="Offre de services" />
+                <filter domain="[('point_service','!=',False)]" name="point_service" string="Point de services" />
                 <filter
+                    domain="[('resumer_situation','!=',False)]"
                     name="resumer_situation"
                     string="R&#233;sum&#233; de la situation"
-                    domain="[('resumer_situation','!=',False)]"
                 />
                 <filter
+                    domain="[('situation_impliquant','!=',False)]"
                     name="situation_impliquant"
                     string="Situation impliquant"
-                    domain="[('situation_impliquant','!=',False)]"
                 />
                 <filter
+                    domain="[('solution_pour_regler','!=',False)]"
                     name="solution_pour_regler"
                     string="Solution pour r&#233;gler la situation"
-                    domain="[('solution_pour_regler','!=',False)]"
                 />
-                <filter name="type_offre" string="Type de l'offre" domain="[('type_offre','!=',False)]" />
+                <filter domain="[('type_offre','!=',False)]" name="type_offre" string="Type de l'offre" />
             </search>
         </field>
     </record>

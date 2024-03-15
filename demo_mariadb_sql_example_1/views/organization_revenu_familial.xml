@@ -73,8 +73,8 @@
         <field name="model">organization.revenu.familial</field>
         <field name="arch" type="xml">
             <search string="Organization revenu familial">
-                <filter name="nom" string="Revenu" domain="[('nom','!=',False)]" />
-                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Revenu" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
             </search>
         </field>
     </record>

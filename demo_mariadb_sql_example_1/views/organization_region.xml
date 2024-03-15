@@ -102,11 +102,11 @@
         <field name="model">organization.region</field>
         <field name="arch" type="xml">
             <search string="Organization region">
-                <filter name="nom" string="Nom" domain="[('nom','!=',False)]" />
-                <filter name="code" string="Code de r&#233;gion" domain="[('code','!=',False)]" />
-                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
-                <filter name="organization" string="Organization" domain="[('organization','!=',False)]" />
-                <filter name="ville" string="Ville" domain="[('ville','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Nom" />
+                <filter domain="[('code','!=',False)]" name="code" string="Code de r&#233;gion" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
+                <filter domain="[('organization','!=',False)]" name="organization" string="Organization" />
+                <filter domain="[('ville','!=',False)]" name="ville" string="Ville" />
             </search>
         </field>
     </record>

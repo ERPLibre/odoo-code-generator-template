@@ -104,73 +104,73 @@
                                         class="text-success float-right mb4"
                                         t-if="record.consulter_etat_compte.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.consulter_etat_compte.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.consulter_profil.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.consulter_profil.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.gestion_dmd.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.gestion_dmd.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.gestion_fichier.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.gestion_fichier.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.gestion_offre.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.gestion_offre.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li
                                         class="text-success float-right mb4"
                                         t-if="record.gestion_offre_service.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.gestion_offre_service.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.gestion_profil.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.gestion_profil.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li
                                         class="text-success float-right mb4"
                                         t-if="record.gestion_type_service.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.gestion_type_service.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.groupe_achat.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.groupe_achat.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -178,16 +178,16 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.saisie_echange.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.saisie_echange.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.validation.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.validation.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                 </ul>
                             </div>
@@ -225,31 +225,31 @@
         <field name="model">organization.droits.admin</field>
         <field name="arch" type="xml">
             <search string="Organization droits admin">
-                <filter name="nom_complet" string="Nom complet" domain="[('nom_complet','!=',False)]" />
+                <filter domain="[('nom_complet','!=',False)]" name="nom_complet" string="Nom complet" />
                 <filter
+                    domain="[('consulter_etat_compte','=',True)]"
                     name="consulter_etat_compte"
                     string="Consulter &#233;tat de compte"
-                    domain="[('consulter_etat_compte','=',True)]"
                 />
-                <filter name="consulter_profil" string="Consulter profil" domain="[('consulter_profil','=',True)]" />
-                <filter name="gestion_dmd" string="Gestion demande de services" domain="[('gestion_dmd','=',True)]" />
-                <filter name="gestion_fichier" string="Gestion fichier" domain="[('gestion_fichier','=',True)]" />
-                <filter name="gestion_offre" string="Gestion offre" domain="[('gestion_offre','=',True)]" />
+                <filter domain="[('consulter_profil','=',True)]" name="consulter_profil" string="Consulter profil" />
+                <filter domain="[('gestion_dmd','=',True)]" name="gestion_dmd" string="Gestion demande de services" />
+                <filter domain="[('gestion_fichier','=',True)]" name="gestion_fichier" string="Gestion fichier" />
+                <filter domain="[('gestion_offre','=',True)]" name="gestion_offre" string="Gestion offre" />
                 <filter
+                    domain="[('gestion_offre_service','=',True)]"
                     name="gestion_offre_service"
                     string="Gestion offre de services"
-                    domain="[('gestion_offre_service','=',True)]"
                 />
-                <filter name="gestion_profil" string="Gestion profil" domain="[('gestion_profil','=',True)]" />
+                <filter domain="[('gestion_profil','=',True)]" name="gestion_profil" string="Gestion profil" />
                 <filter
+                    domain="[('gestion_type_service','=',True)]"
                     name="gestion_type_service"
                     string="Gestion type de services"
-                    domain="[('gestion_type_service','=',True)]"
                 />
-                <filter name="groupe_achat" string="Groupe d'achat" domain="[('groupe_achat','=',True)]" />
-                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
-                <filter name="saisie_echange" string="Saisie &#233;change" domain="[('saisie_echange','=',True)]" />
-                <filter name="validation" string="Validation" domain="[('validation','=',True)]" />
+                <filter domain="[('groupe_achat','=',True)]" name="groupe_achat" string="Groupe d'achat" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
+                <filter domain="[('saisie_echange','=',True)]" name="saisie_echange" string="Saisie &#233;change" />
+                <filter domain="[('validation','=',True)]" name="validation" string="Validation" />
             </search>
         </field>
     </record>

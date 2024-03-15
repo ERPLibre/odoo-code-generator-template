@@ -91,28 +91,28 @@
                                         </strong>
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.si_admin.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.si_admin.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="text-success float-right mb4" t-if="record.si_disponible.raw_value">
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li class="text-danger float-right mb4" t-if="!record.si_disponible.raw_value">
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li
                                         class="text-success float-right mb4"
                                         t-if="record.si_organization_local_seulement.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Ok" role="img" title="Ok" />
+                                        <i aria-label="Ok" class="fa fa-circle" role="img" title="Ok" />
                                     </li>
                                     <li
                                         class="text-danger float-right mb4"
                                         t-if="!record.si_organization_local_seulement.raw_value"
                                     >
-                                        <i class="fa fa-circle" aria-label="Invalid" role="img" title="Invalid" />
+                                        <i aria-label="Invalid" class="fa fa-circle" role="img" title="Invalid" />
                                     </li>
                                     <li class="mb4">
                                         <strong>
@@ -149,22 +149,22 @@
         <field name="model">organization.fichier</field>
         <field name="arch" type="xml">
             <search string="Organization fichier">
-                <filter name="nom" string="Nom" domain="[('nom','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Nom" />
                 <filter
+                    domain="[('date_mise_a_jour','!=',False)]"
                     name="date_mise_a_jour"
                     string="Derni&#232;re mise &#224; jour"
-                    domain="[('date_mise_a_jour','!=',False)]"
                 />
-                <filter name="fichier" string="Fichier" domain="[('fichier','!=',False)]" />
-                <filter name="organization" string="Organization" domain="[('organization','!=',False)]" />
-                <filter name="si_admin" string="Admin" domain="[('si_admin','=',True)]" />
-                <filter name="si_disponible" string="Disponible" domain="[('si_disponible','=',True)]" />
+                <filter domain="[('fichier','!=',False)]" name="fichier" string="Fichier" />
+                <filter domain="[('organization','!=',False)]" name="organization" string="Organization" />
+                <filter domain="[('si_admin','=',True)]" name="si_admin" string="Admin" />
+                <filter domain="[('si_disponible','=',True)]" name="si_disponible" string="Disponible" />
                 <filter
+                    domain="[('si_organization_local_seulement','=',True)]"
                     name="si_organization_local_seulement"
                     string="Organization local seulement"
-                    domain="[('si_organization_local_seulement','=',True)]"
                 />
-                <filter name="type_fichier" string="Type fichier" domain="[('type_fichier','!=',False)]" />
+                <filter domain="[('type_fichier','!=',False)]" name="type_fichier" string="Type fichier" />
             </search>
         </field>
     </record>

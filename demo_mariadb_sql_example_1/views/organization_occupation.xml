@@ -73,8 +73,8 @@
         <field name="model">organization.occupation</field>
         <field name="arch" type="xml">
             <search string="Organization occupation">
-                <filter name="nom" string="Occupation" domain="[('nom','!=',False)]" />
-                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Occupation" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
             </search>
         </field>
     </record>

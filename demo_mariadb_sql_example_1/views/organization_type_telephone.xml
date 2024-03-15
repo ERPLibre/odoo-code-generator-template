@@ -91,10 +91,10 @@
         <field name="model">organization.type.telephone</field>
         <field name="arch" type="xml">
             <search string="Organization type telephone">
-                <filter name="nom" string="Nom" domain="[('nom','!=',False)]" />
-                <filter name="membre" string="Membre 1" domain="[('membre','!=',False)]" />
-                <filter name="membre_2_ids" string="Membre 3" domain="[('membre_2_ids','!=',False)]" />
-                <filter name="membre_ids" string="Membre 2" domain="[('membre_ids','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Nom" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre 1" />
+                <filter domain="[('membre_2_ids','!=',False)]" name="membre_2_ids" string="Membre 3" />
+                <filter domain="[('membre_ids','!=',False)]" name="membre_ids" string="Membre 2" />
             </search>
         </field>
     </record>

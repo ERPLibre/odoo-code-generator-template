@@ -113,12 +113,12 @@
         <field name="model">organization.ville</field>
         <field name="arch" type="xml">
             <search string="Organization ville">
-                <filter name="nom" string="Nom" domain="[('nom','!=',False)]" />
-                <filter name="code" string="Code" domain="[('code','!=',False)]" />
-                <filter name="region" string="R&#233;gion" domain="[('region','!=',False)]" />
-                <filter name="arrondissement" string="Arrondissement" domain="[('arrondissement','!=',False)]" />
-                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
-                <filter name="organization" string="Organization" domain="[('organization','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Nom" />
+                <filter domain="[('code','!=',False)]" name="code" string="Code" />
+                <filter domain="[('region','!=',False)]" name="region" string="R&#233;gion" />
+                <filter domain="[('arrondissement','!=',False)]" name="arrondissement" string="Arrondissement" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
+                <filter domain="[('organization','!=',False)]" name="organization" string="Organization" />
             </search>
         </field>
     </record>

@@ -84,9 +84,9 @@
         <field name="model">organization.quartier</field>
         <field name="arch" type="xml">
             <search string="Organization quartier">
-                <filter name="nom" string="Nom du quartier" domain="[('nom','!=',False)]" />
-                <filter name="arrondissement" string="Arrondissement" domain="[('arrondissement','!=',False)]" />
-                <filter name="membre" string="Membre" domain="[('membre','!=',False)]" />
+                <filter domain="[('nom','!=',False)]" name="nom" string="Nom du quartier" />
+                <filter domain="[('arrondissement','!=',False)]" name="arrondissement" string="Arrondissement" />
+                <filter domain="[('membre','!=',False)]" name="membre" string="Membre" />
             </search>
         </field>
     </record>
