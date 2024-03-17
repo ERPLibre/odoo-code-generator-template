@@ -58,6 +58,7 @@ def post_init_hook(cr, e):
         value["enable_template_wizard_view"] = True
         value["force_generic_template_wizard_view"] = True
         value["enable_template_website_snippet_view"] = False
+        value["template_ignore_export_data"] = True
         value["enable_sync_template"] = True
         value["ignore_fields"] = ""
         value["post_init_hook_show"] = True
