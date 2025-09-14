@@ -127,9 +127,9 @@ class DemoPortalController(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_demo_model_2_portals_history"
-        ] = demo_model_2_portals.ids[:100]
+        request.session["my_demo_model_2_portals_history"] = (
+            demo_model_2_portals.ids[:100]
+        )
 
         values.update(
             {
@@ -281,9 +281,9 @@ class DemoPortalController(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_demo_model_3_portal_diagrams_history"
-        ] = demo_model_3_portal_diagrams.ids[:100]
+        request.session["my_demo_model_3_portal_diagrams_history"] = (
+            demo_model_3_portal_diagrams.ids[:100]
+        )
 
         values.update(
             {
@@ -432,9 +432,9 @@ class DemoPortalController(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_demo_model_portals_history"
-        ] = demo_model_portals.ids[:100]
+        request.session["my_demo_model_portals_history"] = (
+            demo_model_portals.ids[:100]
+        )
 
         values.update(
             {

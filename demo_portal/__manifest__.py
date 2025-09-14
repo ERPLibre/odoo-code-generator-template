@@ -1,7 +1,7 @@
 {
     "name": "Demo Portal",
     "category": "Uncategorized",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "author": "TechnoLibre",
     "license": "AGPL-3",
     "website": "https://technolibre.ca",
@@ -10,6 +10,7 @@
         "mail",
         "portal",
         "website",
+        "web_timeline",
     ],
     "data": [
         "security/ir.model.access.csv",
@@ -19,6 +20,11 @@
         "views/demo_model_portal.xml",
         "views/menu.xml",
         "views/snippets.xml",
+    ],
+    "web.assets_frontend": ["demo_portal/static/src/js/portal.demo_portal.js"],
+    "website.assets_frontend": [
+        "demo_portal/static/src/js/website.demo_portal.animation.js",
+        "demo_portal/static/src/scss/demo_portal.scss",
     ],
     "installable": True,
 }

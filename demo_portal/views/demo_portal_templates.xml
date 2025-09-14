@@ -831,12 +831,6 @@
         </t>
     </template>
 
-    <template id="assets_frontend_demo_portal_portal" name="Portal assets frontend" inherit_id="web.assets_frontend">
-        <xpath expr="//script[last()]" position="after">
-            <script type="text/javascript" src="/demo_portal/static/src/js/portal.demo_portal.js" />
-        </xpath>
-    </template>
-
     <template id="demo_portal.portal_my_demo_model_portals" name="My Demo Model Portals">
         <t t-call="portal.portal_layout">
             <t t-set="breadcrumbs_searchbar" t-value="True" />
