@@ -123,10 +123,9 @@
         </field>
     </record>
 
-    <act_window
-        id="demo_model_2_portal_demo_model_2_portal_action_window"
-        name="Demo model 2 portal"
-        res_model="demo.model_2.portal"
-        view_mode="kanban,tree,pivot,graph,form,activity"
-    />
+    <record id="demo_model_2_portal_demo_model_2_portal_action_window" model="ir.actions.act_window">
+        <field name="name">Demo model 2 portal</field>
+        <field name="res_model">demo.model_2.portal</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form,activity</field>
+    </record>
 </odoo>
