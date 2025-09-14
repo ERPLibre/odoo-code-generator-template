@@ -92,10 +92,9 @@
         </field>
     </record>
 
-    <act_window
-        id="demo_model_2_internal_demo_model_2_internal_action_window"
-        name="Demo model 2 internal"
-        res_model="demo.model_2.internal"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="demo_model_2_internal_demo_model_2_internal_action_window" model="ir.actions.act_window">
+        <field name="name">Demo model 2 internal</field>
+        <field name="res_model">demo.model_2.internal</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>
