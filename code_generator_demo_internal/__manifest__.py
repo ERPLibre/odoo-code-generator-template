@@ -1,7 +1,7 @@
 {
     "name": "Setup testing environment for internal view code generator",
     "category": "Uncategorized",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "TechnoLibre",
     "license": "AGPL-3",
     "depends": ["code_generator"],
