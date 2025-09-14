@@ -51,9 +51,8 @@
         </field>
     </record>
 
-    <act_window
-        id="demo_website_leaflet_map_demo_website_leaflet_map_action_window"
-        name="Demo website leaflet map"
-        res_model="demo.website_leaflet.map"
-    />
+    <record id="demo_website_leaflet_map_demo_website_leaflet_map_action_window" model="ir.actions.act_window">
+        <field name="name">Demo website leaflet map</field>
+        <field name="res_model">demo.website_leaflet.map</field>
+    </record>
 </odoo>
