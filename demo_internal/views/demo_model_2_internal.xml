@@ -36,7 +36,7 @@
                 <field name="name" />
                 <field name="model_1" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -85,16 +85,16 @@
         <field name="name">demo_model_2_internal_tree</field>
         <field name="model">demo.model_2.internal</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="model_1" />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="demo_model_2_internal_demo_model_2_internal_action_window" model="ir.actions.act_window">
         <field name="name">Demo model 2 internal</field>
         <field name="res_model">demo.model_2.internal</field>
-        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
     </record>
 </odoo>
