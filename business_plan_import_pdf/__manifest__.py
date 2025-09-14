@@ -1,6 +1,6 @@
 {
     "name": "Business Plan Import Pdf",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "TechnoLibre",
     "website": "https://technolibre.ca",
     "license": "AGPL-3",
