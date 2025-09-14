@@ -16,7 +16,7 @@ class DemoModelPortal(models.Model):
 
     demo_char = fields.Char(
         string="Char demo",
-        track_visibility="onchange",
+        tracking=True,
     )
 
     demo_date = fields.Date(string="Date demo")
