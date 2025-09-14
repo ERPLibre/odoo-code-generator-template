@@ -141,7 +141,7 @@
                 <field name="solution_pour_regler" />
                 <field name="type_offre" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -389,7 +389,7 @@
         <field name="name">organization_commentaire_tree</field>
         <field name="model">organization.commentaire</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="nom_complet" />
                 <field name="autre_commentaire" />
                 <field name="autre_situation" />
@@ -413,13 +413,13 @@
                 <field name="situation_impliquant" />
                 <field name="solution_pour_regler" />
                 <field name="type_offre" />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="organization_commentaire_commentaire_action_window" model="ir.actions.act_window">
         <field name="name">Commentaire</field>
         <field name="res_model">organization.commentaire</field>
-        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
     </record>
 </odoo>

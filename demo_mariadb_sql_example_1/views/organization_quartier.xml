@@ -40,7 +40,7 @@
                 <field name="arrondissement" />
                 <field name="membre" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -95,17 +95,17 @@
         <field name="name">organization_quartier_tree</field>
         <field name="model">organization.quartier</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="nom" />
                 <field name="arrondissement" />
                 <field name="membre" />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="organization_quartier_quartier_action_window" model="ir.actions.act_window">
         <field name="name">Quartier</field>
         <field name="res_model">organization.quartier</field>
-        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
     </record>
 </odoo>

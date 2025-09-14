@@ -278,7 +278,7 @@
                 <field name="commentaire" />
                 <field name="commentaire_ids" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -759,7 +759,7 @@
         <field name="name">organization_membre_tree</field>
         <field name="model">organization.membre</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="nom_complet" />
                 <field name="achat_regrouper" />
                 <field name="adresse" />
@@ -800,13 +800,13 @@
                 <field name="ville" />
                 <field name="commentaire" />
                 <field name="commentaire_ids" />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="organization_membre_membre_action_window" model="ir.actions.act_window">
         <field name="name">Membre</field>
         <field name="res_model">organization.membre</field>
-        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
     </record>
 </odoo>

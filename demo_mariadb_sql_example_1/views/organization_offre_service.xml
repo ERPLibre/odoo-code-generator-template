@@ -115,7 +115,7 @@
                 <field name="tarif" />
                 <field name="type_service_id" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -285,7 +285,7 @@
         <field name="name">organization_offre_service_tree</field>
         <field name="model">organization.offre.service</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="description" />
                 <field name="accompli" />
                 <field name="approuve" />
@@ -303,13 +303,13 @@
                 <field name="organization" />
                 <field name="tarif" />
                 <field name="type_service_id" />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="organization_offre_service_offre_de_services_action_window" model="ir.actions.act_window">
         <field name="name">Offre de services</field>
         <field name="res_model">organization.offre.service</field>
-        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
     </record>
 </odoo>

@@ -54,7 +54,7 @@
                 <field name="sous_categorie_service" />
                 <field name="type_service" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -133,13 +133,13 @@
         <field name="name">organization_type_service_sous_categorie_tree</field>
         <field name="model">organization.type.service.sous.categorie</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="nom" />
                 <field name="approuver" />
                 <field name="categorie" />
                 <field name="sous_categorie_service" />
                 <field name="type_service" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -149,6 +149,6 @@
     >
         <field name="name">Sous-cat&#233;gorie de services</field>
         <field name="res_model">organization.type.service.sous.categorie</field>
-        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
     </record>
 </odoo>
