@@ -1,6 +1,6 @@
 {
     "name": "Code Generator Template Demo Portal",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "author": "TechnoLibre",
     "license": "AGPL-3",
     "website": "https://technolibre.ca",
