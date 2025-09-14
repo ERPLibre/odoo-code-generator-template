@@ -34,13 +34,13 @@
         <field name="name">demo_website_leaflet_map_tree</field>
         <field name="model">demo.website_leaflet.map</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="category_id" />
                 <field name="company_id" />
                 <field name="description" />
                 <field name="feature_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
 

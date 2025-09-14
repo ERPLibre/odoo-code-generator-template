@@ -31,12 +31,12 @@
         <field name="name">demo_website_leaflet_category_tree</field>
         <field name="model">demo.website_leaflet.category</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="company_id" />
                 <field name="description" />
                 <field name="name" />
                 <field name="parent" />
-            </tree>
+            </list>
         </field>
     </record>
 

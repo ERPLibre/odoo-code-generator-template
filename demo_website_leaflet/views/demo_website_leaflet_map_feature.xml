@@ -55,13 +55,13 @@
         <field name="name">demo_website_leaflet_map_feature_tree</field>
         <field name="model">demo.website_leaflet.map.feature</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="category_id" />
                 <field name="html_text" />
                 <field name="name" />
                 <field name="open_popup" />
                 <field name="type" />
-            </tree>
+            </list>
         </field>
     </record>
 
