@@ -7,15 +7,8 @@
             <form string="Titre">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        
-            <field name="active" invisible="1" />
-            <widget
-                name="web_ribbon"
-                title="Archived"
-                bg_color="bg-danger"
-                attrs="{'invisible': [('active', '=', True)]}"
-            />
-            
+                        <field name="active" invisible="1" />
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active" />
                     </div>
                     <group>
                         <field name="category_id" />
@@ -72,7 +65,10 @@
         </field>
     </record>
 
-    <record id="demo_website_leaflet_map_feature_demo_website_leaflet_map_feature_action_window" model="ir.actions.act_window">
+    <record
+        id="demo_website_leaflet_map_feature_demo_website_leaflet_map_feature_action_window"
+        model="ir.actions.act_window"
+    >
         <field name="name">Demo website leaflet map feature</field>
         <field name="res_model">demo.website_leaflet.map.feature</field>
     </record>

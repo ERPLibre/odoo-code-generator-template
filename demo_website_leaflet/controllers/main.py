@@ -3,10 +3,9 @@ from collections import defaultdict
 from operator import attrgetter
 
 import numpy
-from pyproj import Transformer
-
 from odoo import http
 from odoo.http import request
+from pyproj import Transformer
 
 
 class DemoWebsiteLeafletController(http.Controller):

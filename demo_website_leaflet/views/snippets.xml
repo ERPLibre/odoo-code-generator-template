@@ -17,15 +17,4 @@
             />
         </xpath>
     </template>
-    <template id="demo_website_leaflet_assets_frontend" inherit_id="website.assets_frontend">
-        <xpath expr="//link[last()]" position="after">
-            <link rel="stylesheet" type="text/scss" href="/demo_website_leaflet/static/src/scss/leaflet.scss" />
-            <link rel="stylesheet" type="text/scss" href="/demo_website_leaflet/static/src/scss/leaflet_custom.scss" />
-        </xpath>
-        <xpath expr="//script[last()]" position="after">
-            <script type="text/javascript" src="/demo_website_leaflet/static/src/js/website.leaflet.animation.js" />
-            <script type="text/javascript" src="/demo_website_leaflet/static/src/js/lib/leaflet.js" />
-            <script type="text/javascript" src="/demo_website_leaflet/static/src/js/lib/leaflet-providers.js" />
-        </xpath>
-    </template>
 </odoo>
