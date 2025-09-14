@@ -1,4 +1,3 @@
-
 {
     "name": "Setup testing environment for theme website code generator",
     "author": "TechnoLibre",
