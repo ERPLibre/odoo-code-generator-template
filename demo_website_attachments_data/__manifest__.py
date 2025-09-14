@@ -2,7 +2,7 @@
     "name": "Demo website attachments data",
     "category": "Website",
     "summary": "Exported Data from website with attachments.",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "author": "TechnoLibre",
     "license": "AGPL-3",
     "website": "https://technolibre.ca",
