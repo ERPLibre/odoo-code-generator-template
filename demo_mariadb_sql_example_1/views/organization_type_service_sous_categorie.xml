@@ -7,15 +7,8 @@
             <form string="Titre">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        
-            <field name="active" invisible="1" />
-            <widget
-                name="web_ribbon"
-                title="Archived"
-                bg_color="bg-danger"
-                attrs="{'invisible': [('active', '=', True)]}"
-            />
-            
+                        <field name="active" invisible="1" />
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active" />
                     </div>
                     <group>
                         <field name="nom" />
@@ -150,7 +143,10 @@
         </field>
     </record>
 
-    <record id="organization_type_service_sous_categorie_sous_categorie_de_services_action_window" model="ir.actions.act_window">
+    <record
+        id="organization_type_service_sous_categorie_sous_categorie_de_services_action_window"
+        model="ir.actions.act_window"
+    >
         <field name="name">Sous-cat&#233;gorie de services</field>
         <field name="res_model">organization.type.service.sous.categorie</field>
         <field name="view_mode">kanban,tree,pivot,graph,form</field>

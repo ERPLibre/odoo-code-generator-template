@@ -10055,19 +10055,6 @@
     </template>
 
     <template
-        id="assets_frontend_demo_mariadb_sql_example_1_portal"
-        name="Portal assets frontend"
-        inherit_id="web.assets_frontend"
-    >
-        <xpath expr="//script[last()]" position="after">
-            <script
-                type="text/javascript"
-                src="/demo_mariadb_sql_example_1/static/src/js/portal.demo_mariadb_sql_example_1.js"
-            />
-        </xpath>
-    </template>
-
-    <template
         id="demo_mariadb_sql_example_1.portal_my_organization_arrondissements"
         name="My Organization Arrondissements"
     >
