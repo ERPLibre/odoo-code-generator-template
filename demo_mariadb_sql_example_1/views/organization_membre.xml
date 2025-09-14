@@ -811,10 +811,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_membre_membre_action_window"
-        name="Membre"
-        res_model="organization.membre"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_membre_membre_action_window" model="ir.actions.act_window">
+        <field name="name">Membre</field>
+        <field name="res_model">organization.membre</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

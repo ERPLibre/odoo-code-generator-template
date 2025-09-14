@@ -90,10 +90,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_revenu_familial_revenu_familial_action_window"
-        name="Revenu familial"
-        res_model="organization.revenu.familial"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_revenu_familial_revenu_familial_action_window" model="ir.actions.act_window">
+        <field name="name">Revenu familial</field>
+        <field name="res_model">organization.revenu.familial</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

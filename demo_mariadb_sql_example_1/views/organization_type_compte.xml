@@ -220,10 +220,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_type_compte_type_de_comptes_membre_action_window"
-        name="Type de comptes membre"
-        res_model="organization.type.compte"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_type_compte_type_de_comptes_membre_action_window" model="ir.actions.act_window">
+        <field name="name">Type de comptes membre</field>
+        <field name="res_model">organization.type.compte</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

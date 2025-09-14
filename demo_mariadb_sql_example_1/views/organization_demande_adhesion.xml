@@ -216,10 +216,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_demande_adhesion_demande_d_adhesion_action_window"
-        name="Demande d'adh&#233;sion"
-        res_model="organization.demande.adhesion"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_demande_adhesion_demande_d_adhesion_action_window" model="ir.actions.act_window">
+        <field name="name">Demande d'adh&#233;sion</field>
+        <field name="res_model">organization.demande.adhesion</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

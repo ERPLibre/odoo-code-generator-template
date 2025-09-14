@@ -125,10 +125,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_region_region_action_window"
-        name="R&#233;gion"
-        res_model="organization.region"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_region_region_action_window" model="ir.actions.act_window">
+        <field name="name">R&#233;gion</field>
+        <field name="res_model">organization.region</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

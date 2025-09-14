@@ -138,10 +138,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_ville_ville_action_window"
-        name="Ville"
-        res_model="organization.ville"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_ville_ville_action_window" model="ir.actions.act_window">
+        <field name="name">Ville</field>
+        <field name="res_model">organization.ville</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

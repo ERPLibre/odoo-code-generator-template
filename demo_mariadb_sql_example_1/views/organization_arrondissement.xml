@@ -103,10 +103,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_arrondissement_arrondissement_action_window"
-        name="Arrondissement"
-        res_model="organization.arrondissement"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_arrondissement_arrondissement_action_window" model="ir.actions.act_window">
+        <field name="name">Arrondissement</field>
+        <field name="res_model">organization.arrondissement</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

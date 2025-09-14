@@ -314,10 +314,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_offre_service_offre_de_services_action_window"
-        name="Offre de services"
-        res_model="organization.offre.service"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_offre_service_offre_de_services_action_window" model="ir.actions.act_window">
+        <field name="name">Offre de services</field>
+        <field name="res_model">organization.offre.service</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

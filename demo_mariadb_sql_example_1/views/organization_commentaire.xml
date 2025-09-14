@@ -417,10 +417,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_commentaire_commentaire_action_window"
-        name="Commentaire"
-        res_model="organization.commentaire"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_commentaire_commentaire_action_window" model="ir.actions.act_window">
+        <field name="name">Commentaire</field>
+        <field name="res_model">organization.commentaire</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

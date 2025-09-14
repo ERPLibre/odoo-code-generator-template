@@ -276,10 +276,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_droits_admin_droits_administratifs_action_window"
-        name="Droits administratifs"
-        res_model="organization.droits.admin"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_droits_admin_droits_administratifs_action_window" model="ir.actions.act_window">
+        <field name="name">Droits administratifs</field>
+        <field name="res_model">organization.droits.admin</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

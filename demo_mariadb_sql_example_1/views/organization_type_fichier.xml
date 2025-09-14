@@ -107,10 +107,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_type_fichier_type_de_fichiers_action_window"
-        name="Type de fichiers"
-        res_model="organization.type.fichier"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_type_fichier_type_de_fichiers_action_window" model="ir.actions.act_window">
+        <field name="name">Type de fichiers</field>
+        <field name="res_model">organization.type.fichier</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

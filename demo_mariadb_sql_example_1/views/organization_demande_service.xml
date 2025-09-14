@@ -185,10 +185,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_demande_service_demande_de_services_action_window"
-        name="Demande de services"
-        res_model="organization.demande.service"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_demande_service_demande_de_services_action_window" model="ir.actions.act_window">
+        <field name="name">Demande de services</field>
+        <field name="res_model">organization.demande.service</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

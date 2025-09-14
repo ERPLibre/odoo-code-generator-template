@@ -112,10 +112,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_type_telephone_type_de_telephones_action_window"
-        name="Type de t&#233;l&#233;phones"
-        res_model="organization.type.telephone"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_type_telephone_type_de_telephones_action_window" model="ir.actions.act_window">
+        <field name="name">Type de t&#233;l&#233;phones</field>
+        <field name="res_model">organization.type.telephone</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

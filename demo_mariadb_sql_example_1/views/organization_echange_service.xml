@@ -209,10 +209,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_echange_service_echange_de_services_action_window"
-        name="&#201;change de services"
-        res_model="organization.echange.service"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_echange_service_echange_de_services_action_window" model="ir.actions.act_window">
+        <field name="name">&#201;change de services</field>
+        <field name="res_model">organization.echange.service</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

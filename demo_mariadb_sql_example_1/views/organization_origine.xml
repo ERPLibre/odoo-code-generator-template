@@ -90,10 +90,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_origine_origine_action_window"
-        name="Origine"
-        res_model="organization.origine"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_origine_origine_action_window" model="ir.actions.act_window">
+        <field name="name">Origine</field>
+        <field name="res_model">organization.origine</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

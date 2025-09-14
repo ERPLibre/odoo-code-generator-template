@@ -137,10 +137,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_type_service_categorie_categorie_de_services_action_window"
-        name="Cat&#233;gorie de services"
-        res_model="organization.type.service.categorie"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_type_service_categorie_categorie_de_services_action_window" model="ir.actions.act_window">
+        <field name="name">Cat&#233;gorie de services</field>
+        <field name="res_model">organization.type.service.categorie</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>

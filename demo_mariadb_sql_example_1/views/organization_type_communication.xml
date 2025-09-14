@@ -90,10 +90,9 @@
         </field>
     </record>
 
-    <act_window
-        id="organization_type_communication_type_de_communications_action_window"
-        name="Type de communications"
-        res_model="organization.type.communication"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_type_communication_type_de_communications_action_window" model="ir.actions.act_window">
+        <field name="name">Type de communications</field>
+        <field name="res_model">organization.type.communication</field>
+        <field name="view_mode">kanban,tree,pivot,graph,form</field>
+    </record>
 </odoo>
