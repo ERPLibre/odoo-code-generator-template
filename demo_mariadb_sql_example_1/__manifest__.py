@@ -1,7 +1,7 @@
 {
     "name": "Demo Mariadb Sql Example 1",
     "category": "Uncategorized",
-    "version": "12.0.1.0",
+    "version": "13.0.1.0.0",
     "author": "TechnoLibre",
     "license": "AGPL-3",
     "application": True,
