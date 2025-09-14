@@ -302,7 +302,7 @@ When blacklist, all selected fields will be ignored.""",
             "ttype": "many2many",
         },
         "selected_model_tree_view_ids": {
-            "field_description": "Selected Model Tree View",
+            "field_description": "Selected Model List View",
             "relation": "ir.model",
             "ttype": "many2many",
         },
@@ -2539,9 +2539,9 @@ action = {"type": "ir.actions.act_url", "target": "self", "url": "/code_generato
             "ttype": "integer",
         },
         "code_generator_tree_view_sequence": {
-            "field_description": "Tree view sequence",
+            "field_description": "List view sequence",
             "help": (
-                "Sequence to write this field in tree view from Code"
+                "Sequence to write this field in list view from Code"
                 " Generator."
             ),
             "ttype": "integer",
