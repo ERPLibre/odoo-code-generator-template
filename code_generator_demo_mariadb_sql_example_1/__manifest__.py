@@ -1,7 +1,7 @@
 {
     "name": "Code Generator Demo Mariadb Sql Example 1",
     "category": "Uncategorized",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "TechnoLibre",
     "license": "AGPL-3",
     "website": "https://technolibre.ca",
