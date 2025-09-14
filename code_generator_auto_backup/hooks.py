@@ -344,7 +344,6 @@ for rec in self:
         )''',
                     "name": "_compute_name",
                     "decorator": (
-                        '@api.multi;@api.depends("folder", "method",'
                         ' "sftp_host", "sftp_port", "sftp_user")'
                     ),
                     "param": "self",
@@ -366,7 +365,6 @@ for record in self:
         )''',
                     "name": "_check_folder",
                     "decorator": (
-                        '@api.multi;@api.constrains("folder", "method")'
                     ),
                     "param": "self",
                     "sequence": 2,
@@ -387,7 +385,6 @@ except (
     _logger.info("Connection Test Failed!", exc_info=True)
     raise exceptions.Warning(_("Connection Test Failed!"))''',
                     "name": "action_sftp_test_connection",
-                    "decorator": "@api.multi",
                     "param": "self",
                     "sequence": 3,
                     "m2o_module": code_generator_id.id,
@@ -454,7 +451,6 @@ if sftp:
 # Remove old files for successful backups
 successful.cleanup()''',
                     "name": "action_backup",
-                    "decorator": "@api.multi",
                     "param": "self",
                     "sequence": 4,
                     "m2o_module": code_generator_id.id,
@@ -489,7 +485,6 @@ else:
     _logger.info("Database backup succeeded: %s", self.name)
     self.message_post(body=_("Database backup succeeded."))''',
                     "name": "backup_log",
-                    "decorator": "@api.multi;@contextmanager",
                     "param": "self",
                     "sequence": 6,
                     "m2o_module": code_generator_id.id,
@@ -516,7 +511,6 @@ for rec in self.filtered("days_to_keep"):
                     ):
                         remote.unlink("%s/%s" % (rec.folder, name))''',
                     "name": "cleanup",
-                    "decorator": "@api.multi",
                     "param": "self",
                     "sequence": 7,
                     "m2o_module": code_generator_id.id,
@@ -543,7 +537,6 @@ else:
         "Cleanup of old database backups succeeded: %s", self.name
     )''',
                     "name": "cleanup_log",
-                    "decorator": "@api.multi;@contextmanager",
                     "param": "self",
                     "sequence": 8,
                     "m2o_module": code_generator_id.id,
@@ -598,7 +591,6 @@ else:
 
 return pysftp.Connection(**params, cnopts=cnopts)''',
                     "name": "sftp_connection",
-                    "decorator": "@api.multi",
                     "param": "self",
                     "sequence": 10,
                     "m2o_module": code_generator_id.id,
