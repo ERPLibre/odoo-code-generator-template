@@ -3383,7 +3383,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -4741,7 +4741,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -6976,7 +6976,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -8217,7 +8217,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -9506,7 +9506,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -11239,7 +11239,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -12494,7 +12494,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -15452,7 +15452,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -19207,7 +19207,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -20272,7 +20272,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -22474,7 +22474,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -23935,7 +23935,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -24453,7 +24453,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -25056,7 +25056,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -25454,7 +25454,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -25984,7 +25984,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -26518,7 +26518,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -26872,7 +26872,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -27226,7 +27226,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -27900,7 +27900,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -28919,7 +28919,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -29612,7 +29612,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -30476,7 +30476,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -31176,7 +31176,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -31847,7 +31847,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -32465,7 +32465,7 @@ organization_ville.access_url = (
             {
                 "section_type": "body",
                 "item_type": "t",
-                "t_name": "kanban-box",
+                "t_name": "card",
                 "parent_id": view_item_body_templates_p1.id,
                 "sequence": 1,
             }
@@ -32950,7 +32950,7 @@ organization_ville.access_url = (
                 "id_name": "organization_arrondissement_arrondissement_action_window",
                 "model_name": "organization.arrondissement",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -32963,7 +32963,7 @@ organization_ville.access_url = (
                 "id_name": "organization_type_service_categorie_categorie_de_services_action_window",
                 "model_name": "organization.type.service.categorie",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -32978,7 +32978,7 @@ organization_ville.access_url = (
                 ),
                 "model_name": "organization.commentaire",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -32991,7 +32991,7 @@ organization_ville.access_url = (
                 "id_name": "organization_demande_adhesion_demande_d_adhesion_action_window",
                 "model_name": "organization.demande.adhesion",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33004,7 +33004,7 @@ organization_ville.access_url = (
                 "id_name": "organization_demande_service_demande_de_services_action_window",
                 "model_name": "organization.demande.service",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33017,7 +33017,7 @@ organization_ville.access_url = (
                 "id_name": "organization_droits_admin_droits_administratifs_action_window",
                 "model_name": "organization.droits.admin",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33030,7 +33030,7 @@ organization_ville.access_url = (
                 "id_name": "organization_echange_service_echange_de_services_action_window",
                 "model_name": "organization.echange.service",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33043,7 +33043,7 @@ organization_ville.access_url = (
                 "id_name": "organization_fichier_fichier_action_window",
                 "model_name": "organization.fichier",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33056,7 +33056,7 @@ organization_ville.access_url = (
                 "id_name": "organization_membre_membre_action_window",
                 "model_name": "organization.membre",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33071,7 +33071,7 @@ organization_ville.access_url = (
                 ),
                 "model_name": "organization.occupation",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33084,7 +33084,7 @@ organization_ville.access_url = (
                 "id_name": "organization_offre_service_offre_de_services_action_window",
                 "model_name": "organization.offre.service",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33099,7 +33099,7 @@ organization_ville.access_url = (
                 ),
                 "model_name": "organization.organization",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33112,7 +33112,7 @@ organization_ville.access_url = (
                 "id_name": "organization_origine_origine_action_window",
                 "model_name": "organization.origine",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33125,7 +33125,7 @@ organization_ville.access_url = (
                 "id_name": "organization_point_service_point_de_services_action_window",
                 "model_name": "organization.point.service",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33140,7 +33140,7 @@ organization_ville.access_url = (
                 ),
                 "model_name": "organization.provenance",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33153,7 +33153,7 @@ organization_ville.access_url = (
                 "id_name": "organization_quartier_quartier_action_window",
                 "model_name": "organization.quartier",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33166,7 +33166,7 @@ organization_ville.access_url = (
                 "id_name": "organization_region_region_action_window",
                 "model_name": "organization.region",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33179,7 +33179,7 @@ organization_ville.access_url = (
                 "id_name": "organization_revenu_familial_revenu_familial_action_window",
                 "model_name": "organization.revenu.familial",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33192,7 +33192,7 @@ organization_ville.access_url = (
                 "id_name": "organization_situation_maison_situation_maison_action_window",
                 "model_name": "organization.situation.maison",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33205,7 +33205,7 @@ organization_ville.access_url = (
                 "id_name": "organization_type_service_sous_categorie_sous_categorie_de_services_action_window",
                 "model_name": "organization.type.service.sous.categorie",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33218,7 +33218,7 @@ organization_ville.access_url = (
                 "id_name": "organization_type_communication_type_de_communications_action_window",
                 "model_name": "organization.type.communication",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33231,7 +33231,7 @@ organization_ville.access_url = (
                 "id_name": "organization_type_compte_type_de_comptes_membre_action_window",
                 "model_name": "organization.type.compte",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33244,7 +33244,7 @@ organization_ville.access_url = (
                 "id_name": "organization_type_fichier_type_de_fichiers_action_window",
                 "model_name": "organization.type.fichier",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33257,7 +33257,7 @@ organization_ville.access_url = (
                 "id_name": "organization_type_service_type_de_services_action_window",
                 "model_name": "organization.type.service",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33270,7 +33270,7 @@ organization_ville.access_url = (
                 "id_name": "organization_type_telephone_type_de_telephones_action_window",
                 "model_name": "organization.type.telephone",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
@@ -33283,7 +33283,7 @@ organization_ville.access_url = (
                 "id_name": "organization_ville_ville_action_window",
                 "model_name": "organization.ville",
                 "view_type": "form",
-                "view_mode": "kanban,tree,pivot,graph,form",
+                "view_mode": "kanban,list,pivot,graph,form",
             }
         )
 
