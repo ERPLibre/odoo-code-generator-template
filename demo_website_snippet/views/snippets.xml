@@ -18,20 +18,4 @@
             />
         </xpath>
     </template>
-    <!-- Add stylesheet and Javascript -->
-    <template id="assets_frontend" inherit_id="website.assets_frontend">
-        <xpath expr="//link[last()]" position="after">
-            <link
-                rel="stylesheet"
-                type="text/scss"
-                href="/demo_website_snippet/static/src/scss/demo_website_snippet.scss"
-            />
-        </xpath>
-        <xpath expr="//script[last()]" position="after">
-            <script
-                type="text/javascript"
-                src="/demo_website_snippet/static/src/js/website.demo_website_snippet.animation.js"
-            />
-        </xpath>
-    </template>
 </odoo>

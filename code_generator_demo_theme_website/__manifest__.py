@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 {
     "name": "Setup testing environment for theme website code generator",
     "author": "TechnoLibre",

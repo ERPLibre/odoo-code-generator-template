@@ -7,9 +7,8 @@
             <form string="Titre">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button class="oe_stat_button" icon="fa-archive" name="toggle_active" type="object">
-                            <field name="active" widget="boolean_button" />
-                        </button>
+                        <field name="active" invisible="1" />
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active" />
                     </div>
                     <group>
                         <field name="category_id" />
@@ -35,19 +34,18 @@
         <field name="name">demo_website_leaflet_map_tree</field>
         <field name="model">demo.website_leaflet.map</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="category_id" />
                 <field name="company_id" />
                 <field name="description" />
                 <field name="feature_id" />
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
 
-    <act_window
-        id="demo_website_leaflet_map_demo_website_leaflet_map_action_window"
-        name="Demo website leaflet map"
-        res_model="demo.website_leaflet.map"
-    />
+    <record id="demo_website_leaflet_map_demo_website_leaflet_map_action_window" model="ir.actions.act_window">
+        <field name="name">Demo website leaflet map</field>
+        <field name="res_model">demo.website_leaflet.map</field>
+    </record>
 </odoo>

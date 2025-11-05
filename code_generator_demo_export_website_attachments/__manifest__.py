@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 {
     "name": "export data from website",
     "author": "TechnoLibre",

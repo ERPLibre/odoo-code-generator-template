@@ -66,7 +66,7 @@
                 <field name="si_organization_local_seulement" />
                 <field name="type_fichier" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -173,7 +173,7 @@
         <field name="name">organization_fichier_tree</field>
         <field name="model">organization.fichier</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="nom" />
                 <field name="date_mise_a_jour" />
                 <field name="fichier" />
@@ -182,14 +182,13 @@
                 <field name="si_disponible" />
                 <field name="si_organization_local_seulement" />
                 <field name="type_fichier" />
-            </tree>
+            </list>
         </field>
     </record>
 
-    <act_window
-        id="organization_fichier_fichier_action_window"
-        name="Fichier"
-        res_model="organization.fichier"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_fichier_fichier_action_window" model="ir.actions.act_window">
+        <field name="name">Fichier</field>
+        <field name="res_model">organization.fichier</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
+    </record>
 </odoo>

@@ -1,7 +1,6 @@
 from datetime import datetime
 
 import humanize
-
 from odoo import http
 from odoo.http import request
 

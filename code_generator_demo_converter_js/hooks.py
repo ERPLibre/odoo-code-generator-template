@@ -8,7 +8,6 @@ import js2py
 import requests
 import wget
 from bs4 import BeautifulSoup
-
 from odoo import SUPERUSER_ID, _, api, fields, models
 
 MODULE_NAME = "demo_business_plan"
@@ -291,159 +290,152 @@ def generate_i18n(module_name, module_path, lst_translation):
             file.write(f'msgstr "{new_txt_fr}"\n\n')
 
 
-def post_init_hook(cr, e):
-    with api.Environment.manage():
-        env = api.Environment(cr, SUPERUSER_ID, {})
+def post_init_hook(env):
+    lst_data, lst_translation = generate_model_from_js()
 
-        lst_data, lst_translation = generate_model_from_js()
+    # The path of the actual file
+    path_module_generate = os.path.normpath(
+        os.path.join(os.path.dirname(__file__), "..")
+    )
 
-        # The path of the actual file
-        path_module_generate = os.path.normpath(
-            os.path.join(os.path.dirname(__file__), "..")
-        )
+    short_name = MODULE_NAME.replace("_", " ").title()
 
-        short_name = MODULE_NAME.replace("_", " ").title()
+    # Add code generator
+    value = {
+        "shortdesc": short_name,
+        "name": MODULE_NAME,
+        "license": "AGPL-3",
+        "author": "TechnoLibre",
+        "website": "https://technolibre.ca",
+        "application": True,
+        "enable_sync_code": True,
+        # "path_sync_code": path_module_generate,
+    }
 
-        # Add code generator
+    # TODO HUMAN: enable your functionality to generate
+    value["enable_sync_template"] = False
+    value["post_init_hook_show"] = False
+    value["uninstall_hook_show"] = False
+    value["post_init_hook_feature_code_generator"] = False
+    value["uninstall_hook_feature_code_generator"] = False
+
+    value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
+
+    code_generator_id = env["code.generator.module"].create(value)
+
+    value = {
+        "name": "Business Plan",
+        "model": PREFIX_MODEL,
+        "m2o_module": code_generator_id.id,
+        "rec_name": None,
+        "nomenclator": True,
+    }
+    model_business_plan = env["ir.model"].create(value)
+
+    # Hack to solve field name
+    field_x_name = env["ir.model.fields"].search(
+        [
+            ("model_id", "=", model_business_plan.id),
+            ("name", "=", "x_name"),
+        ]
+    )
+    field_x_name.name = "name"
+    model_business_plan.rec_name = "name"
+
+    for data in lst_data:
+        model = f"{PREFIX_MODEL}.{convert_text_to_model_name(data.title_en)}"
+        data_name = convert_text_to_variable_name(data.title_en)
         value = {
-            "shortdesc": short_name,
-            "name": MODULE_NAME,
-            "license": "AGPL-3",
-            "author": "TechnoLibre",
-            "website": "https://technolibre.ca",
-            "application": True,
-            "enable_sync_code": True,
-            # "path_sync_code": path_module_generate,
-        }
-
-        # TODO HUMAN: enable your functionality to generate
-        value["enable_sync_template"] = False
-        value["post_init_hook_show"] = False
-        value["uninstall_hook_show"] = False
-        value["post_init_hook_feature_code_generator"] = False
-        value["uninstall_hook_feature_code_generator"] = False
-
-        value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
-
-        code_generator_id = env["code.generator.module"].create(value)
-
-        value = {
-            "name": "Business Plan",
-            "model": PREFIX_MODEL,
+            "name": data.title_en,
+            "model": model,
             "m2o_module": code_generator_id.id,
             "rec_name": None,
             "nomenclator": True,
         }
-        model_business_plan = env["ir.model"].create(value)
+        model_data = env["ir.model"].create(value)
+
+        ##### Begin Field
+        for child in data.child:
+            # TODO create group
+            i = -1
+            for field in child.fields:
+                i += 1
+                # name = convert_text_to_variable_name(child.title_en)
+                value_field_demo_html = {
+                    "name": field.name,
+                    "model": model,
+                    "field_description": field.description,
+                    "help": field.help,
+                    "ttype": field.ttype,
+                    "model_id": model_data.id,
+                }
+
+                try:
+                    field_fr = child.fields_fr[i]
+                    lst_translation.append(
+                        (field.description, field_fr.description)
+                    )
+                    lst_translation.append((field.help, field_fr.help))
+                except Exception as e:
+                    print(e)
+                try:
+                    env["ir.model.fields"].create(value_field_demo_html)
+                except Exception as e:
+                    print(e)
+
+        # Link with business plan
+        value_field_business_plan_many2one = {
+            "name": data_name,
+            "model": PREFIX_MODEL,
+            "field_description": data.title_en,
+            "ttype": "many2one",
+            # TODO remove comodel_name from code_generator
+            "relation": model,
+            "model_id": model_business_plan.id,
+        }
+        env["ir.model.fields"].create(value_field_business_plan_many2one)
+
+        value_field_business_plan_one2many = {
+            "name": "business_plan_id",
+            "model": model,
+            "field_description": "Business Plan",
+            "ttype": "one2many",
+            "relation": PREFIX_MODEL,
+            "relation_field": data_name,
+            "model_id": model_data.id,
+        }
+        env["ir.model.fields"].create(value_field_business_plan_one2many)
 
         # Hack to solve field name
         field_x_name = env["ir.model.fields"].search(
-            [
-                ("model_id", "=", model_business_plan.id),
-                ("name", "=", "x_name"),
-            ]
+            [("model_id", "=", model_data.id), ("name", "=", "x_name")]
         )
         field_x_name.name = "name"
-        model_business_plan.rec_name = "name"
+        model_data.rec_name = "name"
+        ##### End Field
 
-        for data in lst_data:
-            model = (
-                f"{PREFIX_MODEL}.{convert_text_to_model_name(data.title_en)}"
-            )
-            data_name = convert_text_to_variable_name(data.title_en)
-            value = {
-                "name": data.title_en,
-                "model": model,
-                "m2o_module": code_generator_id.id,
-                "rec_name": None,
-                "nomenclator": True,
-            }
-            model_data = env["ir.model"].create(value)
+    # Generate view
+    wizard_view = env["code.generator.generate.views.wizard"].create(
+        {
+            "code_generator_id": code_generator_id.id,
+            "enable_generate_all": False,
+            # 'enable_generate_portal': True,
+        }
+    )
 
-            ##### Begin Field
-            for child in data.child:
-                # TODO create group
-                i = -1
-                for field in child.fields:
-                    i += 1
-                    # name = convert_text_to_variable_name(child.title_en)
-                    value_field_demo_html = {
-                        "name": field.name,
-                        "model": model,
-                        "field_description": field.description,
-                        "help": field.help,
-                        "ttype": field.ttype,
-                        "model_id": model_data.id,
-                    }
+    wizard_view.button_generate_views()
 
-                    try:
-                        field_fr = child.fields_fr[i]
-                        lst_translation.append(
-                            (field.description, field_fr.description)
-                        )
-                        lst_translation.append((field.help, field_fr.help))
-                    except Exception as e:
-                        print(e)
-                    try:
-                        env["ir.model.fields"].create(value_field_demo_html)
-                    except Exception as e:
-                        print(e)
+    # Generate module
+    value = {"code_generator_ids": code_generator_id.ids}
+    code_generator_writer = env["code.generator.writer"].create(value)
 
-            # Link with business plan
-            value_field_business_plan_many2one = {
-                "name": data_name,
-                "model": PREFIX_MODEL,
-                "field_description": data.title_en,
-                "ttype": "many2one",
-                # TODO remove comodel_name from code_generator
-                "relation": model,
-                "model_id": model_business_plan.id,
-            }
-            env["ir.model.fields"].create(value_field_business_plan_many2one)
-
-            value_field_business_plan_one2many = {
-                "name": "business_plan_id",
-                "model": model,
-                "field_description": "Business Plan",
-                "ttype": "one2many",
-                "relation": PREFIX_MODEL,
-                "relation_field": data_name,
-                "model_id": model_data.id,
-            }
-            env["ir.model.fields"].create(value_field_business_plan_one2many)
-
-            # Hack to solve field name
-            field_x_name = env["ir.model.fields"].search(
-                [("model_id", "=", model_data.id), ("name", "=", "x_name")]
-            )
-            field_x_name.name = "name"
-            model_data.rec_name = "name"
-            ##### End Field
-
-        # Generate view
-        wizard_view = env["code.generator.generate.views.wizard"].create(
-            {
-                "code_generator_id": code_generator_id.id,
-                "enable_generate_all": False,
-                # 'enable_generate_portal': True,
-            }
-        )
-
-        wizard_view.button_generate_views()
-
-        # Generate module
-        value = {"code_generator_ids": code_generator_id.ids}
-        code_generator_writer = env["code.generator.writer"].create(value)
-
-        new_module_path = os.path.join(path_module_generate, MODULE_NAME)
-        generate_i18n(MODULE_NAME, new_module_path, lst_translation)
+    new_module_path = os.path.join(path_module_generate, MODULE_NAME)
+    generate_i18n(MODULE_NAME, new_module_path, lst_translation)
 
 
-def uninstall_hook(cr, e):
-    with api.Environment.manage():
-        env = api.Environment(cr, SUPERUSER_ID, {})
-        code_generator_id = env["code.generator.module"].search(
-            [("name", "=", MODULE_NAME)]
-        )
-        if code_generator_id:
-            code_generator_id.unlink()
+def uninstall_hook(env):
+    code_generator_id = env["code.generator.module"].search(
+        [("name", "=", MODULE_NAME)]
+    )
+    if code_generator_id:
+        code_generator_id.unlink()

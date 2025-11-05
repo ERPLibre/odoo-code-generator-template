@@ -72,7 +72,7 @@
                 <field name="diagram_demo2_ids" />
                 <field name="diagram_demo_ids" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -126,18 +126,17 @@
         <field name="name">demo_model_3_portal_diagram_tree</field>
         <field name="model">demo.model_3.portal.diagram</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="diagram_demo2_ids" />
                 <field name="diagram_demo_ids" />
-            </tree>
+            </list>
         </field>
     </record>
 
-    <act_window
-        id="demo_model_3_portal_diagram_demo_model_3_portal_diagram_action_window"
-        name="Demo model 3 portal diagram"
-        res_model="demo.model_3.portal.diagram"
-        view_mode="kanban,tree,pivot,graph,form,diagram"
-    />
+    <record id="demo_model_3_portal_diagram_demo_model_3_portal_diagram_action_window" model="ir.actions.act_window">
+        <field name="name">Demo model 3 portal diagram</field>
+        <field name="res_model">demo.model_3.portal.diagram</field>
+        <field name="view_mode">kanban,list,pivot,graph,form,diagram</field>
+    </record>
 </odoo>

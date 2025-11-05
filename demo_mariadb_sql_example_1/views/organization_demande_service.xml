@@ -7,9 +7,8 @@
             <form string="Titre">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button class="oe_stat_button" icon="fa-archive" name="toggle_active" type="object">
-                            <field name="active" widget="boolean_button" />
-                        </button>
+                        <field name="active" invisible="1" />
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active" />
                     </div>
                     <group>
                         <field name="titre" />
@@ -70,7 +69,7 @@
                 <field name="organization" />
                 <field name="commentaire" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -166,7 +165,7 @@
         <field name="name">organization_demande_service_tree</field>
         <field name="model">organization.demande.service</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="titre" />
                 <field name="approuver" />
                 <field name="date_debut" />
@@ -175,14 +174,13 @@
                 <field name="membre" />
                 <field name="organization" />
                 <field name="commentaire" />
-            </tree>
+            </list>
         </field>
     </record>
 
-    <act_window
-        id="organization_demande_service_demande_de_services_action_window"
-        name="Demande de services"
-        res_model="organization.demande.service"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_demande_service_demande_de_services_action_window" model="ir.actions.act_window">
+        <field name="name">Demande de services</field>
+        <field name="res_model">organization.demande.service</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
+    </record>
 </odoo>

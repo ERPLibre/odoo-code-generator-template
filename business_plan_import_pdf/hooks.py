@@ -191,96 +191,93 @@ def transform_text_to_html(text):
     return result
 
 
-def post_init_hook(cr, e):
-    with api.Environment.manage():
-        env = api.Environment(cr, SUPERUSER_ID, {})
-
-        # Read PDF and create data from different font and size
-        document = createPDFDoc()
-        device, interpreter = createDeviceInterpreter()
-        pages = PDFPage.create_pages(document)
-        work = Working()
-        count_skip = -1
-        while True:
-            try:
-                page_result = next(pages)
-                count_skip += 1
-                if NB_SKIP_PAGE > count_skip:
-                    continue
-                interpreter.process_page(page_result)
-                layout = device.get_result()
-
-                parse_obj(layout._objs, work, count_skip == 0)
-            except StopIteration:
-                break
-        lst_result = work.get_result()
-
-        # Search all needed model and fields
-        ir_model_ids = (
-            env["ir.model"]
-            .search([])
-            .filtered(lambda field: "business.plan." in field.model)
-        )
-        dct_result_model_ids = {}
-        ir_model_field_ids = env["ir.model.fields"].search(
-            [("model_id.id", "in", ir_model_ids.ids)]
-        )
-        # dct_model_title = {a.name: a for a in ir_model_ids}
-        dct_field_title = {a.field_description: a for a in ir_model_field_ids}
-        dct_mapped_help_field = {}
-
-        # Hack from help, separate by " -- "
-        for field_id in ir_model_field_ids:
-            help_str = field_id.help
-            if not help_str:
+def post_init_hook(env):
+    # Read PDF and create data from different font and size
+    document = createPDFDoc()
+    device, interpreter = createDeviceInterpreter()
+    pages = PDFPage.create_pages(document)
+    work = Working()
+    count_skip = -1
+    while True:
+        try:
+            page_result = next(pages)
+            count_skip += 1
+            if NB_SKIP_PAGE > count_skip:
                 continue
-            if " -- " in help_str:
-                help_str = help_str[: help_str.find(" -- ")].strip()
-            dct_mapped_help_field[help_str] = field_id
-        logger.info(f"Find {len(lst_result)} result to match.")
+            interpreter.process_page(page_result)
+            layout = device.get_result()
 
-        # Find a match
-        lst_match = []
-        # Match result with model
-        for result in lst_result:
-            # TODO search by translation, fr and en in same time
-            help_str = result.get("help")
-            field_str = result.get("field")
-            ir_help_fields_id = dct_mapped_help_field.get(help_str)
-            ir_field_fields_id = dct_field_title.get(field_str)
-            if ir_help_fields_id:
-                lst_match.append((ir_help_fields_id, result))
-            elif ir_field_fields_id:
-                lst_match.append((ir_field_fields_id, result))
-            else:
-                logger.warning(f"Cannot find match for {result}")
+            parse_obj(layout._objs, work, count_skip == 0)
+        except StopIteration:
+            break
+    lst_result = work.get_result()
 
-        # Create a business plan
-        next_id_business_plan = env["business.plan"].search([])
-        next_id = 1
-        if next_id_business_plan:
-            next_id = next_id_business_plan[-1].id + 1
-        business_plan_id = env["business.plan"].create(
-            {
-                "name": f"Business Plan {next_id}",
-            }
-        )
+    # Search all needed model and fields
+    ir_model_ids = (
+        env["ir.model"]
+        .search([])
+        .filtered(lambda field: "business.plan." in field.model)
+    )
+    dct_result_model_ids = {}
+    ir_model_field_ids = env["ir.model.fields"].search(
+        [("model_id.id", "in", ir_model_ids.ids)]
+    )
+    # dct_model_title = {a.name: a for a in ir_model_ids}
+    dct_field_title = {a.field_description: a for a in ir_model_field_ids}
+    dct_mapped_help_field = {}
 
-        logger.info(f"Find {len(lst_match)} match.")
-        for match in lst_match:
-            # Create sub section of business plan
-            field_id = match[0]
-            result_model_id = field_id.model_id
-            result = match[1]
-            model_id = dct_result_model_ids.get(result_model_id)
-            data_txt = transform_text_to_html(result.get("data"))
-            value = {field_id.name: data_txt}
-            if not model_id:
-                value["name"] = f"{result_model_id.name} {next_id}"
-                value["business_plan_id"] = [(4, business_plan_id.id)]
-                model_id = env[result_model_id.model].create(value)
-                dct_result_model_ids[result_model_id] = model_id
-            else:
-                model_id.write(value)
+    # Hack from help, separate by " -- "
+    for field_id in ir_model_field_ids:
+        help_str = field_id.help
+        if not help_str:
+            continue
+        if " -- " in help_str:
+            help_str = help_str[: help_str.find(" -- ")].strip()
+        dct_mapped_help_field[help_str] = field_id
+    logger.info(f"Find {len(lst_result)} result to match.")
 
-        logger.debug("End of writing business plan.")
+    # Find a match
+    lst_match = []
+    # Match result with model
+    for result in lst_result:
+        # TODO search by translation, fr and en in same time
+        help_str = result.get("help")
+        field_str = result.get("field")
+        ir_help_fields_id = dct_mapped_help_field.get(help_str)
+        ir_field_fields_id = dct_field_title.get(field_str)
+        if ir_help_fields_id:
+            lst_match.append((ir_help_fields_id, result))
+        elif ir_field_fields_id:
+            lst_match.append((ir_field_fields_id, result))
+        else:
+            logger.warning(f"Cannot find match for {result}")
+
+    # Create a business plan
+    next_id_business_plan = env["business.plan"].search([])
+    next_id = 1
+    if next_id_business_plan:
+        next_id = next_id_business_plan[-1].id + 1
+    business_plan_id = env["business.plan"].create(
+        {
+            "name": f"Business Plan {next_id}",
+        }
+    )
+
+    logger.info(f"Find {len(lst_match)} match.")
+    for match in lst_match:
+        # Create sub section of business plan
+        field_id = match[0]
+        result_model_id = field_id.model_id
+        result = match[1]
+        model_id = dct_result_model_ids.get(result_model_id)
+        data_txt = transform_text_to_html(result.get("data"))
+        value = {field_id.name: data_txt}
+        if not model_id:
+            value["name"] = f"{result_model_id.name} {next_id}"
+            value["business_plan_id"] = [(4, business_plan_id.id)]
+            model_id = env[result_model_id.model].create(value)
+            dct_result_model_ids[result_model_id] = model_id
+        else:
+            model_id.write(value)
+
+    logger.debug("End of writing business plan.")

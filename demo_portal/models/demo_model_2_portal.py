@@ -6,7 +6,7 @@ class DemoModel2Portal(models.Model):
     _inherit = ["mail.activity.mixin", "mail.thread", "portal.mixin"]
     _description = "demo_model_2_portal"
 
-    name = fields.Char(track_visibility="onchange")
+    name = fields.Char(tracking=True)
 
     demo_many2one_dst = fields.Many2one(
         comodel_name="demo.model.portal",

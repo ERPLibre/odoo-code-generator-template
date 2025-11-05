@@ -198,9 +198,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_arrondissements_history"
-        ] = organization_arrondissements.ids[:100]
+        request.session["my_organization_arrondissements_history"] = (
+            organization_arrondissements.ids[:100]
+        )
 
         values.update(
             {
@@ -358,9 +358,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_commentaires_history"
-        ] = organization_commentaires.ids[:100]
+        request.session["my_organization_commentaires_history"] = (
+            organization_commentaires.ids[:100]
+        )
 
         values.update(
             {
@@ -518,9 +518,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_demande_adhesions_history"
-        ] = organization_demande_adhesions.ids[:100]
+        request.session["my_organization_demande_adhesions_history"] = (
+            organization_demande_adhesions.ids[:100]
+        )
 
         values.update(
             {
@@ -680,9 +680,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_demande_services_history"
-        ] = organization_demande_services.ids[:100]
+        request.session["my_organization_demande_services_history"] = (
+            organization_demande_services.ids[:100]
+        )
 
         values.update(
             {
@@ -840,9 +840,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_droits_admins_history"
-        ] = organization_droits_admins.ids[:100]
+        request.session["my_organization_droits_admins_history"] = (
+            organization_droits_admins.ids[:100]
+        )
 
         values.update(
             {
@@ -1000,9 +1000,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_echange_services_history"
-        ] = organization_echange_services.ids[:100]
+        request.session["my_organization_echange_services_history"] = (
+            organization_echange_services.ids[:100]
+        )
 
         values.update(
             {
@@ -1158,9 +1158,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_fichiers_history"
-        ] = organization_fichiers.ids[:100]
+        request.session["my_organization_fichiers_history"] = (
+            organization_fichiers.ids[:100]
+        )
 
         values.update(
             {
@@ -1311,9 +1311,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_membres_history"
-        ] = organization_membres.ids[:100]
+        request.session["my_organization_membres_history"] = (
+            organization_membres.ids[:100]
+        )
 
         values.update(
             {
@@ -1465,9 +1465,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_occupations_history"
-        ] = organization_occupations.ids[:100]
+        request.session["my_organization_occupations_history"] = (
+            organization_occupations.ids[:100]
+        )
 
         values.update(
             {
@@ -1623,9 +1623,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_offre_services_history"
-        ] = organization_offre_services.ids[:100]
+        request.session["my_organization_offre_services_history"] = (
+            organization_offre_services.ids[:100]
+        )
 
         values.update(
             {
@@ -1781,9 +1781,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_organizations_history"
-        ] = organization_organizations.ids[:100]
+        request.session["my_organization_organizations_history"] = (
+            organization_organizations.ids[:100]
+        )
 
         values.update(
             {
@@ -1937,9 +1937,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_origines_history"
-        ] = organization_origines.ids[:100]
+        request.session["my_organization_origines_history"] = (
+            organization_origines.ids[:100]
+        )
 
         values.update(
             {
@@ -2092,9 +2092,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_point_services_history"
-        ] = organization_point_services.ids[:100]
+        request.session["my_organization_point_services_history"] = (
+            organization_point_services.ids[:100]
+        )
 
         values.update(
             {
@@ -2250,9 +2250,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_provenances_history"
-        ] = organization_provenances.ids[:100]
+        request.session["my_organization_provenances_history"] = (
+            organization_provenances.ids[:100]
+        )
 
         values.update(
             {
@@ -2406,9 +2406,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_quartiers_history"
-        ] = organization_quartiers.ids[:100]
+        request.session["my_organization_quartiers_history"] = (
+            organization_quartiers.ids[:100]
+        )
 
         values.update(
             {
@@ -2560,9 +2560,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_regions_history"
-        ] = organization_regions.ids[:100]
+        request.session["my_organization_regions_history"] = (
+            organization_regions.ids[:100]
+        )
 
         values.update(
             {
@@ -2716,9 +2716,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_revenu_familials_history"
-        ] = organization_revenu_familials.ids[:100]
+        request.session["my_organization_revenu_familials_history"] = (
+            organization_revenu_familials.ids[:100]
+        )
 
         values.update(
             {
@@ -2878,9 +2878,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_situation_maisons_history"
-        ] = organization_situation_maisons.ids[:100]
+        request.session["my_organization_situation_maisons_history"] = (
+            organization_situation_maisons.ids[:100]
+        )
 
         values.update(
             {
@@ -3042,9 +3042,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
                 offset=pager["offset"],
             )
         )
-        request.session[
-            "my_organization_type_communications_history"
-        ] = organization_type_communications.ids[:100]
+        request.session["my_organization_type_communications_history"] = (
+            organization_type_communications.ids[:100]
+        )
 
         values.update(
             {
@@ -3202,9 +3202,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_type_comptes_history"
-        ] = organization_type_comptes.ids[:100]
+        request.session["my_organization_type_comptes_history"] = (
+            organization_type_comptes.ids[:100]
+        )
 
         values.update(
             {
@@ -3360,9 +3360,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_type_fichiers_history"
-        ] = organization_type_fichiers.ids[:100]
+        request.session["my_organization_type_fichiers_history"] = (
+            organization_type_fichiers.ids[:100]
+        )
 
         values.update(
             {
@@ -3518,9 +3518,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_type_services_history"
-        ] = organization_type_services.ids[:100]
+        request.session["my_organization_type_services_history"] = (
+            organization_type_services.ids[:100]
+        )
 
         values.update(
             {
@@ -3680,9 +3680,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
                 offset=pager["offset"],
             )
         )
-        request.session[
-            "my_organization_type_service_categories_history"
-        ] = organization_type_service_categories.ids[:100]
+        request.session["my_organization_type_service_categories_history"] = (
+            organization_type_service_categories.ids[:100]
+        )
 
         values.update(
             {
@@ -4016,9 +4016,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_type_telephones_history"
-        ] = organization_type_telephones.ids[:100]
+        request.session["my_organization_type_telephones_history"] = (
+            organization_type_telephones.ids[:100]
+        )
 
         values.update(
             {
@@ -4169,9 +4169,9 @@ class DemoMariadbSqlExample1Controller(CustomerPortal):
             limit=self._items_per_page,
             offset=pager["offset"],
         )
-        request.session[
-            "my_organization_villes_history"
-        ] = organization_villes.ids[:100]
+        request.session["my_organization_villes_history"] = (
+            organization_villes.ids[:100]
+        )
 
         values.update(
             {

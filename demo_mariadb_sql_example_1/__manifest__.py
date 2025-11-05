@@ -1,7 +1,7 @@
 {
     "name": "Demo Mariadb Sql Example 1",
     "category": "Uncategorized",
-    "version": "12.0.1.0",
+    "version": "18.0.1.0.0",
     "author": "TechnoLibre",
     "license": "AGPL-3",
     "application": True,
@@ -36,6 +36,9 @@
         "views/organization_type_telephone.xml",
         "views/organization_ville.xml",
         "views/menu.xml",
+    ],
+    "web.assets_frontend": [
+        "demo_mariadb_sql_example_1/static/src/js/portal.demo_mariadb_sql_example_1.js"
     ],
     "installable": True,
 }

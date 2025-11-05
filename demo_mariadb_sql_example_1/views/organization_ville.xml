@@ -53,7 +53,7 @@
                 <field name="membre" />
                 <field name="organization" />
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="oe_kanban_details">
                                 <ul>
@@ -127,21 +127,20 @@
         <field name="name">organization_ville_tree</field>
         <field name="model">organization.ville</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="nom" />
                 <field name="code" />
                 <field name="region" />
                 <field name="arrondissement" />
                 <field name="membre" />
                 <field name="organization" />
-            </tree>
+            </list>
         </field>
     </record>
 
-    <act_window
-        id="organization_ville_ville_action_window"
-        name="Ville"
-        res_model="organization.ville"
-        view_mode="kanban,tree,pivot,graph,form"
-    />
+    <record id="organization_ville_ville_action_window" model="ir.actions.act_window">
+        <field name="name">Ville</field>
+        <field name="res_model">organization.ville</field>
+        <field name="view_mode">kanban,list,pivot,graph,form</field>
+    </record>
 </odoo>
