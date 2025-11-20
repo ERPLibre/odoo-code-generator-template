@@ -51,7 +51,7 @@ def post_init_hook(env):
 
     value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Database
     value_db = {

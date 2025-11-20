@@ -22,7 +22,7 @@ def post_init_hook(env):
         "enable_sync_code": True,
         # "path_sync_code": path_module_generate,
     }
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependency
     depend = "website"
@@ -33,7 +33,7 @@ def post_init_hook(env):
         "name": depend,
         "depend_id": module_id.id,
     }
-    env["code.generator.module.dependency"].create(value_dependency_website)
+    env["code.generator.module.dependency"].create([value_dependency_website])
 
     depend = "base_geoengine"
     module_id = env["ir.module.module"].search([("name", "=", depend)])
@@ -43,7 +43,7 @@ def post_init_hook(env):
         "name": depend,
         "depend_id": module_id.id,
     }
-    env["code.generator.module.dependency"].create(value_dependency_website)
+    env["code.generator.module.dependency"].create([value_dependency_website])
 
     # Add external dependency
     depend = "pyproj"
@@ -53,7 +53,7 @@ def post_init_hook(env):
         "application_type": "python",
     }
     env["code.generator.module.external.dependency"].create(
-        value_dependency_website
+        [value_dependency_website]
     )
 
     # Model Category
@@ -66,7 +66,7 @@ def post_init_hook(env):
         "rec_name": None,
         "nomenclator": True,
     }
-    model_category_id = env["ir.model"].create(value)
+    model_category_id = env["ir.model"].create([value])
 
     # Field active
     value_field = {
@@ -76,7 +76,7 @@ def post_init_hook(env):
         "model_id": model_category_id.id,
         "default": True,
     }
-    env["ir.model.fields"].create(value_field)
+    env["ir.model.fields"].create([value_field])
 
     # Field name
     value_field = {
@@ -86,7 +86,7 @@ def post_init_hook(env):
         "required": True,
         "model_id": model_category_id.id,
     }
-    env["ir.model.fields"].create(value_field)
+    env["ir.model.fields"].create([value_field])
 
     # Field description
     value_field = {

@@ -23,7 +23,7 @@ def post_init_hook(env):
     }
 
     # TODO HUMAN: enable your functionality to generate
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependencies
     lst_depend = [
@@ -38,11 +38,11 @@ def post_init_hook(env):
         "enable_javascript": True,
         "snippet_type": "effect",
     }
-    env["code.generator.snippet"].create(value_snippet)
+    env["code.generator.snippet"].create([value_snippet])
 
     # Generate module
     value = {"code_generator_ids": code_generator_id.ids}
-    env["code.generator.writer"].create(value)
+    env["code.generator.writer"].create([value])
 
 
 def uninstall_hook(env):

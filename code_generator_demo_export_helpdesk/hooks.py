@@ -37,7 +37,7 @@ def post_init_hook(env):
         # "o2m_models": [(0, 0, models_id)],
         "nomenclator_only": True,
     }
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Select models and blacklist some fields
     models_id = env["ir.model"].search([("model", "=", model_name)])
@@ -58,19 +58,19 @@ def post_init_hook(env):
 
     # Generate view
     wizard_view = env["code.generator.add.model.wizard"].create(
-        {
+        [{
             "code_generator_id": code_generator_id.id,
             "model_ids": [(6, 0, [models_id.id])],
             "field_ids": [(6, 0, [a.id for a in lst_field])],
             "option_blacklist": "blacklist",
-        }
+        }]
     )
 
     wizard_view.button_generate_add_model()
 
     # Generate module
     value = {"code_generator_ids": code_generator_id.ids}
-    code_generator_writer = env["code.generator.writer"].create(value)
+    code_generator_writer = env["code.generator.writer"].create([value])
 
 
 def uninstall_hook(env):

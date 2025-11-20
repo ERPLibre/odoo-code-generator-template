@@ -33,9 +33,7 @@ def post_init_hook(env):
         value["pre_init_hook_show"] = True
         value[
             "pre_init_hook_code"
-        ] = """with api.Environment.manage():
-env = api.Environment(cr, SUPERUSER_ID, {})
-# Remove all website pages before installing data
+        ] = """# Remove all website pages before installing data
 
 website_page_ids = env['website.page'].search([])
 website_menu_ids = env['website.menu'].search([])
@@ -55,7 +53,7 @@ for website_menu in website_menu_ids:
     # Export data parameter
     value["export_website_optimize_binary_image"] = True
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependency
     depend = "website"
@@ -66,7 +64,7 @@ for website_menu in website_menu_ids:
         "name": depend,
         "depend_id": module_id[0].id,
     }
-    env["code.generator.module.dependency"].create(value_dependency_website)
+    env["code.generator.module.dependency"].create([value_dependency_website])
 
     # Select models
     # lst_model_names = ['website.page', 'website.menu']
@@ -195,12 +193,14 @@ for website_menu in website_menu_ids:
         lst_field += lst_website_field
 
     wizard_view = env["code.generator.add.model.wizard"].create(
-        {
-            "code_generator_id": code_generator_id.id,
-            "model_ids": [(6, 0, model_ids.ids)],
-            "field_ids": [(6, 0, [a.id for a in lst_field])],
-            "option_blacklist": "whitelist",
-        }
+        [
+            {
+                "code_generator_id": code_generator_id.id,
+                "model_ids": [(6, 0, model_ids.ids)],
+                "field_ids": [(6, 0, [a.id for a in lst_field])],
+                "option_blacklist": "whitelist",
+            }
+        ]
     )
 
     wizard_view.button_generate_add_model()
@@ -238,7 +238,7 @@ for website_menu in website_menu_ids:
 
     # Generate module
     value = {"code_generator_ids": code_generator_id.ids}
-    code_generator_writer = env["code.generator.writer"].create(value)
+    code_generator_writer = env["code.generator.writer"].create([value])
 
 
 def uninstall_hook(env):

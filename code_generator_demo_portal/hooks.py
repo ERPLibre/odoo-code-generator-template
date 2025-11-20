@@ -47,7 +47,7 @@ def post_init_hook(env):
 
     value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependencies
     lst_depend_module = ["mail", "portal", "website"]
@@ -63,7 +63,7 @@ def post_init_hook(env):
         "model_name": "demo.model.portal",
         "snippet_type": "structure",
     }
-    env["code.generator.snippet"].create(value_snippet)
+    env["code.generator.snippet"].create([value_snippet])
 
     # Add/Update Demo Model Portal
     model_model = "demo.model.portal"
@@ -363,7 +363,7 @@ demo_model_3_portal_diagram.access_url = (
 
     # Generate module
     value = {"code_generator_ids": code_generator_id.ids}
-    env["code.generator.writer"].create(value)
+    env["code.generator.writer"].create([value])
 
 
 def uninstall_hook(env):

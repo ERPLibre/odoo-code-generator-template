@@ -321,7 +321,7 @@ def post_init_hook(env):
 
     value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     value = {
         "name": "Business Plan",
@@ -330,7 +330,7 @@ def post_init_hook(env):
         "rec_name": None,
         "nomenclator": True,
     }
-    model_business_plan = env["ir.model"].create(value)
+    model_business_plan = env["ir.model"].create([value])
 
     # Hack to solve field name
     field_x_name = env["ir.model.fields"].search(

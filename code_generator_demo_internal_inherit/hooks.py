@@ -47,7 +47,7 @@ def post_init_hook(env):
 
     value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependencies
     code_generator_id.add_module_dependency("demo_internal")
@@ -58,9 +58,10 @@ def post_init_hook(env):
     lst_depend_model = ["demo.model.internal"]
     dct_model = {
         "menu_name_keep_application": True,
+        "order": "id",
     }
     dct_field = {
-        "feature_text": {
+        "x_feature_text": {
             "code_generator_sequence": 1,
             "field_description": "Feature demo",
             "is_show_whitelist_model_inherit": True,
@@ -82,39 +83,43 @@ def post_init_hook(env):
         lst_item_view = []
         # BODY
         view_item_body_xpath_p1 = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "xpath",
-                "expr": "//field[@name='banana']",
-                "position": "after",
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "xpath",
+                    "expr": "//field[@name='banana']",
+                    "position": "after",
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item_body_xpath_p1.id)
 
         view_item = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "field",
-                "name": "feature_text",
-                "action_name": "feature_text",
-                "parent_id": view_item_body_xpath_p1.id,
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "name": "feature_text",
+                    "action_name": "feature_text",
+                    "parent_id": view_item_body_xpath_p1.id,
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item.id)
 
         view_code_generator = env["code.generator.view"].create(
-            {
-                "code_generator_id": code_generator_id.id,
-                "view_type": "calendar",
-                "view_name": "demo_model_internal_calendar",
-                "m2o_model": model_demo_model_internal.id,
-                "view_item_ids": [(6, 0, lst_item_view)],
-                "inherit_view_name": (
-                    "demo_internal.demo_model_internal_view_calendar"
-                ),
-            }
+            [
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "view_type": "calendar",
+                    "view_name": "demo_model_internal_calendar",
+                    "m2o_model": model_demo_model_internal.id,
+                    "view_item_ids": [(6, 0, lst_item_view)],
+                    "inherit_view_name": "demo_internal.demo_model_internal_view_calendar",
+                }
+            ]
         )
         lst_view_id.append(view_code_generator.id)
 
@@ -123,39 +128,43 @@ def post_init_hook(env):
         lst_item_view = []
         # BODY
         view_item_body_xpath_p1 = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "xpath",
-                "expr": "//field[@name='banana']",
-                "position": "after",
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "xpath",
+                    "expr": "//field[@name='banana']",
+                    "position": "after",
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item_body_xpath_p1.id)
 
         view_item = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "field",
-                "name": "feature_text",
-                "action_name": "feature_text",
-                "parent_id": view_item_body_xpath_p1.id,
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "name": "feature_text",
+                    "action_name": "feature_text",
+                    "parent_id": view_item_body_xpath_p1.id,
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item.id)
 
         view_code_generator = env["code.generator.view"].create(
-            {
-                "code_generator_id": code_generator_id.id,
-                "view_type": "form",
-                "view_name": "demo_model_internal_form",
-                "m2o_model": model_demo_model_internal.id,
-                "view_item_ids": [(6, 0, lst_item_view)],
-                "inherit_view_name": (
-                    "demo_internal.demo_model_internal_view_form"
-                ),
-            }
+            [
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "view_type": "form",
+                    "view_name": "demo_model_internal_form",
+                    "m2o_model": model_demo_model_internal.id,
+                    "view_item_ids": [(6, 0, lst_item_view)],
+                    "inherit_view_name": "demo_internal.demo_model_internal_view_form",
+                }
+            ]
         )
         lst_view_id.append(view_code_generator.id)
 
@@ -164,83 +173,95 @@ def post_init_hook(env):
         lst_item_view = []
         # BODY
         view_item_body_xpath_p1 = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "xpath",
-                "expr": "//field[@name='banana']",
-                "position": "after",
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "xpath",
+                    "expr": "//field[@name='banana']",
+                    "position": "after",
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item_body_xpath_p1.id)
 
         view_item = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "field",
-                "name": "feature_text",
-                "action_name": "feature_text",
-                "parent_id": view_item_body_xpath_p1.id,
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "name": "feature_text",
+                    "action_name": "feature_text",
+                    "parent_id": view_item_body_xpath_p1.id,
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item.id)
 
         view_item_body_xpath_p1 = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "xpath",
-                "expr": "//div[hasclass('oe_kanban_details')]/ul",
-                "position": "inside",
-                "sequence": 2,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "xpath",
+                    "expr": "//div[hasclass('oe_kanban_details')]/ul",
+                    "position": "inside",
+                    "sequence": 2,
+                }
+            ]
         )
         lst_item_view.append(view_item_body_xpath_p1.id)
 
         view_item_body_li_p2 = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "li",
-                "class_attr": "mb4",
-                "parent_id": view_item_body_xpath_p1.id,
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "li",
+                    "class_attr": "mb4",
+                    "parent_id": view_item_body_xpath_p1.id,
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item_body_li_p2.id)
 
         view_item_body_strong_p3 = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "strong",
-                "parent_id": view_item_body_li_p2.id,
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "strong",
+                    "parent_id": view_item_body_li_p2.id,
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item_body_strong_p3.id)
 
         view_item = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "field",
-                "name": "feature_text",
-                "action_name": "feature_text",
-                "parent_id": view_item_body_strong_p3.id,
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "name": "feature_text",
+                    "action_name": "feature_text",
+                    "parent_id": view_item_body_strong_p3.id,
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item.id)
 
         view_code_generator = env["code.generator.view"].create(
-            {
-                "code_generator_id": code_generator_id.id,
-                "view_type": "kanban",
-                "view_name": "demo_model_internal_kanban",
-                "m2o_model": model_demo_model_internal.id,
-                "view_item_ids": [(6, 0, lst_item_view)],
-                "inherit_view_name": (
-                    "demo_internal.demo_model_internal_view_kanban"
-                ),
-            }
+            [
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "view_type": "kanban",
+                    "view_name": "demo_model_internal_kanban",
+                    "m2o_model": model_demo_model_internal.id,
+                    "view_item_ids": [(6, 0, lst_item_view)],
+                    "inherit_view_name": "demo_internal.demo_model_internal_view_kanban",
+                }
+            ]
         )
         lst_view_id.append(view_code_generator.id)
 
@@ -249,99 +270,109 @@ def post_init_hook(env):
         lst_item_view = []
         # BODY
         view_item_body_xpath_p1 = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "xpath",
-                "expr": "//field[@name='banana']",
-                "position": "after",
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "xpath",
+                    "expr": "//field[@name='banana']",
+                    "position": "after",
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item_body_xpath_p1.id)
 
         view_item = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "field",
-                "name": "feature_text",
-                "action_name": "feature_text",
-                "parent_id": view_item_body_xpath_p1.id,
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "name": "feature_text",
+                    "action_name": "feature_text",
+                    "parent_id": view_item_body_xpath_p1.id,
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item.id)
 
         view_code_generator = env["code.generator.view"].create(
-            {
-                "code_generator_id": code_generator_id.id,
-                "view_type": "pivot",
-                "view_name": "demo_model_internal_pivot",
-                "m2o_model": model_demo_model_internal.id,
-                "view_item_ids": [(6, 0, lst_item_view)],
-                "inherit_view_name": (
-                    "demo_internal.demo_model_internal_view_pivot"
-                ),
-            }
+            [
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "view_type": "pivot",
+                    "view_name": "demo_model_internal_pivot",
+                    "m2o_model": model_demo_model_internal.id,
+                    "view_item_ids": [(6, 0, lst_item_view)],
+                    "inherit_view_name": "demo_internal.demo_model_internal_view_pivot",
+                }
+            ]
         )
         lst_view_id.append(view_code_generator.id)
 
-    # tree view
+    # list view
     if True:
         lst_item_view = []
         # BODY
         view_item_body_xpath_p1 = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "xpath",
-                "expr": "//field[@name='banana']",
-                "position": "after",
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "xpath",
+                    "expr": "//field[@name='banana']",
+                    "position": "after",
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item_body_xpath_p1.id)
 
         view_item = env["code.generator.view.item"].create(
-            {
-                "section_type": "body",
-                "item_type": "field",
-                "name": "feature_text",
-                "action_name": "feature_text",
-                "parent_id": view_item_body_xpath_p1.id,
-                "sequence": 1,
-            }
+            [
+                {
+                    "section_type": "body",
+                    "item_type": "field",
+                    "name": "feature_text",
+                    "action_name": "feature_text",
+                    "parent_id": view_item_body_xpath_p1.id,
+                    "sequence": 1,
+                }
+            ]
         )
         lst_item_view.append(view_item.id)
 
         view_code_generator = env["code.generator.view"].create(
-            {
-                "code_generator_id": code_generator_id.id,
-                "view_type": "tree",
-                "view_name": "demo_model_internal_tree",
-                "m2o_model": model_demo_model_internal.id,
-                "view_item_ids": [(6, 0, lst_item_view)],
-                "inherit_view_name": (
-                    "demo_internal.demo_model_internal_view_tree"
-                ),
-            }
+            [
+                {
+                    "code_generator_id": code_generator_id.id,
+                    "view_type": "list",
+                    "view_name": "demo_model_internal_tree",
+                    "m2o_model": model_demo_model_internal.id,
+                    "view_item_ids": [(6, 0, lst_item_view)],
+                    "inherit_view_name": "demo_internal.demo_model_internal_view_tree",
+                }
+            ]
         )
         lst_view_id.append(view_code_generator.id)
 
     # Action generate view
     wizard_view = env["code.generator.generate.views.wizard"].create(
-        {
-            "code_generator_id": code_generator_id.id,
-            "enable_generate_all": False,
-            "disable_generate_menu": True,
-            "disable_generate_access": True,
-            "code_generator_view_ids": [(6, 0, lst_view_id)],
-        }
+        [
+            {
+                "code_generator_id": code_generator_id.id,
+                "enable_generate_all": False,
+                "disable_generate_menu": True,
+                "disable_generate_access": True,
+                "code_generator_view_ids": [(6, 0, lst_view_id)],
+            }
+        ]
     )
 
     wizard_view.button_generate_views()
 
     # Generate module
     value = {"code_generator_ids": code_generator_id.ids}
-    env["code.generator.writer"].create(value)
+    env["code.generator.writer"].create([value])
 
 
 def uninstall_hook(env):

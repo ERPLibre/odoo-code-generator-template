@@ -62,7 +62,7 @@ def post_init_hook(env):
 
     value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependencies
     code_generator_id.add_module_dependency("mail")
@@ -72,7 +72,7 @@ def post_init_hook(env):
         "depend": "pysftp",
         "application_type": "python",
     }
-    env["code.generator.module.external.dependency"].create(value)
+    env["code.generator.module.external.dependency"].create([value])
 
     # Add/Update Db Backup
     model_model = "db.backup"
@@ -97,7 +97,7 @@ def post_init_hook(env):
         "days_to_keep": {
             "code_generator_form_simple_view_sequence": 12,
             "code_generator_sequence": 6,
-            "code_generator_tree_view_sequence": 12,
+            "code_generator_list_view_sequence": 12,
             "field_description": "Days To Keep",
             "help": (
                 "Backups older than this will be deleted automatically."
@@ -109,7 +109,7 @@ def post_init_hook(env):
         "folder": {
             "code_generator_form_simple_view_sequence": 11,
             "code_generator_sequence": 7,
-            "code_generator_tree_view_sequence": 11,
+            "code_generator_list_view_sequence": 11,
             "default_lambda": "lambda self: self._default_folder()",
             "field_description": "Folder",
             "help": "Absolute path for storing the backups",
@@ -131,7 +131,7 @@ def post_init_hook(env):
             "code_generator_compute": "_compute_name",
             "code_generator_form_simple_view_sequence": 10,
             "code_generator_sequence": 4,
-            "code_generator_tree_view_sequence": 10,
+            "code_generator_list_view_sequence": 10,
             "field_description": "Name",
             "help": "Summary of this backup process",
             "store": True,
