@@ -7,6 +7,7 @@
     "application": True,
     "depends": [
         "code_generator",
+        "code_generator_hook",
         "demo_internal",
     ],
     "installable": True,

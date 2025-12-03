@@ -47,10 +47,11 @@ def post_init_hook(env):
 
     value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependencies
-    code_generator_id.add_module_dependency("mail")
+    lst_depend_module = ["mail", "web_timeline"]
+    code_generator_id.add_module_dependency(lst_depend_module)
 
     # Add/Update Demo Model Internal
     model_model = "demo.model.internal"
@@ -64,40 +65,40 @@ def post_init_hook(env):
     dct_field = {
         "banana": {
             "code_generator_form_simple_view_sequence": 11,
+            "code_generator_list_view_sequence": 11,
             "code_generator_sequence": 4,
-            "code_generator_tree_view_sequence": 11,
             "comment_before": "Banana demo",
             "field_description": "Banana demo",
             "ttype": "boolean",
         },
         "date_end": {
             "code_generator_form_simple_view_sequence": 12,
+            "code_generator_list_view_sequence": 12,
             "code_generator_sequence": 5,
-            "code_generator_tree_view_sequence": 12,
             "field_description": "Date end",
             "is_date_end_view": True,
             "ttype": "datetime",
         },
         "date_start": {
             "code_generator_form_simple_view_sequence": 13,
+            "code_generator_list_view_sequence": 13,
             "code_generator_sequence": 6,
-            "code_generator_tree_view_sequence": 13,
             "field_description": "Date start",
             "is_date_start_view": True,
             "ttype": "datetime",
         },
         "empty": {
             "code_generator_form_simple_view_sequence": 14,
+            "code_generator_list_view_sequence": 14,
             "code_generator_sequence": 7,
-            "code_generator_tree_view_sequence": 14,
             "comment_after": "End of DemoModelInternal",
             "field_description": "Empty",
             "ttype": "text",
         },
         "name": {
             "code_generator_form_simple_view_sequence": 10,
+            "code_generator_list_view_sequence": 10,
             "code_generator_sequence": 3,
-            "code_generator_tree_view_sequence": 10,
             "field_description": "Name",
             "ttype": "char",
         },
@@ -120,8 +121,8 @@ def post_init_hook(env):
     dct_field = {
         "model_1": {
             "code_generator_form_simple_view_sequence": 11,
+            "code_generator_list_view_sequence": 11,
             "code_generator_sequence": 3,
-            "code_generator_tree_view_sequence": 11,
             "comment_before": """Model_2 contain model_1
 Only 1 time""",
             "field_description": "Model 1",
@@ -130,8 +131,8 @@ Only 1 time""",
         },
         "name": {
             "code_generator_form_simple_view_sequence": 10,
+            "code_generator_list_view_sequence": 10,
             "code_generator_sequence": 2,
-            "code_generator_tree_view_sequence": 10,
             "field_description": "Name",
             "ttype": "char",
         },
@@ -146,17 +147,19 @@ Only 1 time""",
     # Generate view
     # Action generate view
     wizard_view = env["code.generator.generate.views.wizard"].create(
-        {
-            "code_generator_id": code_generator_id.id,
-            "enable_generate_all": False,
-        }
+        [
+            {
+                "code_generator_id": code_generator_id.id,
+                "enable_generate_all": False,
+            }
+        ]
     )
 
     wizard_view.button_generate_views()
 
     # Generate module
     value = {"code_generator_ids": code_generator_id.ids}
-    env["code.generator.writer"].create(value)
+    env["code.generator.writer"].create([value])
 
 
 def uninstall_hook(env):

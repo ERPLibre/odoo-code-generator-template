@@ -51,7 +51,7 @@ def post_init_hook(env):
         value["template_module_name"] = new_module_name
     value["hook_constant_code"] = f'MODULE_NAME = "{new_module_name}"'
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependencies
     # TODO HUMAN: update your dependencies
@@ -63,7 +63,7 @@ def post_init_hook(env):
 
     # Generate module
     value = {"code_generator_ids": code_generator_id.ids}
-    code_generator_writer = env["code.generator.writer"].create(value)
+    code_generator_writer = env["code.generator.writer"].create([value])
 
 
 def uninstall_hook(env):

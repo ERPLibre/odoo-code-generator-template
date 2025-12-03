@@ -47,7 +47,7 @@ def post_init_hook(env):
 
     value["hook_constant_code"] = f'MODULE_NAME = "{MODULE_NAME}"'
 
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Add dependencies
     lst_depend_module = ["base", "mail"]
@@ -2538,7 +2538,7 @@ action = {"type": "ir.actions.act_url", "target": "self", "url": "/code_generato
             "help": "Sequence to write this field from Code Generator.",
             "ttype": "integer",
         },
-        "code_generator_tree_view_sequence": {
+        "code_generator_list_view_sequence": {
             "field_description": "List view sequence",
             "help": (
                 "Sequence to write this field in list view from Code"

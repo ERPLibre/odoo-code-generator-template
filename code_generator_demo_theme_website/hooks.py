@@ -20,11 +20,11 @@ def post_init_hook(env):
         "enable_sync_code": True,
         # "path_sync_code": path_module_generate,
     }
-    code_generator_id = env["code.generator.module"].create(value)
+    code_generator_id = env["code.generator.module"].create([value])
 
     # Generate view
     wizard_view = env["code.generator.generate.views.wizard"].create(
-        {
+        [{
             "code_generator_id": code_generator_id.id,
             "enable_generate_all": False,
             "enable_generate_theme_website": True,
@@ -37,14 +37,14 @@ def post_init_hook(env):
             "theme_website_footer_color": "#71f",
             "theme_website_menu_color": "#091",
             "theme_website_text_color": "#f41",
-        }
+        }]
     )
 
     wizard_view.button_generate_views()
 
     # Generate module
     value = {"code_generator_ids": code_generator_id.ids}
-    code_generator_writer = env["code.generator.writer"].create(value)
+    code_generator_writer = env["code.generator.writer"].create([value])
 
 
 def uninstall_hook(env):
