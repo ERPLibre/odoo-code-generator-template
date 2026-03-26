@@ -300,6 +300,7 @@
         <field name="model">demo.model.portal</field>
         <field name="arch" type="xml">
             <search string="Demo model portal">
+                <field name="name" />
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('demo_binary','!=',False)]" name="demo_binary" string="Binary demo" />
                 <filter
