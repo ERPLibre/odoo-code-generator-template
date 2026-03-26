@@ -10,6 +10,7 @@
         "mail",
         "portal",
         "website",
+        "web_diagram",
     ],
     "data": [
         "security/ir.model.access.csv",
