@@ -97,10 +97,8 @@
     </template>
     <!-- Add stylesheet and Javascript -->
     <template id="assets_frontend" inherit_id="website.assets_frontend">
-        <xpath expr="//link[last()]" position="after">
+        <xpath expr="." position="inside">
             <link rel="stylesheet" type="text/scss" href="/demo_portal/static/src/scss/demo_portal.scss" />
-        </xpath>
-        <xpath expr="//script[last()]" position="after">
             <script type="text/javascript" src="/demo_portal/static/src/js/website.demo_portal.animation.js" />
         </xpath>
     </template>
