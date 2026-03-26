@@ -25,10 +25,7 @@
                     <field name="demo_many2one_dst" />
                     <field name="name" />
                 </arrow>
-                <label
-                    class="o_form_label"
-                    string="Caution, all modification is live. Diagram model: demo.model_3.portal.diagram, node model: demo.model.portal and arrow model: demo.model_2.portal"
-                />
+
             </diagram>
         </field>
     </record>
@@ -115,6 +112,7 @@
         <field name="model">demo.model_3.portal.diagram</field>
         <field name="arch" type="xml">
             <search string="Demo model 3 portal diagram">
+                <field name="name" />
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('diagram_demo2_ids','!=',False)]" name="diagram_demo2_ids" string="One2Many demo 2" />
                 <filter domain="[('diagram_demo_ids','!=',False)]" name="diagram_demo_ids" string="One2Many demo" />
