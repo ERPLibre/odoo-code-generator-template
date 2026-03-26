@@ -26,7 +26,7 @@
                     <field name="name" />
                 </arrow>
                 <label
-                    for=""
+                    class="o_form_label"
                     string="Caution, all modification is live. Diagram model: demo.model_3.portal.diagram, node model: demo.model.portal and arrow model: demo.model_2.portal"
                 />
             </diagram>
