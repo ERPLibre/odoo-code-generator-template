@@ -11,6 +11,7 @@
         "portal",
         "website",
         "web_timeline",
+        "web_diagram",
     ],
     "data": [
         "security/ir.model.access.csv",
