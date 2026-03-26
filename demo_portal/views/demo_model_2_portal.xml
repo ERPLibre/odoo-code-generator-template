@@ -102,6 +102,7 @@
         <field name="model">demo.model_2.portal</field>
         <field name="arch" type="xml">
             <search string="Demo model 2 portal">
+                <field name="name" />
                 <filter domain="[('name','!=',False)]" name="name" string="Name" />
                 <filter domain="[('demo_many2one_dst','!=',False)]" name="demo_many2one_dst" string="Many2one dst" />
                 <filter domain="[('demo_many2one_src','!=',False)]" name="demo_many2one_src" string="Many2one src" />
