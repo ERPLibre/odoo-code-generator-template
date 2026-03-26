@@ -21,5 +21,14 @@
         "views/menu.xml",
         "views/snippets.xml",
     ],
+    "assets": {
+        "web.assets_frontend": [
+            "demo_portal/static/src/js/portal.demo_portal.js",
+        ],
+        "website.assets_frontend": [
+            "demo_portal/static/src/scss/demo_portal.scss",
+            "demo_portal/static/src/js/website.demo_portal.animation.js",
+        ],
+    },
     "installable": True,
 }
