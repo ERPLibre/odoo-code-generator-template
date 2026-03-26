@@ -20,11 +20,7 @@
                     label="['name']"
                     object="demo.model_2.portal"
                     source="demo_many2one_src"
-                >
-                    <field name="demo_many2one_src" />
-                    <field name="demo_many2one_dst" />
-                    <field name="name" />
-                </arrow>
+                />
 
             </diagram>
         </field>
