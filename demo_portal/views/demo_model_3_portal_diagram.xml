@@ -32,6 +32,18 @@
         <field name="arch" type="xml">
             <form string="Titre">
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_open_diagram"
+                            icon="fa-code-fork"
+                        >
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Diagram</span>
+                            </div>
+                        </button>
+                    </div>
                     <group>
                         <field name="name" />
                     </group>
