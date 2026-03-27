@@ -469,7 +469,7 @@
     </template>
     <!-- Add snippets to menu -->
     <template id="snippet_structure" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
             <t
                 t-snippet="demo_website_multiple_snippet.s_demo_website_multiple_snippet_helloworld_static_structure"
                 t-thumbnail="/demo_website_multiple_snippet/static/description/icon.png"
@@ -505,7 +505,7 @@
         </xpath>
     </template>
     <template id="snippet_content" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
+        <xpath expr="//snippets[@id='snippet_content']" position="inside">
             <t
                 t-snippet="demo_website_multiple_snippet.s_demo_website_multiple_snippet_helloworld_content"
                 t-thumbnail="/demo_website_multiple_snippet/static/description/icon.png"
@@ -517,7 +517,7 @@
         </xpath>
     </template>
     <template id="snippet_feature" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+        <xpath expr="//snippets[@id='snippet_feature']" position="inside">
             <t
                 t-snippet="demo_website_multiple_snippet.s_demo_website_multiple_snippet_helloworld_feature"
                 t-thumbnail="/demo_website_multiple_snippet/static/description/icon.png"
@@ -529,7 +529,7 @@
         </xpath>
     </template>
     <template id="snippet_effect" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+        <xpath expr="//snippets[@id='snippet_effect']" position="inside">
             <t
                 t-snippet="demo_website_multiple_snippet.s_demo_website_multiple_snippet_helloworld_effect"
                 t-thumbnail="/demo_website_multiple_snippet/static/description/icon.png"
