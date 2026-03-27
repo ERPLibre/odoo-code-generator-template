@@ -11,7 +11,7 @@
     </template>
     <!-- Add snippets to menu -->
     <template id="snippet_effect" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+        <xpath expr="//snippets[@id='snippet_effect']" position="inside">
             <t
                 t-snippet="demo_website_snippet.s_demo_website_snippet"
                 t-thumbnail="/demo_website_snippet/static/description/icon.png"
