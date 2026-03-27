@@ -91,7 +91,7 @@
     </template>
     <!-- Add snippets to menu -->
     <template id="snippet_structure" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
             <t t-snippet="demo_portal.s_demo_portal" t-thumbnail="/demo_portal/static/description/icon.png" />
         </xpath>
     </template>
