@@ -1,14 +1,14 @@
 import html
 import os
-import sys
 import tempfile
 from collections import namedtuple
 
-import js2py
 import requests
+import tree_sitter_javascript
 import wget
 from bs4 import BeautifulSoup
 from odoo import SUPERUSER_ID, _, api, fields, models
+from tree_sitter import Language, Parser
 
 MODULE_NAME = "demo_business_plan"
 
@@ -32,6 +32,161 @@ PREFIX_MODEL = ""
 TTYPE_INPUT = "char"
 TTYPE_TEXTAREA = "html"
 KEEP_CACHE = True
+JS_LANGUAGE = Language(tree_sitter_javascript.language())
+JS_ESCAPES = {
+    "b": "\b",
+    "f": "\f",
+    "n": "\n",
+    "r": "\r",
+    "t": "\t",
+    "v": "\v",
+}
+JS_LINE_TERMINATORS = ("\r\n", "\n", "\r", "\u2028", "\u2029")
+
+
+def js_escape_to_text(sequence):
+    body = sequence[1:]
+    if body in JS_LINE_TERMINATORS:
+        # Line continuation: the backslash and the newline vanish
+        return ""
+    if body[0] == "x":
+        return chr(int(body[1:], 16))
+    if body[0] == "u":
+        return chr(int(body[1:].strip("{}"), 16))
+    if body.isdigit() and "8" not in body and "9" not in body:
+        # Legacy octal escape, \0 included
+        return chr(int(body, 8))
+    return JS_ESCAPES.get(body, body)
+
+
+def js_string_to_text(node):
+    parts = []
+    for child in node.named_children:
+        if child.type == "string_fragment":
+            parts.append(child.text.decode())
+        elif child.type == "escape_sequence":
+            parts.append(js_escape_to_text(child.text.decode()))
+        elif child.type == "template_substitution":
+            raise ValueError(
+                f"Template string with substitution is not a literal: "
+                f"{node.text.decode()[:80]}"
+            )
+    # \uD83D\uDE00 decodes to two surrogates, joined back here
+    return "".join(parts).encode("utf-16", "surrogatepass").decode("utf-16")
+
+
+def js_number_to_python(text):
+    text = text.replace("_", "")
+    if text[:2].lower() in ("0x", "0o", "0b"):
+        return int(text, 0)
+    if any(char in text for char in ".eE"):
+        return float(text)
+    if len(text) > 1 and text[0] == "0":
+        # Legacy octal literal
+        return int(text, 8)
+    return int(text)
+
+
+def js_literal_to_python(node):
+    """Return the Python value of a JavaScript literal, executing nothing.
+
+    Accepts arrays, objects, strings, template strings without substitution,
+    numbers, booleans, null, undefined, a sign before a number and "+"
+    between two literals. Anything else — a call, a variable, a computed or
+    shorthand key, a spread — raises ValueError: the file is downloaded, and
+    evaluating it would run whatever code it carries.
+    """
+    node_type = node.type
+    if node_type == "parenthesized_expression":
+        return js_literal_to_python(node.named_children[0])
+    if node_type in ("string", "template_string"):
+        return js_string_to_text(node)
+    if node_type == "number":
+        return js_number_to_python(node.text.decode())
+    if node_type in ("true", "false"):
+        return node_type == "true"
+    if node_type in ("null", "undefined"):
+        return None
+    if node_type == "array":
+        return [
+            js_literal_to_python(child)
+            for child in node.named_children
+            if child.type != "comment"
+        ]
+    if node_type == "object":
+        result = {}
+        for child in node.named_children:
+            if child.type == "comment":
+                continue
+            if child.type != "pair":
+                raise ValueError(
+                    f"Unsupported object member {child.type}: "
+                    f"{child.text.decode()[:80]}"
+                )
+            key = child.child_by_field_name("key")
+            if key.type == "property_identifier":
+                key_value = key.text.decode()
+            elif key.type in ("string", "number"):
+                key_value = str(js_literal_to_python(key))
+            else:
+                raise ValueError(
+                    f"Unsupported object key {key.type}: "
+                    f"{key.text.decode()[:80]}"
+                )
+            result[key_value] = js_literal_to_python(
+                child.child_by_field_name("value")
+            )
+        return result
+    if node_type == "unary_expression":
+        operator = node.child_by_field_name("operator").type
+        value = js_literal_to_python(node.child_by_field_name("argument"))
+        if operator in ("-", "+") and isinstance(value, (int, float)):
+            return -value if operator == "-" else value
+    if node_type == "binary_expression":
+        if node.child_by_field_name("operator").type == "+":
+            left = js_literal_to_python(node.child_by_field_name("left"))
+            right = js_literal_to_python(node.child_by_field_name("right"))
+            if isinstance(left, str) or isinstance(right, str):
+                return f"{left}{right}"
+            return left + right
+    raise ValueError(
+        f"Not a JavaScript literal ({node_type}): {node.text.decode()[:80]}"
+    )
+
+
+def extract_js_variable(source, name):
+    """Return the value last assigned to the variable name in source.
+
+    Both a declaration (var, let, const) and a plain assignment count, the
+    last one in the file winning as it would at run time. The value must be
+    a literal, see js_literal_to_python. Raises ValueError when name is never
+    assigned.
+    """
+    tree = Parser(JS_LANGUAGE).parse(source.encode())
+    value_node = None
+    stack = [tree.root_node]
+    while stack:
+        node = stack.pop()
+        if node.type == "variable_declarator":
+            target = node.child_by_field_name("name")
+            value = node.child_by_field_name("value")
+        elif node.type == "assignment_expression":
+            target = node.child_by_field_name("left")
+            value = node.child_by_field_name("right")
+        else:
+            target = value = None
+        if (
+            target is not None
+            and value is not None
+            and target.type == "identifier"
+            and target.text.decode() == name
+        ):
+            value_node = value
+        # Reversed, so nodes come out of the stack in source order
+        stack.extend(reversed(node.children))
+    if value_node is None:
+        raise ValueError(f"No assignment to JavaScript variable {name}")
+    return js_literal_to_python(value_node)
 
 
 def download_url_and_get_content(url, dir_path):
@@ -167,7 +322,6 @@ def generate_model_from_js():
     temp_dir_path = tempfile.mkdtemp()
     print(f"Debug temp dir {temp_dir_path}")
     path_js = os.path.join(temp_dir_path, "file_to_convert.js")
-    path_py = os.path.join(temp_dir_path, "file_to_convert.py")
     filename_js = wget.download(URL_JS, out=path_js)
     # Special treatment, support only specific js
     with open(filename_js, "r") as file:
@@ -182,15 +336,7 @@ def generate_model_from_js():
         file_content = KEY_TO_ADD_BEGIN_FILE + file_content.replace(
             KEY_JS_VARIABLE, "content"
         )
-    with open(filename_js, "w") as file:
-        file.write(file_content)
-    js2py.translate_file(filename_js, path_py)
-    sys.path.append(temp_dir_path)
-    try:
-        import file_to_convert  # pylint: disable=W0404
-    except Exception as e:
-        raise e
-    lst_extract_info = file_to_convert.file_to_convert.content
+    lst_extract_info = extract_js_variable(file_content, "content")
     for dct_extract_info in lst_extract_info:
         data = {}
         info = namedtuple("ObjectName", dct_extract_info.keys())(

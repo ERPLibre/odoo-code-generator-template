@@ -1,3 +1,4 @@
 wget
-js2py
+tree-sitter
+tree-sitter-javascript
 BeautifulSoup4

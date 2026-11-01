@@ -8,6 +8,9 @@
     "depends": [
         "code_generator",
     ],
+    "external_dependencies": {
+        "python": ["tree-sitter", "tree-sitter-javascript"],
+    },
     "installable": True,
     "post_init_hook": "post_init_hook",
     "uninstall_hook": "uninstall_hook",
